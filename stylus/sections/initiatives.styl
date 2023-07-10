@@ -1,0 +1,124 @@
+.initiatives__text
+  margin-bottom 2em
+
+  +mq(992)
+    margin-bottom 0
+
+
+.initiatives--yellow
+  background-color $yellow
+
+  .initiatives__text
+    .title--deco
+      p:before
+        color $white
+
+
+.initiatives--black
+  background-color $black
+
+  .initiatives__text
+    color $white
+
+    .title--deco
+      p:before
+        color $yellow
+
+
+.wrap-single-initiatives
+  display block
+  text-align center
+
+  +mq(650)
+    margin 0 -16px
+
+  &:after
+    content ''
+    display table
+    clear both
+
+
+.single-initiative
+  display flex
+  padding 20px
+  width 215px
+  height @width
+  text-align center
+  justify-content center
+  flex-wrap wrap
+  border-radius 50%
+  cursor pointer
+
+  +mq(650)
+    display inline-flex
+    margin 0 15% -45%
+    transform translateY(-45%)
+  +mq(992)
+    display flex
+    margin 5% auto 0
+    transform translateY(0)
+  +mq(1180)
+    display inline-flex
+    margin 0 15% -45%
+    transform translateY(-45%)
+
+  &:first-child
+    display flex
+    transform translateY(0)
+
+    +mq(650)
+      margin 0 auto
+
+  &:nth-child(2)
+    margin-left auto
+
+    +mq(650)
+      margin-left 0
+    +mq(992)
+      margin-left auto
+    +mq(1180)
+      margin-left 0
+
+  &:nth-child(3)
+    +mq(650)
+      margin-right 0
+    +mq(992)
+      margin-right auto
+    +mq(1180)
+      margin-right 0
+
+
+  .title,
+  a
+    flex 1 1 100%
+    color $black
+
+  .title
+    margin-top auto
+    margin-bottom auto
+
+  a
+    display inline-block
+    flex 0 0 auto
+    padding-bottom 4px
+    margin-top 0
+    margin-bottom auto
+    border-bottom 1px solid $black
+    text-transform uppercase
+    font-weight 500
+    font-size 12px
+
+
+
+.single-initiative--yellow
+  background-color $yellow
+
+.single-initiative--blue
+  background-color $blue
+
+  .title,
+  a
+    color rgba($black, 0.5)
+
+  a
+    border-color rgba($black, 0.5)

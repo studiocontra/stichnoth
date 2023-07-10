@@ -1,0 +1,20 @@
+{
+  "name": "terrasos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Contra-Studio/terrasos.git",
+  "author": "Contra",
+  "license": "MIT",
+  "scripts": {
+    "watch:stylus": "stylus -w ./stylus -o ./theme/assets/custom.min.css -c",
+    "watch:babel": "babel ./theme/assets/custom.js --watch --out-file ./theme/assets/custom-compiled.js",
+    "dev": "concurrently --kill-others \"npm run watch:stylus\" \"npm run watch:babel\""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "concurrently": "^8.0.1",
+    "stylus": "^0.59.0"
+  }
+}

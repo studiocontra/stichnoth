@@ -1,0 +1,110 @@
+.news__grid
+  display flex
+  flex-wrap wrap
+  gap 16px
+
+  +mq(768)
+    gap 20px
+
+
+.single-news
+  display block
+  position relative
+  flex-grow 0
+  flex-shrink 1
+  flex-basis 100%
+  border-radius 3px
+  overflow hidden
+  transition(flex-basis)
+
+  +mq(768)
+    flex-basis 280px
+    padding-bottom 0
+  +mq(1400)
+    flex-basis 330px
+
+
+.single-news__content
+  position relative
+  display flex
+  width 100%
+  height auto
+  padding 20px 16px
+  background-color $yellow
+  flex-direction column
+  opacity 0
+  z-index 1
+  pointer-events none
+  transition(opacity)
+
+  +mq(768)
+    padding 45px 32px
+    min-width 250px
+    width 45%
+    height 100%
+  +mq(1400)
+    min-width 300px
+
+  .eyebrow
+    align-self flex-start
+
+  .title
+    margin-top 20%
+
+    +mq(768)
+      margin-top 75%
+
+
+.single-news__img
+  position absolute
+  top 0
+  right 0
+  width 100%
+  height 100%
+  border-radius 3px
+  transition(width)
+
+  img
+    fullAbs()
+    fit()
+
+.single-news__icon
+  position absolute
+  bottom 32px
+  left 24px
+  width 35px
+  height @width
+  padding 2px
+  background-color $yellow
+  border-radius 50%
+  cursor pointer
+
+  svg
+    fill $black
+
+.single-news--active
+  padding-bottom 50%
+
+  +mq(768)
+    padding-bottom 0
+    flex-basis 580px
+  +mq(1400)
+    flex-basis calc(100% - 700px)
+
+  .single-news__img
+    top 50%
+    height 50%
+
+    +mq(768)
+      height 100%
+      top 0
+      width calc(100% - 250px)
+    +mq(1400)
+      width calc(100% - 300px)
+
+  .single-news__icon
+    opacity 0
+
+  .single-news__content
+    opacity 1
+    pointer-events all

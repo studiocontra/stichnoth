@@ -1,0 +1,94 @@
+*
+  padding 0
+  margin 0
+  box-sizing border-box
+
+
+body,
+html
+  height 100%
+  margin 0
+  padding 0
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  -webkit-font-smoothing antialiased
+  -webkit-text-size-adjust 100%
+  -ms-text-size-adjust 100%
+  font()
+
+
+[v-cloak]
+  display none
+
+
+a
+  text-decoration none
+
+img
+  display block
+  height auto
+  max-width 100%
+  margin 0
+
+
+.container
+  width 100%
+  max-width 2000px
+  margin 0 auto
+  padding 0 16px
+  z-index 1
+  position relative
+
+  +mq(768)
+    padding 0 32px
+
+
+.container--edge
+  padding 0
+
+  +mq(1850)
+    padding 0 32px
+
+
+.custom-block
+  padding 40px 0
+
+  +mq(768)
+    padding 80px 0
+  +mq(992)
+    padding 120px 0
+
+
+.custom-block--tight
+  padding 40px 0
+
+  +mq(768)
+    padding 20px 0
+  +mq(992)
+    padding 40px 0
+
+
+.fade-enter-active,
+.fade-leave-active
+  transition opacity 0.5s ease
+
+.fade-enter-from,
+.fade-leave-to
+  opacity 0
+
+// Default style for slider arrows
+.swiper-button
+  background-color $yellow
+  width 34px
+  height @width
+  padding 5px
+  border-radius 50%
+
+  +mq(768)
+    width 44px
+    height @width
+    padding 10px
+
+  &:after
+    color $black
+    font-size 16px

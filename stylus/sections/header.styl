@@ -1,0 +1,42 @@
+header
+  padding 20px 0
+  background-color $yellow
+  position fixed
+  top 0
+  left 0
+  width 100%
+  z-index 5
+
+  >.container
+    display flex
+    justify-content space-between
+    align-items center
+
+.header__logo
+  width 120px
+
+.header__nav
+  display none
+  margin-left auto
+  margin-right 25px
+
+  +mq(576)
+    display block
+
+  a
+    color $black
+    text-decoration none
+    font-weight 500
+
+.header__cart
+  cursor pointer
+  transition opacity 0.3s ease-in
+
+  &:hover
+    opacity: 0.5
+
+  svg
+    width 20px
+
+.header--hidden
+  height 69px

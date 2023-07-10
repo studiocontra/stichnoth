@@ -1,0 +1,123 @@
+// This snippet uses the same breakpoints as Bootstrap.
+col-sizes = 1 2 3 4 5 6 7 8 9 10 11 12
+media-queries = {
+  sm: 576
+  md: 768
+  lg: 992
+  xl: 1200
+  xx: 1440
+  kk: 2200
+}
+
+.row
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+
+  &.no-gutters
+    margin: 0;
+
+    >[class^="col-"]
+      padding: 0;
+
+  &.justify-between
+    justify-content: space-between;
+
+  &.justify-left
+    justify-content: flex-start;
+
+  &.justify-center
+    justify-content: center;
+
+  &.justify-right
+    justify-content: flex-end;
+
+  &.align-top
+    align-items: flex-start;
+
+  &.align-center
+    align-items: center;
+
+  &.align-bottom
+    align-items: flex-end;
+
+  &.align-stretch
+    align-items: stretch;
+
+  for name, size in media-queries
+    // Justify Medias
+    &.justify-{name}-between
+      +mq(size)
+        justify-content: space-between;
+
+    &.justify-{name}-left
+      +mq(size)
+        justify-content: flex-start;
+
+    &.justify-{name}-center
+      +mq(size)
+        justify-content: center;
+
+    &.justify-{name}-right
+      +mq(size)
+        justify-content: flex-end;
+
+    // Align Medias
+    &.align-{name}-top
+      +mq(size)
+        align-items: flex-start;
+
+    &.align-{name}-center
+      +mq(size)
+        align-items: center;
+
+    &.align-{name}-center
+      +mq(size)
+        align-items: flex-end;
+
+    &.align-{name}-stretch
+      +mq(size)
+        align-items: stretch;
+
+    // Flex directions Medias
+    &.direction-{name}-reverse
+      +mq(size)
+        flex-direction: row-reverse;
+
+
+
+[class*="col-"]
+  position: relative;
+  padding: 0 16px;
+  width: 100%;
+
+  for name, size in media-queries
+    &.align-{name}-left
+      +mq(size)
+        text-align: left;
+
+    &.align-{name}-center
+      +mq(size)
+        text-align: center;
+
+    &.align-{name}-right
+      +mq(size)
+        text-align: right;
+
+.col-auto
+  width: auto;
+  flex: 1 1;
+
+for col in col-sizes
+  .col-{col}
+    width: percentage((col * 1) / 12);
+
+for name, size in media-queries
+  .col-{name}-auto
+    +mq(size)
+      width: auto;
+
+  for col in col-sizes
+    .col-{name}-{col}
+      +mq(size)
+        width: percentage((col * 1) / 12);

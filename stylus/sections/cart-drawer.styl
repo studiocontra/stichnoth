@@ -1,0 +1,198 @@
+.cart-drawer
+  position fixed
+  right 0
+  top 69px
+  height calc(100lvh - 69px)
+  width 95%
+  max-width 500px
+  padding-top 70px
+  z-index 6
+  background white
+  box-shadow -15px 0 11px -10px rgba($black, 0.25)
+  overflow auto
+  transform translateX(120%)
+  transition(transform)
+
+  &.active
+    transform translateX(0)
+
+  .title--small
+    font-weight 300
+
+  .title
+    font-size 26px
+
+  .cart__headline
+    padding-bottom 50px
+
+
+  .cart-labels
+    display grid
+    grid-template-columns 75px auto 80px
+    column-gap 20px
+    padding 10px 0
+    margin-bottom 32px
+    border-bottom 1px solid rgba($black, 0.2)
+
+  .cart__label
+    color $black
+    text-transform uppercase
+    font-size 14px
+    letter-spacing 0.075em
+    font(400)
+
+    &.product
+      grid-column 1 / 3
+
+    &.qty
+      display none
+
+    &.total
+      grid-column 3 / 4
+      text-align right
+
+
+  // Products
+  .single-cart-product
+    display grid
+    grid-template-columns auto 80px
+    grid-template-rows 1fr 1fr 1fr
+    column-gap 20px
+    row-gap 16px
+    align-items center
+    margin-bottom 32px
+
+    +mq(450)
+      grid-template-columns 75px auto 80px
+      grid-template-rows 1fr 1fr
+
+  .cart-product__img
+    position relative
+    width 100px
+    height @width
+    grid-column 1 / 3
+    grid-row 1 / 2
+
+    +mq(450)
+      width 75px
+      height @width
+      grid-column 1 / 2
+      grid-row span 2
+
+    img
+      fullAbs()
+      fit()
+
+  .cart-product__info
+    grid-column 1 / 2
+    grid-row 2 / 3
+
+    +mq(450)
+      grid-column 2 / 3
+      grid-row 1 / 2
+
+    a
+      display block
+      color $black
+      margin-bottom 16px
+
+    span
+      color rgba($black, 0.5)
+
+
+  .cart-product__quantity
+    display flex
+    flex-direction column
+    align-items flex-start
+    grid-column 1 / 2
+    grid-row 3 / 4
+
+    +mq(450)
+      grid-column 2 / 3
+      grid-row 2 / 3
+
+    .cart-quantity
+      display flex
+      justify-content space-between
+      align-items center
+      flex 0 0 40px
+      width 100%
+      max-width 150px
+      padding 10px
+      margin-right 0
+      border 1px solid $black
+      margin-bottom 16px
+
+      .add,
+      .remove
+        display flex
+        align-items center
+        color $black
+        cursor pointer
+
+      svg
+        width 16px
+
+    .cart-delete
+      svg
+        width 22px
+
+
+  .cart-product__total
+    grid-column 2 / 3
+    grid-row 1 / 2
+    text-align right
+
+    +mq(450)
+      grid-row span 2
+      grid-column 3 / 4
+
+
+  // Cart Footer
+  .cart__footer
+    padding 80px 0
+    text-align left
+    border-top 1px solid rgba($black, 0.2)
+
+    .cart-totals
+      display flex
+      justify-content flex-start
+      margin-bottom 32px
+      border 0
+
+      span
+        text-transform uppercase
+        font-size 14px
+        letter-spacing 0.075em
+        font(400)
+
+      p
+        margin-left 20px
+        font-weight 500
+
+  // Additional Inputs
+  .cart__input
+    max-width 750px
+    text-align left
+    margin-bottom 32px
+
+
+    input
+      margin 20px 0
+
+
+  .cart__input--checkbox
+    justify-content flex-end
+    flex-direction row-reverse
+
+    input
+      left 0
+
+    .input
+      margin 0
+      margin-right 20px
+
+
+  // Empty cart
+  .cart--empty
+    text-align center
