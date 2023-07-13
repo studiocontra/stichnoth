@@ -1,14 +1,17 @@
 {
-  "name": "terrasos",
+  "name": "stichnoth",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:Contra-Studio/terrasos.git",
+  "repository": "git@github.com:Contra-Studio/stichnoth.git",
   "author": "Contra",
   "license": "MIT",
   "scripts": {
     "watch:stylus": "stylus -w ./stylus -o ./theme/assets/custom.min.css -c",
-    "watch:babel": "babel ./theme/assets/custom.js --watch --out-file ./theme/assets/custom-compiled.js",
-    "dev": "concurrently --kill-others \"npm run watch:stylus\" \"npm run watch:babel\""
+    "watch:babel": "babel ./scripts --watch --out-dir ./theme/assets",
+    "dev": "concurrently --kill-others \"npm run watch:stylus\" \"npm run watch:babel\"",
+    "t:dev": "shopify theme dev --store=https://stichnoth.myshopify.com --path=./theme/",
+    "t:pull": "shopify theme pull --store=https://stichnoth.myshopify.com --path=./theme/",
+    "t:push": "shopify theme push --store=https://stichnoth.myshopify.com --path=./theme/"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",

@@ -1,16 +1,25 @@
 // Variables
-$black = #101010
-$white = #fff
-$yellow = #ffd100
-$blue = #e5eff8
+$black = #000000
+$black2 = #1a1c1f
+$white = #ffffff
+$gold = #957153
+$gray = #f5f5f5
 
 // Mixins
 mq($size)
   @media (min-width unit($size, px))
     {block}
 
-font($weight = 400)
-  font-family 'gotham', sans-serif
+font($style = 'body', $weight = 400)
+  if $style is 'body'
+    // font-family 'monument', sans-serif
+  else if $style is 'headline'
+    font-family 'monument_extended', sans-serif
+    text-transform uppercase
+  else
+    font-family 'humane', sans-serif
+    text-transform uppercase
+
   font-weight $weight
 
 transition($prop, $duration = .3s)

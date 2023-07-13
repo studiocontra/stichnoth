@@ -99,7 +99,7 @@ html.no-js .no-js-hidden {
   padding: 0 1.5rem;
 }
 
-body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
+body:has(.section-header .drawer-menu) .announcement-bar-section slideshow-component {
   max-width: 100%;
 }
 
@@ -584,14 +584,11 @@ details > * {
 :root {
   --duration-short: 100ms;
   --duration-default: 200ms;
-  --duration-announcement-bar: 250ms;
-  --duration-medium: 300ms;
   --duration-long: 500ms;
   --duration-extra-long: 600ms;
   --duration-extended: 3s;
-  --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
-  --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
-  --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
+  --animation-slide-in: slideIn var(--duration-extra-long) cubic-bezier(0, 0, 0.3, 1) forwards;
+  --animation-fade-in: fadeIn var(--duration-extra-long) cubic-bezier(0, 0, 0.3, 1);
 }
 
 .underlined-link,
@@ -2119,46 +2116,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
-@media screen and (min-width: 990px) {
-  .utility-bar--bottom-border-social-only {
-    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-  }
-}
-
-.utility-bar__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.utility-bar__grid .list-social {
-  justify-content: flex-start;
-  align-content: center;
-  margin-left: -1.2rem;
-}
-
-@media screen and (max-width: 989px) {
-  .utility-bar .utility-bar__grid .list-social {
-    display: none;
-  }
-}
-
-.utility-bar .list-social__item .icon {
-  scale: 0.9;
-}
-
-@media screen and (min-width: 990px) {
-  .utility-bar__grid {
-    grid-template-columns: 3fr 4fr 3fr;
-    grid-template-areas: 'social-icons announcements language-currency';
-  }
-
-  .announcement-bar.announcement-bar--one-announcement,
-  .announcement-bar--one-announcement .announcement-bar__link {
-    width: fit-content;
-    margin: auto;
-  }
-}
-
 .announcement-bar,
 .announcement-bar__announcement {
   color: rgb(var(--color-foreground));
@@ -2172,15 +2129,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .announcement-bar .slider--everywhere {
   margin-bottom: 0;
-  scroll-behavior: auto;
-}
-
-.utility-bar__grid .announcement-bar-slider {
-  width: 100%;
-}
-
-.utility-bar__grid .announcement-bar-slider {
-  width: 100%;
 }
 
 .announcement-bar-slider,
@@ -2199,8 +2147,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .announcement-bar .slider-button--next:focus-visible,
-.announcement-bar .slider-button--prev:focus-visible,
-.utility-bar .list-social__link:focus-visible {
+.announcement-bar .slider-button--prev:focus-visible {
   outline-offset: -0.3rem;
   box-shadow: 0 0 0 -0.2rem rgb(var(--color-foreground));
 }
@@ -2216,9 +2163,12 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 @media screen and (min-width: 990px) {
-  body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
-    padding-left: 5rem;
-    padding-right: 5rem;
+  body:has(.section-header .header:not(.drawer-menu)) .announcement-bar-section .announcement-bar .slider-button--next {
+    margin-right: -1.8rem;
+  }
+
+  body:has(.section-header .header:not(.drawer-menu)) .announcement-bar-section .announcement-bar .slider-button--prev {
+    margin-left: -1.8rem;
   }
 
   .announcement-bar-slider {
@@ -2257,51 +2207,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
   padding: 1rem 0;
   margin: 0;
   letter-spacing: 0.1rem;
-}
-
-.announcement-bar-slider--fade-in-next .announcement-bar__message,
-.announcement-bar-slider--fade-in-previous .announcement-bar__message,
-.announcement-bar-slider--fade-out-next .announcement-bar__message,
-.announcement-bar-slider--fade-out-previous .announcement-bar__message {
-  animation-duration: var(--duration-announcement-bar);
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-.announcement-bar-slider--fade-in-next .announcement-bar__message {
-  --announcement-translate-from: -1.5rem;
-  /* Prevent flicker */
-  opacity: 0;
-  animation-name: translateAnnouncementSlideIn;
-  animation-delay: var(--duration-announcement-bar);
-}
-
-.announcement-bar-slider--fade-in-previous .announcement-bar__message {
-  --announcement-translate-from: 1.5rem;
-  /* Prevent flicker */
-  opacity: 0;
-  animation-name: translateAnnouncementSlideIn;
-  animation-delay: var(--duration-announcement-bar);
-}
-
-.announcement-bar-slider--fade-out-next .announcement-bar__message {
-  --announcement-translate-to: 1.5rem;
-  animation-name: translateAnnouncementSlideOut;
-}
-
-.announcement-bar-slider--fade-out-previous .announcement-bar__message {
-  --announcement-translate-to: -1.5rem;
-  animation-name: translateAnnouncementSlideOut;
-}
-
-@keyframes translateAnnouncementSlideIn {
-  0% {opacity: 0; transform: translateX(var(--announcement-translate-from))}
-  100% {opacity: 1; transform: translateX(0)}
-}
-
-@keyframes translateAnnouncementSlideOut {
-  0% {opacity: 1; transform: translateX(0)}
-  100% {opacity: 0; transform: translateX(var(--announcement-translate-to))}
 }
 
 /* section-header */
@@ -2831,13 +2736,13 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__submenu.list-menu {
-  padding: 1rem 0;
+  padding: 2.4rem 0;
 }
 
 .header__submenu .header__submenu {
   background-color: rgba(var(--color-foreground), 0.03);
-  padding: 1rem 0;
-  margin: 1rem 0;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .header__submenu .header__menu-item:after {
@@ -2846,11 +2751,11 @@ details[open] > .header__menu-item .icon-caret {
 
 .header__submenu .header__menu-item {
   justify-content: space-between;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 2.4rem;
 }
 
-.header__submenu .header__menu-item:hover {
-  text-decoration-line: underline;
+.header__submenu .header__submenu .header__menu-item {
+  padding-left: 3.4rem;
 }
 
 .header__menu-item .icon-caret {
@@ -3227,17 +3132,6 @@ details-disclosure > details {
   height: 100vh;
 }
 
-/* Zoom in image on scroll */
-.animate--zoom-in {
-  --zoom-in-ratio: 1;
-}
-
-.animate--zoom-in > img,
-.animate--zoom-in > svg {
-  transition: scale var(--duration-short) linear;
-  scale: var(--zoom-in-ratio);
-}
-
 /* Animations */
 
 @media (prefers-reduced-motion: no-preference) {
@@ -3308,7 +3202,7 @@ details-disclosure > details {
   }
 }
 
-/* Element Hovers: Vertical Lift, 3d Lift */
+/* Element Hovers: 3d Lift */
 
 @media (prefers-reduced-motion: no-preference) and (hover: hover) {
   .animate--hover-3d-lift .card-wrapper .card--card,
@@ -3427,54 +3321,5 @@ details-disclosure > details {
   :root {
     --easter-egg: none;
     --sparkle: url('./sparkle.gif');
-  }
-
-  .animate--hover-vertical-lift .button:not(.button--tertiary),
-  .animate--hover-vertical-lift .shopify-challenge__button,
-  .animate--hover-vertical-lift .customer button,
-  .animate--hover-vertical-lift .shopify-payment-button__button {
-    transition: transform var(--duration-default) var(--ease-out-slow);
-  }
-
-  .animate--hover-vertical-lift .card-wrapper .card--card,
-  .animate--hover-vertical-lift .card-wrapper .card--standard .card__inner {
-    transition: transform var(--duration-medium) var(--ease-out-slow);
-  }
-
-  .animate--hover-vertical-lift .card-wrapper:hover .card--card,
-  .animate--hover-vertical-lift .card-wrapper:hover .card--standard .card__inner {
-    transform: translateY(-0.75rem);
-  }
-
-  .animate--hover-vertical-lift .card-wrapper:active .card--card,
-  .animate--hover-vertical-lift .card-wrapper:active .card--standard .card__inner {
-    transform: translateY(-0.5rem);
-  }
-
-  .animate--hover-vertical-lift .button:not(.button--tertiary):not([disabled]):hover,
-  .animate--hover-vertical-lift .shopify-challenge__button:not([disabled]):hover,
-  .animate--hover-vertical-lift .customer button:not([disabled]):hover,
-  .animate--hover-vertical-lift .shopify-payment-button__button:hover {
-    transform: translateY(-0.25rem);
-  }
-
-  .animate--hover-vertical-lift .button:not(.button--tertiary):not([disabled]):active,
-  .animate--hover-vertical-lift .shopify-challenge__button:not([disabled]):active,
-  .animate--hover-vertical-lift .customer button:not([disabled]):active,
-  .animate--hover-vertical-lift .shopify-payment-button__button:active {
-    transform: translateY(0);
-  }
-
-  .animate--hover-vertical-lift .button:not([disabled]):hover:after,
-  .animate--hover-vertical-lift .customer button:not([disabled]):hover:after,
-  .animate--hover-vertical-lift .shopify-payment-button__button:not([disabled]):hover:after {
-    --border-offset: 0.3px; /* Default is 1.3px as defined above in this file. This removes 1px to prevent the border from growing on buttons when this effect is on.  */
-    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
-        rgba(var(--color-button-text), var(--border-opacity)),
-      0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
-  }
-
-  .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
-    --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
