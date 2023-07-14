@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "watch:stylus": "stylus -w ./stylus -o ./theme/assets/custom.min.css -c",
-    "watch:babel": "babel ./scripts --watch --out-dir ./theme/assets",
+    "watch:babel": "babel ./scripts --watch --out-file ./theme/assets/custom.min.js",
     "dev": "concurrently --kill-others \"npm run watch:stylus\" \"npm run watch:babel\"",
     "t:dev": "shopify theme dev --store=https://stichnoth.myshopify.com --path=./theme/",
     "t:pull": "shopify theme pull --store=https://stichnoth.myshopify.com --path=./theme/",

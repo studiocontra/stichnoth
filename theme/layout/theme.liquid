@@ -28,6 +28,8 @@
 
     {% render 'meta-tags' %}
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
     {{ 'fonts.css' | asset_url | stylesheet_tag }}
     {{ 'custom.min.css' | asset_url | stylesheet_tag }}
 
@@ -73,6 +75,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="{{ 'custom.min.js' | asset_url }}" defer="defer"></script>
 
     <script>
       window.shopUrl = '{{ request.origin }}';

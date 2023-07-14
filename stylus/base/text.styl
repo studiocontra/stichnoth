@@ -28,7 +28,7 @@
   margin-bottom 0.5em
   font-size 26px
   line-height 1.25
-  font()
+  font('headline')
 
   +mq(768)
     font-size 36px
@@ -70,14 +70,15 @@
 
 
 .title--hero
-  font-size 40px
+  font-size 28vw
   font-weight 700
-  line-height 1
+  line-height 0.85
+  margin-bottom 0
+  letter-spacing 0.015em
+  font('display', 600)
 
   +mq(768)
-    font-size 60px
-  +mq(992)
-    font-size 80px
+    font-size 17vw
 
 
 .title--deco

@@ -1,0 +1,119 @@
+.hero
+  padding 80px 0
+
+
+.hero__slider
+  .swiper-slide:not(.swiper-slide-active)
+    .hero__slider__arrows
+      opacity 0
+      visibility hidden
+
+
+  .slide__text
+    text-align center
+
+  .slide__content
+    position relative
+    overflow hidden
+    padding 16px
+    border-radius 8px
+    aspect-ratio 1.5 / 1
+
+    +mq(768)
+      aspect-ratio 2.75 / 1
+      padding 32px
+
+    img
+      fullAbs()
+      fit()
+
+    .cta
+      position absolute
+      display flex
+      align-items center
+      background-color $white
+      padding 16px
+      border-radius 4px
+      transition background 0.2s ease-in
+      bottom 16px
+      left 16px
+      right 16px
+
+      +mq(450)
+        right auto
+
+      +mq(768)
+        bottom 32px
+        left 32px
+
+
+      &:hover
+        background-color $black2
+
+        span
+          color $gold
+
+        svg
+          path
+            stroke $gold
+
+
+      span
+        display block
+        color $black
+        font-size 14px
+        text-align center
+        text-transform uppercase
+        transition color 0.2s ease-in
+        font('headline', 500)
+
+        +mq(768)
+          font-size 16px
+
+      svg
+        display block
+        margin-left 10px
+
+        path
+          stroke $black
+          transition stroke 0.2s ease-in
+
+
+.hero__slider__arrows
+  position absolute
+  width 100%
+  left 0
+  top 0
+  padding 16px
+  display flex
+  justify-content flex-end
+  gap 0 8px
+  pointer-events none
+  z-index 1
+
+  +mq(768)
+    top auto
+    bottom 0
+    padding 32px
+
+  .swiper-button
+    background-color $white
+    display flex
+    justify-content center
+    align-items center
+    cursor pointer
+    border-radius 4px
+    pointer-events all
+    transition background 0.2s ease-in
+
+    &:hover
+      background-color $black2
+
+      svg
+        path
+          stroke $gold
+
+    svg
+      path
+        stroke $black
+        transition stroke 0.2s ease-in
