@@ -1,6 +1,6 @@
 .image-text__img
   width 90%
-  margin-bottom 4em
+  margin-bottom 3em
 
   +mq(768)
     width 86%
@@ -22,8 +22,8 @@
     padding-right 25%
 
   .img--small
-    width 30%
     float right
+    width 50%
     max-width 240px
     border-radius 8px
 
@@ -33,3 +33,18 @@
   .text
     margin-bottom 1em
     color #6f6f6f
+
+
+.image-text--space
+  .image-text__img
+    width 95%
+    margin-bottom 0
+
+  .image-text__content
+    .img--small
+      margin-bottom -17%
+      transform translateY(-50%)
+
+      +mq(768)
+        margin-bottom 15%
+        transform translateY(0)

@@ -1,7 +1,7 @@
-<div class="custom-block image-text">
+<div class="custom-block image-text{% if section.settings.img_style == 'space' %} image-text--space{% endif %}">
   <div class="container">
     <div class="row justify-between {{ section.settings.v_align }}{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
-      <div class="col-md-6">
+      <div class="{% if section.settings.img_style == 'space' %}col-md-7{% else %}col-md-6{% endif %}">
         <div class="image-text__img">
           <picture>
             <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
