@@ -14,6 +14,7 @@ const mainHeaderApp = Vue.createApp({
       mobileFirst: true,
       effect: 'fade',
       loop: true,
+      watchOverflow: true,
       fadeEffect: {
         crossFade: true
       },

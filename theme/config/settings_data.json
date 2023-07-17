@@ -1,6 +1,5 @@
 {
   "current": {
-    "logo_width": 90,
     "social_facebook_link": "",
     "social_instagram_link": "",
     "social_youtube_link": "",
@@ -11,6 +10,7 @@
     "social_tumblr_link": "",
     "social_vimeo_link": "",
     "currency_code_enabled": true,
+    "logo_width": 90,
     "cart_type": "notification",
     "show_vendor": false,
     "show_cart_note": false,
@@ -36,34 +36,22 @@
       "background-1": {
         "settings": {
           "background": "#efefef",
-          "background_gradient": "",
           "text": "#242833",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "button": "#121212"
         }
       },
       "background-2": {
         "settings": {
           "background": "#f3f3f3",
-          "background_gradient": "",
           "text": "#121212",
-          "button": "#121212",
-          "button_label": "#f3f3f3",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "button": "#121212"
         }
       },
       "inverse": {
         "settings": {
           "background": "#242833",
-          "background_gradient": "",
           "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#000000",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "button": "#ffffff"
         }
       }
     }

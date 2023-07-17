@@ -26,47 +26,9 @@
 // Headlines
 .title
   margin-bottom 0.5em
-  font-size 26px
+  font-size clamp(22px, 3vw, 40px)
   line-height 1.25
-  font('headline')
-
-  +mq(768)
-    font-size 36px
-  +mq(992)
-    font-size 48px
-
-
-.title--xsmall
-  font-size 18px
-  font-weight 500
-  line-height 1.05
-
-  +mq(768)
-    font-size 20px
-  +mq(992)
-    font-size 24px
-
-
-.title--small
-  font-size 24px
-  font-weight 500
-  line-height 1.05
-
-  +mq(768)
-    font-size 28px
-  +mq(992)
-    font-size 32px
-
-
-.title--big
-  font-size 54px
-  line-height 1
-  font-weight 300
-
-  +mq(768)
-    font-size 72px
-  +mq(992)
-    font-size 100px
+  font('headline', 700)
 
 
 .title--hero
@@ -79,6 +41,9 @@
 
   +mq(768)
     font-size 17vw
+
+.title--hero-light
+  font-weight 400
 
 
 .title--deco

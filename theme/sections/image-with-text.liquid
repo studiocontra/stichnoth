@@ -1,95 +1,51 @@
-{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+<div class="custom-block image-text">
+  <div class="container">
+    <div class="row justify-between {{ section.settings.v_align }}{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
+      <div class="col-md-6">
+        <div class="image-text__img">
+          <picture>
+            <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+            <source srcset="{{ section.settings.image | image_url: width: 450 }}">
+            <img
+              src="{{ section.settings.image | image_url }}"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+            >
+          </picture>
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-{% assign scheme1 = settings.color_schemes | first %}
-
-<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-    <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-      <div
-        class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
-        {% if section.settings.height == 'adapt' and section.settings.image != blank %}
-          style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
-        {% endif %}
-      >
-        {%- if section.settings.image != blank -%}
-          {%- if section.settings.image_behavior == 'ambient' -%}
-            {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-            {%- capture sizes -%}
-              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
-              (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
-            {%- endcapture -%}
-          {%- else -%}
-            {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-            {%- capture sizes -%}
-              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
-              (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-            {%- endcapture -%}
-          {%- endif -%}
-          {{
-            section.settings.image
-            | image_url: width: 1500
-            | image_tag: loading: 'lazy', sizes: sizes, widths: widths
-          }}
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
+          {% if section.settings.img_style == 'overlap' %}
+            <img
+              class="img--small"
+              src="{{ section.settings.image_2 | image_url: width: 300 }}"
+              width="{{ section.settings.image_2.width }}"
+              height="{{ section.settings.image_2.height }}"
+            >
+          {% endif %}
+        </div>
       </div>
-    </div>
-    <div class="image-with-text__text-item grid__item">
-      <div
-        id="ImageWithText--{{ section.id }}"
-        class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
-      >
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'heading' -%}
-              <h2
-                class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
-                {{ block.shopify_attributes }}
-              >
-                {{ block.settings.heading }}
-              </h2>
-            {%- when 'caption' -%}
-              <p
-                class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
-                {{ block.shopify_attributes }}
-              >
-                {{ block.settings.caption | escape }}
-              </p>
-            {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                {{ block.settings.text }}
-              </div>
-            {%- when 'button' -%}
-              {%- if block.settings.button_label != blank -%}
-                <a
-                  {% if block.settings.button_link == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link }}"
-                  {% endif %}
-                  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                  {{ block.shopify_attributes }}
-                >
-                  {{ block.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
-          {%- endcase -%}
-        {%- endfor -%}
+      <div class="col-md-5">
+        <div class="image-text__content">
+          {% if section.settings.img_style == 'space' %}
+            <img
+              class="img--small"
+              src="{{ section.settings.image_2 | image_url: width: 300 }}"
+              width="{{ section.settings.image_2.width }}"
+              height="{{ section.settings.image_2.height }}"
+            >
+          {% endif %}
+          {%- for block in section.blocks -%}
+            {% case block.type %}
+              {%- when 'heading' -%}
+                <h3 class="title{% if block.settings.heading_size == 'hero' %} title--hero-light{% endif %}">
+                  {{ block.settings.heading }}
+                </h3>
+              {%- when 'text' -%}
+                <div class="text">
+                  {{ block.settings.text }}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
       </div>
     </div>
   </div>
@@ -109,122 +65,25 @@
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
-      "type": "select",
-      "id": "height",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.image-with-text.settings.height.options__1.label"
-        },
-        {
-          "value": "small",
-          "label": "t:sections.image-with-text.settings.height.options__2.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.image-with-text.settings.height.options__3.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.image-with-text.settings.height.options__4.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.image-with-text.settings.height.label"
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Additional Image"
     },
     {
       "type": "select",
-      "id": "desktop_image_width",
+      "id": "img_style",
+      "label": "Images Style",
       "options": [
-        {
-          "value": "small",
-          "label": "t:sections.image-with-text.settings.desktop_image_width.options__1.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.image-with-text.settings.desktop_image_width.options__2.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.image-with-text.settings.desktop_image_width.options__3.label"
-        }
-      ],
-      "default": "medium",
-      "label": "t:sections.image-with-text.settings.desktop_image_width.label",
-      "info": "t:sections.image-with-text.settings.desktop_image_width.info"
-    },
-    {
-      "type": "select",
-      "id": "layout",
-      "options": [
-        {
-          "value": "image_first",
-          "label": "t:sections.image-with-text.settings.layout.options__1.label"
-        },
-        {
-          "value": "text_first",
-          "label": "t:sections.image-with-text.settings.layout.options__2.label"
-        }
-      ],
-      "default": "image_first",
-      "label": "t:sections.image-with-text.settings.layout.label",
-      "info": "t:sections.image-with-text.settings.layout.info"
-    },
-    {
-      "type": "select",
-      "id": "desktop_content_position",
-      "options": [
-        {
-          "value": "top",
-          "label": "t:sections.image-with-text.settings.desktop_content_position.options__1.label"
-        },
-        {
-          "value": "middle",
-          "label": "t:sections.image-with-text.settings.desktop_content_position.options__2.label"
-        },
-        {
-          "value": "bottom",
-          "label": "t:sections.image-with-text.settings.desktop_content_position.options__3.label"
-        }
-      ],
-      "default": "top",
-      "label": "t:sections.image-with-text.settings.desktop_content_position.label"
-    },
-    {
-      "type": "select",
-      "id": "desktop_content_alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__1.label"
-        },
-        {
-          "value": "center",
-          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__2.label"
-        },
-        {
-          "value": "right",
-          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__3.label"
-        }
-      ],
-      "default": "left",
-      "label": "t:sections.image-with-text.settings.desktop_content_alignment.label"
-    },
-    {
-      "type": "select",
-      "id": "content_layout",
-      "options": [
-        {
-          "value": "no-overlap",
-          "label": "t:sections.image-with-text.settings.content_layout.options__1.label"
-        },
         {
           "value": "overlap",
-          "label": "t:sections.image-with-text.settings.content_layout.options__2.label"
+          "label": "Overlapping"
+        },
+        {
+          "value": "space",
+          "label": "Space"
         }
       ],
-      "default": "no-overlap",
-      "label": "t:sections.image-with-text.settings.content_layout.label"
+      "default": "overlap"
     },
     {
       "type": "color_scheme",
@@ -233,72 +92,36 @@
       "default": "background-1"
     },
     {
-      "type": "header",
-      "content": "t:sections.all.animation.content"
-    },
-    {
       "type": "select",
-      "id": "image_behavior",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.all.animation.image_behavior.options__1.label"
-        },
-        {
-          "value": "ambient",
-          "label": "t:sections.all.animation.image_behavior.options__2.label"
-        }
-      ],
-      "default": "none",
-      "label": "t:sections.all.animation.image_behavior.label"
-    },
-    {
-      "type": "header",
-      "content": "Mobile layout"
-    },
-    {
-      "type": "select",
-      "id": "mobile_content_alignment",
+      "id": "text_position",
+      "label": "Text Position",
       "options": [
         {
           "value": "left",
-          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__1.label"
-        },
-        {
-          "value": "center",
-          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__2.label"
+          "label": "Left"
         },
         {
           "value": "right",
-          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__3.label"
+          "label": "Right"
         }
       ],
-      "default": "left",
-      "label": "t:sections.image-with-text.settings.mobile_content_alignment.label"
+      "default": "right"
     },
     {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "type": "select",
+      "id": "v_align",
+      "label": "Vertical Align",
+      "options": [
+        {
+          "value": "align-bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "align-center",
+          "label": "Center"
+        }
+      ],
+      "default": "align-center"
     }
   ],
   "blocks": [
@@ -308,7 +131,7 @@
       "limit": 1,
       "settings": [
         {
-          "type": "inline_richtext",
+          "type": "text",
           "id": "heading",
           "default": "Image with text",
           "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
@@ -316,71 +139,18 @@
         {
           "type": "select",
           "id": "heading_size",
+          "label": "t:sections.all.heading_size.label",
           "options": [
             {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
+              "value": "headline",
+              "label": "headline"
             },
             {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
+              "value": "display",
+              "label": "Hero"
             }
           ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
-        }
-      ]
-    },
-    {
-      "type": "caption",
-      "name": "t:sections.image-with-text.blocks.caption.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "caption",
-          "default": "Add a tagline",
-          "label": "t:sections.image-with-text.blocks.caption.settings.text.label"
-        },
-        {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "subtitle",
-              "label": "t:sections.image-with-text.blocks.caption.settings.text_style.options__1.label"
-            },
-            {
-              "value": "caption-with-letter-spacing",
-              "label": "t:sections.image-with-text.blocks.caption.settings.text_style.options__2.label"
-            }
-          ],
-          "default": "caption-with-letter-spacing",
-          "label": "t:sections.image-with-text.blocks.caption.settings.text_style.label"
-        },
-        {
-          "type": "select",
-          "id": "text_size",
-          "options": [
-            {
-              "value": "small",
-              "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.options__1.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.options__2.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.options__3.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.label"
+          "default": "headline"
         }
       ]
     },
@@ -394,22 +164,6 @@
           "id": "text",
           "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
           "label": "t:sections.image-with-text.blocks.text.settings.text.label"
-        },
-        {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "body",
-              "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__1.label"
-            },
-            {
-              "value": "subtitle",
-              "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__2.label"
-            }
-          ],
-          "default": "body",
-          "label": "t:sections.image-with-text.blocks.text.settings.text_style.label"
         }
       ]
     },
@@ -435,18 +189,7 @@
   ],
   "presets": [
     {
-      "name": "t:sections.image-with-text.presets.name",
-      "blocks": [
-        {
-          "type": "heading"
-        },
-        {
-          "type": "text"
-        },
-        {
-          "type": "button"
-        }
-      ]
+      "name": "t:sections.image-with-text.presets.name"
     }
   ]
 }

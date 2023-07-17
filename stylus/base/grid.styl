@@ -10,114 +10,114 @@ media-queries = {
 }
 
 .row
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -16px;
+  display flex
+  flex-wrap wrap
+  margin 0 -10px
 
   &.no-gutters
-    margin: 0;
+    margin 0
 
     >[class^="col-"]
-      padding: 0;
+      padding 0
 
   &.justify-between
-    justify-content: space-between;
+    justify-content space-between
 
   &.justify-left
-    justify-content: flex-start;
+    justify-content flex-start
 
   &.justify-center
-    justify-content: center;
+    justify-content center
 
   &.justify-right
-    justify-content: flex-end;
+    justify-content flex-end
 
   &.align-top
-    align-items: flex-start;
+    align-items flex-start
 
   &.align-center
-    align-items: center;
+    align-items center
 
   &.align-bottom
-    align-items: flex-end;
+    align-items flex-end
 
   &.align-stretch
-    align-items: stretch;
+    align-items stretch
 
   for name, size in media-queries
     // Justify Medias
     &.justify-{name}-between
       +mq(size)
-        justify-content: space-between;
+        justify-content space-between
 
     &.justify-{name}-left
       +mq(size)
-        justify-content: flex-start;
+        justify-content flex-start
 
     &.justify-{name}-center
       +mq(size)
-        justify-content: center;
+        justify-content center
 
     &.justify-{name}-right
       +mq(size)
-        justify-content: flex-end;
+        justify-content flex-end
 
     // Align Medias
     &.align-{name}-top
       +mq(size)
-        align-items: flex-start;
+        align-items flex-start
 
     &.align-{name}-center
       +mq(size)
-        align-items: center;
+        align-items center
 
-    &.align-{name}-center
+    &.align-{name}-bottom
       +mq(size)
-        align-items: flex-end;
+        align-items flex-end
 
     &.align-{name}-stretch
       +mq(size)
-        align-items: stretch;
+        align-items stretch
 
     // Flex directions Medias
     &.direction-{name}-reverse
       +mq(size)
-        flex-direction: row-reverse;
+        flex-direction row-reverse
 
 
 
 [class*="col-"]
-  position: relative;
-  padding: 0 16px;
-  width: 100%;
+  position relative
+  padding 0 10px
+  width 100%
 
   for name, size in media-queries
     &.align-{name}-left
       +mq(size)
-        text-align: left;
+        text-align left
 
     &.align-{name}-center
       +mq(size)
-        text-align: center;
+        text-align center
 
     &.align-{name}-right
       +mq(size)
-        text-align: right;
+        text-align right
 
 .col-auto
-  width: auto;
-  flex: 1 1;
+  width auto
+  flex 1 1
 
 for col in col-sizes
   .col-{col}
-    width: percentage((col * 1) / 12);
+    width percentage((col * 1) / 12)
 
 for name, size in media-queries
   .col-{name}-auto
     +mq(size)
-      width: auto;
+      width auto
 
   for col in col-sizes
     .col-{name}-{col}
       +mq(size)
-        width: percentage((col * 1) / 12);
+        width percentage((col * 1) / 12)
