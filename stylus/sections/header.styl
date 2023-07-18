@@ -15,7 +15,7 @@ header
 .header__mobile-toggle
   display flex
   gap 0 12px
-  width 90px
+  width 120px
 
   +mq(768)
     display none
@@ -64,7 +64,7 @@ header
 
 
 .header__locale
-  width 90px
+  width 120px
   display none
   gap 0 4px
   align-items center
@@ -82,6 +82,11 @@ header
 
   .locale__link--active
     font-weight 500
+
+.header__locale--mobile
+  +mq(768)
+    display none
+
 
 
 .header__logo
@@ -103,7 +108,7 @@ header
 .header__icons
   display flex
   align-items center
-  width 90px
+  width 120px
   gap 0 16px
 
 

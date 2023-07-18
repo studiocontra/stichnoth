@@ -31,16 +31,29 @@
   font('headline', 700)
 
 
+.title--small
+  font-size clamp(16px, 1vw, 24px)
+
+
 .title--hero
-  font-size 28vw
+  font-size clamp(120px, 15vw, 260px)
   font-weight 700
   line-height 0.85
   margin-bottom 0
   letter-spacing 0.015em
   font('display', 600)
 
-  +mq(768)
-    font-size 17vw
+  +mq(1600)
+    font-size clamp(100px, 20vw, 320px)
+
+.title--hero--small
+  font-size clamp(112px, 10vw, 175px)
+  font-weight 700
+  line-height 0.85
+  margin-bottom 0
+  letter-spacing 0.015em
+  font('display', 600)
+
 
 .title--hero-light
   font-weight 400

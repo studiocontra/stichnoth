@@ -15,7 +15,7 @@
       {% render 'header-search', input_id: 'Search-In-Modal-Mobile' %}
     </div>
 
-    {%- form 'localization', id: 'LanguageForm', class: 'localization-form' -%}
+    {%- form 'localization', id: 'LanguageForm', class: 'header__locale' -%}
       {% render 'language-localization', formId: 'LanguageForm' %}
     {%- endform -%}
 
@@ -88,7 +88,7 @@
         </ul>
       </nav>
 
-      {%- form 'localization', id: 'LanguageMobileForm', class: 'localization-form' -%}
+      {%- form 'localization', id: 'LanguageMobileForm', class: 'header__locale header__locale--mobile' -%}
         {% render 'language-localization', formId: 'LanguageMobileForm' %}
       {%- endform -%}
     </div>

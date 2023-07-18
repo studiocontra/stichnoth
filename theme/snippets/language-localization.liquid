@@ -8,24 +8,22 @@
 <input type="hidden" name="locale_code" v-model="currentLocale">
 <input type="hidden" name="country_code" v-model="currentLocale">
 
-<div class="header__locale">
-  {%- if localization.available_languages.size > 1 -%}
-    {%- for language in localization.available_languages -%}
-      <a
-        class="locale__link{% if language.iso_code == localization.language.iso_code %} locale__link--active{% endif %}"
-        href="#"
-        hreflang="{{ language.iso_code }}"
-        lang="{{ language.iso_code }}"
-        {% if language.iso_code == localization.language.iso_code %}
-          aria-current="true"
-        {% endif %}
-        @click.prevent="changeLocale('{{ language.iso_code }}', '{{ formId }}')"
-      >
-        {{ language.iso_code }}
-      </a>
-      {% unless forloop.last %}
-        <div class="bull">&bull;</div>
-      {% endunless %}
-    {%- endfor -%}
-  {%- endif -%}
-</div>
+{%- if localization.available_languages.size > 1 -%}
+  {%- for language in localization.available_languages -%}
+    <a
+      class="locale__link{% if language.iso_code == localization.language.iso_code %} locale__link--active{% endif %}"
+      href="#"
+      hreflang="{{ language.iso_code }}"
+      lang="{{ language.iso_code }}"
+      {% if language.iso_code == localization.language.iso_code %}
+        aria-current="true"
+      {% endif %}
+      @click.prevent="changeLocale('{{ language.iso_code }}', '{{ formId }}')"
+    >
+      {{ language.iso_code }}
+    </a>
+    {% unless forloop.last %}
+      <div class="bull">&bull;</div>
+    {% endunless %}
+  {%- endfor -%}
+{%- endif -%}

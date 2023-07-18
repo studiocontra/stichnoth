@@ -1,0 +1,65 @@
+.pre-footer
+  position relative
+  background-color $gray
+
+  +mq(768)
+    padding 56px 0 75px
+
+
+.pre-footer__shape
+  position absolute
+  top 0
+  height 30%
+  width 100%
+  background-color $white
+
+.pre-footer__img
+  position relative
+  margin-bottom 2em
+  aspect-ratio 1 / 1.2
+
+  +mq(768)
+    margin-bottom 0
+
+  img
+    border-radius 8px
+    fullAbs()
+    fit()
+
+
+.pre-footer__content
+  display flex
+  flex-wrap wrap
+  align-items center
+
+  +mq(768)
+    padding-left 5%
+
+  .title
+    flex 1 1 100%
+
+  .text
+    +mq(768)
+      margin-bottom 1em
+      padding-right 2%
+    +mq(1200)
+      margin-bottom -1em
+      flex 1 0 65%
+    +mq(1450)
+      flex 1 0 70%
+      padding-right 0
+
+  .link
+    display flex
+    flex 1 1 100%
+    justify-content flex-end
+
+    +mq(768)
+      justify-content flex-start
+    +mq(1200)
+      flex 0 0 27%
+      align-self flex-end
+      justify-content flex-end
+    +mq(1450)
+      flex 0 0 25%
+
