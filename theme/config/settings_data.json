@@ -1,8 +1,11 @@
 {
   "current": {
-    "social_facebook_link": "",
-    "social_instagram_link": "",
-    "social_youtube_link": "",
+    "logo": "shopify:\/\/shop_images\/logo-web.png",
+    "logo_mobile": "shopify:\/\/shop_images\/logo-mobile.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "social_facebook_link": "https:\/\/www.facebook.com\/goldschmiede.stichnoth",
+    "social_instagram_link": "https:\/\/www.instagram.com\/goldschmiede_stichnoth\/",
+    "social_youtube_link": "https:\/\/www.youtube.com\/@stichnothschmuck-unduhrenm3937",
     "social_tiktok_link": "",
     "social_twitter_link": "",
     "social_snapchat_link": "",
@@ -26,6 +29,54 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "background-1"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "main-menu"
+        }
+      },
+      "pre-footer": {
+        "type": "pre-footer",
+        "settings": {
+          "color_scheme": "",
+          "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+          "headline": "Work with us",
+          "content": "<p>If you would like to become part of an innovative company that has been shaped by decades of tradition, apply now! <\/p><p>We are always interested in talented employees who enjoy creativity and craftsmanship.<\/p>",
+          "button_label": "Go to Careers",
+          "button_link": "shopify:\/\/pages\/contact"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1"
+        ],
+        "settings": {
+          "footer_logo": "shopify:\/\/shop_images\/logo-footer.png",
+          "footer_top_text": "<p>Honoring heritage with timeless traditions, seamlessly woven into the brilliance of modern innovation.<\/p>",
+          "color_scheme": "",
+          "show_social": true,
+          "enable_language_selector": true,
+          "payment_enable": true
         }
       }
     },

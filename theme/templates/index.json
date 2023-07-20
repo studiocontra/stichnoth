@@ -1,75 +1,99 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "3def522a-0898-4c51-b06d-2a2a2c6f3d0c": {
+      "type": "hero",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "a0dc6a88-5046-4036-b5ff-09f2910afc88": {
+          "type": "slide",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "headline": "Lorem ipsum dolor",
+            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+            "button_label": "Learn More",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "a0dc6a88-5046-4036-b5ff-09f2910afc88"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "7825c5b8-9f81-4c4a-bb0e-715d7e03b64d": {
+      "type": "collection-list",
+      "blocks": {
+        "template--19944138113322__7825c5b8-9f81-4c4a-bb0e-715d7e03b64d-1689725930cbb29b49-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "template--19944138113322__7825c5b8-9f81-4c4a-bb0e-715d7e03b64d-1689725930cbb29b49-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "template--19944138113322__7825c5b8-9f81-4c4a-bb0e-715d7e03b64d-1689725930cbb29b49-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19944138113322__7825c5b8-9f81-4c4a-bb0e-715d7e03b64d-1689725930cbb29b49-0",
+        "template--19944138113322__7825c5b8-9f81-4c4a-bb0e-715d7e03b64d-1689725930cbb29b49-1",
+        "template--19944138113322__7825c5b8-9f81-4c4a-bb0e-715d7e03b64d-1689725930cbb29b49-2"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "title": "Our Products",
+        "color_scheme": "",
+        "show_view_all": true
+      }
+    },
+    "74d7b426-d16c-4c28-b88c-7ca9c138ca69": {
+      "type": "image-with-text",
+      "blocks": {
+        "a2880955-71ff-4a3d-94f7-096ca275ad43": {
+          "type": "heading",
+          "settings": {
+            "heading": "Crafting Excellence",
+            "heading_size": "headline"
+          }
+        },
+        "0798c79e-a639-4a82-a066-453211967fb6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For three generations, traditional manufacturing processes have met modern techniques in our manufactory. Goldschmiede Stichnoth stands for craftsmanship at the highest level. True to the motto “Made in Germany”, all pieces of jewelry are made in our manufactory in Hanover.<\/p>"
+          }
+        },
+        "4f079cf2-7ac4-42a4-b2b8-142909603d32": {
+          "type": "button",
+          "settings": {
+            "button_label": "contact",
+            "button_link": "shopify:\/\/pages\/contact"
+          }
+        }
+      },
+      "block_order": [
+        "a2880955-71ff-4a3d-94f7-096ca275ad43",
+        "0798c79e-a639-4a82-a066-453211967fb6",
+        "4f079cf2-7ac4-42a4-b2b8-142909603d32"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/an-engagment-ring-sits-in-a-blue-box.jpg",
+        "image_2": "shopify:\/\/shop_images\/an-engagment-ring-sits-in-a-blue-box.jpg",
+        "img_style": "overlap",
+        "color_scheme": "",
+        "text_position": "right",
+        "v_align": "align-bottom"
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "3def522a-0898-4c51-b06d-2a2a2c6f3d0c",
+    "7825c5b8-9f81-4c4a-bb0e-715d7e03b64d",
+    "74d7b426-d16c-4c28-b88c-7ca9c138ca69"
   ]
 }

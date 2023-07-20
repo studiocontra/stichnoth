@@ -1,0 +1,103 @@
+.footer
+  background-color $black
+  color $white
+
+.footer__top
+  padding 30px 0
+  border-bottom 1px solid rgba($white, 0.2)
+
+  +mq(768)
+    padding 60px 0
+
+  .footer__logo
+    margin-bottom 2em
+    +mq(768)
+      margin-bottom 0
+
+  .text
+    margin-bottom 0
+
+
+.footer__main
+  padding 30px 0 60px
+  border-bottom 1px solid rgba($white, 0.2)
+
+  +mq(768)
+    padding 60px 0 120px
+
+  .footer__col
+    margin-bottom 4em
+
+    +mq(768)
+      margin-bottom 0
+
+  .title
+    margin-bottom 2em
+
+  ul
+    list-style none
+    padding-left 0
+
+  li
+  p
+    &
+    a
+      font-size 18px
+      line-height 1.2
+      color $white
+      margin-bottom 0.75em
+
+
+.footer__locale
+  a,
+  .bull
+    display inline-block
+
+  a
+    text-transform uppercase
+
+  .bull
+    margin 0
+
+
+.footer__social
+.footer__copyright
+  display flex
+  align-items center
+  padding-left 0
+  list-style none
+
+  li
+    margin-right 16px
+
+    a
+      display block
+
+  svg
+    width 20px
+    display block
+    margin 0
+
+    path
+      fill $white
+
+  .icon-youtube
+    width 24px
+
+
+.footer__copyright
+  justify-content space-between
+  padding 15px 0
+  text-transform uppercase
+
+  +mq(768)
+    padding 23px 0
+
+  a
+    color $white
+    font-size 14px
+
+  .policies
+    display flex
+    align-items center
+    list-style none

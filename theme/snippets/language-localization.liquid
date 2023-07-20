@@ -23,7 +23,11 @@
       {{ language.iso_code }}
     </a>
     {% unless forloop.last %}
-      <div class="bull">&bull;</div>
+      {% if inFooter %}
+        <div class="bull">/</div>
+      {% else %}
+        <div class="bull">&bull;</div>
+      {% endif %}
     {% endunless %}
   {%- endfor -%}
 {%- endif -%}
