@@ -29,21 +29,11 @@
           {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
           {%- assign card_collection = block.settings.collection -%}
 
-          <div class="collection-list__card">
-            <h3 class="title title--small">
-              {{ card_collection.title }}
-            </h3>
-
-            <div class="card__img">
-              {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
-            </div>
-
-            <div class="card__footer">
-              <span> {{ forloop.index }} / {{ forloop.length }} </span>
-
-              <span class="link"> Discover Now </span>
-            </div>
-          </div>
+          {% render 'card-collection',
+            card_collection: card_collection,
+            placeholder_image: placeholder_image,
+            forloop: forloop
+          %}
         </div>
       {%- endfor -%}
     </div>

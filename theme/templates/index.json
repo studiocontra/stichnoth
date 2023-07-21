@@ -25,7 +25,7 @@
         "template--19944138113322__7825c5b8-9f81-4c4a-bb0e-715d7e03b64d-1689725930cbb29b49-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "frontpage"
           }
         },
         "template--19944138113322__7825c5b8-9f81-4c4a-bb0e-715d7e03b64d-1689725930cbb29b49-1": {
@@ -89,11 +89,103 @@
         "text_position": "right",
         "v_align": "align-bottom"
       }
+    },
+    "80658265-3e2b-4689-b761-537e4df465f3": {
+      "type": "bg-image-with-text",
+      "settings": {
+        "color_scheme": "inverse",
+        "heading": "Image with text",
+        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+        "button_label": "Button label",
+        "button_link": "",
+        "text_position": "right"
+      }
+    },
+    "0640a114-b82d-42c6-a4aa-f7ffe7d4731f": {
+      "type": "image-with-text",
+      "blocks": {
+        "a9c4ed0f-ef38-40bb-ad25-326c86dbb964": {
+          "type": "heading",
+          "settings": {
+            "heading": "Timeless Craftsmanship",
+            "heading_size": "headline"
+          }
+        },
+        "3a196355-84fa-4be8-90fd-a265e7507fdd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For three generations, traditional manufacturing processes have met modern techniques in our manufactory. Goldschmiede Stichnoth stands for craftsmanship at the highest level. True to the motto “Made in Germany”, all pieces of jewelry are made in our manufactory in Hanover.<\/p>"
+          }
+        },
+        "b0064ab3-a468-4609-b115-2bc0580540da": {
+          "type": "button",
+          "settings": {
+            "button_label": "contact",
+            "button_link": "shopify:\/\/pages\/contact"
+          }
+        }
+      },
+      "block_order": [
+        "a9c4ed0f-ef38-40bb-ad25-326c86dbb964",
+        "3a196355-84fa-4be8-90fd-a265e7507fdd",
+        "b0064ab3-a468-4609-b115-2bc0580540da"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/an-engagment-ring-sits-in-a-blue-box.jpg",
+        "image_2": "shopify:\/\/shop_images\/an-engagment-ring-sits-in-a-blue-box.jpg",
+        "img_style": "space",
+        "color_scheme": "",
+        "text_position": "right",
+        "v_align": "align-bottom"
+      }
+    },
+    "a04c9bc8-533b-40e3-8445-512917a12c33": {
+      "type": "product-list",
+      "blocks": {
+        "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-2": {
+          "type": "related_product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-1": {
+          "type": "related_product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-3": {
+          "type": "related_product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "3137369b-2234-4dce-9357-32b351678431": {
+          "type": "related_product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-2",
+        "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-1",
+        "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-3",
+        "3137369b-2234-4dce-9357-32b351678431"
+      ],
+      "settings": {
+        "title": "Our Recommendations",
+        "color_scheme": "",
+        "show_view_all": false
+      }
     }
   },
   "order": [
     "3def522a-0898-4c51-b06d-2a2a2c6f3d0c",
     "7825c5b8-9f81-4c4a-bb0e-715d7e03b64d",
-    "74d7b426-d16c-4c28-b88c-7ca9c138ca69"
+    "74d7b426-d16c-4c28-b88c-7ca9c138ca69",
+    "80658265-3e2b-4689-b761-537e4df465f3",
+    "0640a114-b82d-42c6-a4aa-f7ffe7d4731f",
+    "a04c9bc8-533b-40e3-8445-512917a12c33"
   ]
 }

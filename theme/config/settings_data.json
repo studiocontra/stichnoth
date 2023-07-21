@@ -84,23 +84,23 @@
 
     ],
     "color_schemes": {
-      "background-1": {
+      "normal": {
         "settings": {
-          "background": "#efefef",
-          "text": "#242833",
-          "button": "#121212"
+          "background": "#fff",
+          "text": "#000000",
+          "button": "#957153"
         }
       },
-      "background-2": {
+      "dark": {
         "settings": {
-          "background": "#f3f3f3",
-          "text": "#121212",
-          "button": "#121212"
+          "background": "#1a1c1d",
+          "text": "#fff",
+          "button": "#fff"
         }
       },
-      "inverse": {
+      "gold": {
         "settings": {
-          "background": "#242833",
+          "background": "#957153",
           "text": "#ffffff",
           "button": "#ffffff"
         }

@@ -1,0 +1,100 @@
+<div class="custom-block product-list color-{{ section.settings.color_scheme }}">
+  {%- unless section.settings.title == blank -%}
+    <div class="product-list__headline">
+      <h2 class="title">
+        {{ section.settings.title }}
+      </h2>
+
+      {%- if section.settings.show_view_all -%}
+        <a
+          href="{{ routes.collections_url }}"
+          class="link"
+          aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
+        >
+          {{- 'sections.collection_list.view_all' | t -}}
+
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+          </svg>
+        </a>
+      {%- endif -%}
+    </div>
+  {%- endunless -%}
+
+  <div class="product-list__grid">
+    <div class="container">
+      <div class="row">
+        {%- for block in section.blocks -%}
+          <div class="col-sm-6 col-lg-3">
+            {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+            {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+            {%- assign card_collection = block.settings.collection -%}
+
+            {% render 'card-product', card_product: block.settings.product, placeholder_image: placeholder_image %}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "product-list",
+  "tag": "section",
+  "max_blocks": 12,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Collections",
+      "label": "t:sections.product-list.settings.title.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "background-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": false,
+      "label": "t:sections.product-list.settings.show_view_all.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "related_product",
+      "name": "product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product List",
+      "blocks": [
+        {
+          "type": "related_product"
+        },
+        {
+          "type": "related_product"
+        },
+        {
+          "type": "related_product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
