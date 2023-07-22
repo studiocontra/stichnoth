@@ -16,19 +16,27 @@
     width 30%
     max-width 240px
 
+  .img--small--bottom
+    top auto
+    bottom 10%
+
 
 .image-text__content
-  +mq(992)
-    padding-right 25%
+  &.left
+    +mq(992)
+      padding-left 15%
 
-  .img--small
-    float right
-    width 50%
-    max-width 240px
-    border-radius 8px
+  &.right
+    +mq(992)
+      padding-right 15%
 
   .title
     clear both
+
+  .title--hero-light
+    b,
+    strong
+      font-weight 600
 
   .text
     margin-bottom 1em
@@ -42,7 +50,11 @@
 
   .image-text__content
     .img--small
-      margin-bottom -17%
+      float right
+      width 50%
+      max-width 240px
+      border-radius 8px
+      margin-bottom -5%
       transform translateY(-50%)
 
       +mq(768)

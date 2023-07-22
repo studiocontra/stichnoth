@@ -82,8 +82,8 @@
         "4f079cf2-7ac4-42a4-b2b8-142909603d32"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/an-engagment-ring-sits-in-a-blue-box.jpg",
-        "image_2": "shopify:\/\/shop_images\/an-engagment-ring-sits-in-a-blue-box.jpg",
+        "image": "shopify:\/\/shop_images\/womens-hand-moon-bracelet-_925x_ee830176-d9b0-4bb5-b89f-4abc27feebc7.jpg",
+        "image_2": "shopify:\/\/shop_images\/moon-friendship-bracelet_925x_873b8179-5e77-41bf-963b-0b8005e9cfa5.jpg",
         "img_style": "overlap",
         "color_scheme": "",
         "text_position": "right",
@@ -93,8 +93,9 @@
     "80658265-3e2b-4689-b761-537e4df465f3": {
       "type": "bg-image-with-text",
       "settings": {
-        "color_scheme": "inverse",
-        "heading": "Image with text",
+        "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+        "color_scheme": "gold",
+        "heading": "1979 & <strong>1980<\/strong>",
         "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
         "button_label": "Button label",
         "button_link": "",
@@ -131,8 +132,8 @@
         "b0064ab3-a468-4609-b115-2bc0580540da"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/an-engagment-ring-sits-in-a-blue-box.jpg",
-        "image_2": "shopify:\/\/shop_images\/an-engagment-ring-sits-in-a-blue-box.jpg",
+        "image": "shopify:\/\/shop_images\/leather-anchor-bracelet-for-men_925x_1ee66342-cd3d-447d-8067-efcdae229c18.jpg",
+        "image_2": "shopify:\/\/shop_images\/anchor-bracelet-for-men_925x_1e3d669e-1b26-494e-b1c4-b58255c4b97f.jpg",
         "img_style": "space",
         "color_scheme": "",
         "text_position": "right",
@@ -145,25 +146,25 @@
         "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-2": {
           "type": "related_product",
           "settings": {
-            "product": ""
+            "product": "guardian-angel-earrings"
           }
         },
         "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-1": {
           "type": "related_product",
           "settings": {
-            "product": ""
+            "product": "gold-bird-necklace"
           }
         },
         "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-3": {
           "type": "related_product",
           "settings": {
-            "product": ""
+            "product": "bangle-bracelet"
           }
         },
         "3137369b-2234-4dce-9357-32b351678431": {
           "type": "related_product",
           "settings": {
-            "product": ""
+            "product": "silver-threader-necklace"
           }
         }
       },
@@ -176,7 +177,7 @@
       "settings": {
         "title": "Our Recommendations",
         "color_scheme": "",
-        "show_view_all": false
+        "show_view_all": true
       }
     }
   },

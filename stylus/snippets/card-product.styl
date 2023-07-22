@@ -1,0 +1,58 @@
+.card-product
+  a
+    color $black
+
+
+.card-product__media
+  position relative
+  margin-bottom 1em
+  aspect-ratio 1 / 1.45
+
+  svg
+  img
+    border-radius 8px
+    fullAbs()
+    fit()
+
+
+.card-product__content
+  display flex
+  align-content flex-start
+  justify-content space-between
+
+  .title
+    flex 0 1 auto
+
+  .wrap-price
+    flex 0 0 135px
+    font-size 18px
+    letter-spacing 0.1rem
+    line-height 1.2
+    color $gray
+
+    .price
+      text-align right
+
+    .price-item
+      display inline-block
+
+
+  .price--regular
+    display block
+
+
+  .price--sale
+    display none
+
+
+  .wrap-price--on-sale
+    .price--regular
+      display none
+
+    .price--sale
+      display block
+
+    .price-item--regular
+      color $gold
+      font-size 0.85em
+      text-decoration line-through

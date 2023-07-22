@@ -195,7 +195,7 @@
   font-size: calc(var(--font-heading-scale) * 1.2rem);
 }
 
-.card--horizontal .card-information > *:not(.visually-hidden:first-child) + *:not(.rating) {
+.card--horizontal .card-information > *:not(.sr-only:first-child) + *:not(.rating) {
   margin-top: 0;
 }
 
@@ -364,7 +364,7 @@
   margin-top: 0.4rem;
 }
 
-.card-information > *:not(.visually-hidden:first-child) + *:not(.rating) {
+.card-information > *:not(.sr-only:first-child) + *:not(.rating) {
   margin-top: 0.7rem;
 }
 

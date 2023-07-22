@@ -233,7 +233,7 @@ fieldset.product-form__input .form__label {
   color: rgb(var(--color-background));
 }
 
-.product-form__input input[type='radio']:not(.disabled) + label > .visually-hidden {
+.product-form__input input[type='radio']:not(.disabled) + label > .sr-only {
   display: none;
 }
 

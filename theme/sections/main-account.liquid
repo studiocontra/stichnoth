@@ -32,7 +32,7 @@
       {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
           <table role="table" class="order-history">
-            <caption class="visually-hidden">
+            <caption class="sr-only">
               {{ 'customer.orders.title' | t }}
             </caption>
             <thead role="rowgroup">

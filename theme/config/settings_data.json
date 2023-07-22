@@ -45,7 +45,7 @@
           "headline": "Work with us",
           "content": "<p>If you would like to become part of an innovative company that has been shaped by decades of tradition, apply now! <\/p><p>We are always interested in talented employees who enjoy creativity and craftsmanship.<\/p>",
           "button_label": "Go to Careers",
-          "button_link": "shopify:\/\/pages\/contact"
+          "button_link": "shopify:\/\/pages\/our-story"
         }
       },
       "footer": {
@@ -86,7 +86,7 @@
     "color_schemes": {
       "normal": {
         "settings": {
-          "background": "#fff",
+          "background": "#ffffff",
           "text": "#000000",
           "button": "#957153"
         }
@@ -94,8 +94,8 @@
       "dark": {
         "settings": {
           "background": "#1a1c1d",
-          "text": "#fff",
-          "button": "#fff"
+          "text": "#ffffff",
+          "button": "#ffffff"
         }
       },
       "gold": {

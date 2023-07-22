@@ -44,7 +44,6 @@
 
 .title--hero
   font-size clamp(120px, 15vw, 260px)
-  font-weight 700
   line-height 0.85
   margin-bottom 0
   letter-spacing 0.015em
@@ -55,7 +54,6 @@
 
 .title--hero--small
   font-size clamp(112px, 10vw, 175px)
-  font-weight 700
   line-height 0.85
   margin-bottom 0
   letter-spacing 0.015em
@@ -64,54 +62,3 @@
 
 .title--hero-light
   font-weight 400
-
-
-.title--deco
-  display flex
-  align-items flex-start
-
-  &:before
-    position relative
-    display inline-block
-    margin-right 5px
-    color $yellow
-    vertical-align middle
-    font-size 1.5em
-    line-height 1
-    transform translateY(-3px)
-    content '\2022'
-
-  p
-    display inline-block
-
-
-// Other
-.eyebrow
-  display inline-block
-  padding 5px 8px
-  margin-bottom 36px
-  color $black
-  background-color $yellow
-  text-transform uppercase
-  font-weight 500
-  font-size 12px
-  line-height 1.3
-  border-radius 2px
-
-  +mq(768)
-    font-size 14px
-
-
-.eyebrow--small
-  font-size 8px
-
-  +mq(768)
-    font-size 10px
-
-.eyebrow--white
-  background-color $white
-
-
-.eyebrow--black
-  background-color $black
-  color $white

@@ -2,20 +2,24 @@
   margin-bottom 72px
   text-align center
 
+.product-list__slider
+  margin 0 auto
+  padding 0 10px
+  max-width 2000px
 
-.product-list__card
-  .title
-    margin-bottom 1em
+  +mq(1300)
+    padding 0 22px
 
-  .card__img
-    margin-bottom 1em
+  .swiper-slide
+    width @css{max(275px, calc(25% - 20px))}
+    margin 0 10px
 
-    img,
-    svg
-      display block
-      width 100%
-      border-radius 8px
-
-  .card__footer
+  .product-list__slider__arrows
     display flex
-    justify-content space-between
+    justify-content flex-end
+
+    .swiper-button
+      cursor pointer
+
+      &-disabled
+        opacity 0.3

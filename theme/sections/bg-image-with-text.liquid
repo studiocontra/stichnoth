@@ -4,41 +4,65 @@
 >
   <div class="container">
     <div class="row justify-between align-bottom{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
-      <div class="col-12">
-        {%- if section.settings.heading != '' -%}
-          <div class="bg-image-text__headline">
-            <h3
-              class="title title--hero title--hero-light"
-              style="color: {{ section.settings.color_scheme.settings.text }};"
-            >
-              {{ section.settings.heading }}
-            </h3>
-          </div>
-        {%- endif -%}
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="bg-image-text__content">
-          {%- if section.settings.text != '' -%}
-            <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
-              {{ section.settings.text }}
+      {% if section.settings.image %}
+        <div class="col-12">
+          {%- if section.settings.heading != '' -%}
+            <div class="bg-image-text__headline">
+              <h3
+                class="title title--hero title--hero-light"
+                style="color: {{ section.settings.color_scheme.settings.text }};"
+              >
+                {{ section.settings.heading }}
+              </h3>
             </div>
           {%- endif -%}
         </div>
-      </div>
-      <div class="col-md-6 col-lg-8">
-        <div class="bg-image-text__img">
-          <picture>
-            <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
-            <source srcset="{{ section.settings.image | image_url: width: 450 }}">
-            <img
-              src="{{ section.settings.image | image_url }}"
-              width="{{ section.settings.image.width }}"
-              height="{{ section.settings.image.height }}"
-              lazy="true"
-            >
-          </picture>
+        <div class="col-md-6 col-lg-4">
+          <div class="bg-image-text__content">
+            {%- if section.settings.text != '' -%}
+              <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
+                {{ section.settings.text }}
+              </div>
+            {%- endif -%}
+          </div>
         </div>
-      </div>
+        <div class="col-md-6 col-lg-8">
+          <div class="bg-image-text__img">
+            <picture>
+              <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+              <source srcset="{{ section.settings.image | image_url: width: 450 }}">
+              <img
+                src="{{ section.settings.image | image_url }}"
+                width="{{ section.settings.image.width }}"
+                height="{{ section.settings.image.height }}"
+                lazy="true"
+              >
+            </picture>
+          </div>
+        </div>
+      {% else %}
+        <div class="col-md-6">
+          {%- if section.settings.heading != '' -%}
+            <div class="bg-image-text__headline">
+              <h3
+                class="title title--hero title--hero-light"
+                style="color: {{ section.settings.color_scheme.settings.text }};"
+              >
+                {{ section.settings.heading }}
+              </h3>
+            </div>
+          {%- endif -%}
+        </div>
+        <div class="col-md-6">
+          <div class="bg-image-text__content bg-image-text__content--padding">
+            {%- if section.settings.text != '' -%}
+              <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
+                {{ section.settings.text }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>

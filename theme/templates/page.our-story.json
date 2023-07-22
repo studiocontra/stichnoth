@@ -1,0 +1,234 @@
+{
+  "sections": {
+    "fe482c5d-34a9-40b7-84da-c05f0315c2ca": {
+      "type": "hero",
+      "blocks": {
+        "a95498be-f23e-426f-9cf2-120b58ab0124": {
+          "type": "slide",
+          "settings": {
+            "headline": "Our Story",
+            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+            "button_label": "Learn More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a95498be-f23e-426f-9cf2-120b58ab0124"
+      ],
+      "settings": {
+      }
+    },
+    "ad84b7a7-8b64-4366-aeac-e7cd158c5b21": {
+      "type": "image-with-text",
+      "blocks": {
+        "117fcb7c-fc9f-468f-be5f-ddcfdaa8daa8": {
+          "type": "heading",
+          "settings": {
+            "heading": "1954",
+            "heading_size": "display"
+          }
+        },
+        "9019c496-1454-47bc-a888-f2c1c339cb75": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Goldschmiede Stichnoth was founded in 1954 by Horst Stichnoth in Lehrte near Hannover, after passing the master craftsman examination and completing his studies at the Zeichenakademie Hanau.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "117fcb7c-fc9f-468f-be5f-ddcfdaa8daa8",
+        "9019c496-1454-47bc-a888-f2c1c339cb75"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
+        "color_scheme": "",
+        "img_style": "overlap",
+        "text_position": "left",
+        "v_align": "align-center"
+      }
+    },
+    "470cdd73-ca3f-4f78-a301-584a0894a773": {
+      "type": "image-with-text",
+      "blocks": {
+        "3cb64149-e4c2-42a4-a8f6-ab778b33dae9": {
+          "type": "heading",
+          "settings": {
+            "heading": "1959",
+            "heading_size": "display"
+          }
+        },
+        "72bf12ed-09ec-4bbe-b189-bbb4cab20f85": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In 1959, Horst Stichnoth expanded his goldsmith business to Hannover and has since been working with his wife Anneliese Stichnoth, constantly filled with joy and ambition, to further develop and grow the company. The Goldschmiede Stichnoth has always been recognized as a training company.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3cb64149-e4c2-42a4-a8f6-ab778b33dae9",
+        "72bf12ed-09ec-4bbe-b189-bbb4cab20f85"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
+        "color_scheme": "",
+        "img_style": "overlap",
+        "text_position": "right",
+        "v_align": "align-center"
+      }
+    },
+    "b48ef18c-19ef-4b35-a56c-c595bc3120a9": {
+      "type": "bg-image-with-text",
+      "settings": {
+        "color_scheme": "dark",
+        "heading": "1979 & <strong>1980<\/strong>",
+        "text": "<p>Horst Stichnoth passed on his craftsmanship and love for jewelry to his sons Jörg and Dirk Stichnoth, both of whom started their apprenticeship as goldsmiths in 1979 and 1980. The foundation for the continuation of the business in the second generation was laid.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_position": "right"
+      }
+    },
+    "fcd5e182-bcf0-410e-acb0-66447f0d08d9": {
+      "type": "image-with-text",
+      "blocks": {
+        "14e8d3f5-a9a1-4471-8ca2-7afb525129c0": {
+          "type": "heading",
+          "settings": {
+            "heading": "19XX",
+            "heading_size": "display"
+          }
+        },
+        "c4918080-4112-4fc5-bcf0-22d494e62c4d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After completing their apprenticeship and\/or simultaneously studying at the Zeichenakademie Hanau, Jörg and Dirk Stichnoth joined the family-run business in 19XX. The second store of the Goldschmiede Stichnoth was opened at Georgstraße 52 in Hannover.<\/p><p>In the following years, additional stores were opened in Berlin, Frankfurt, Bremen, and Hamburg.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "14e8d3f5-a9a1-4471-8ca2-7afb525129c0",
+        "c4918080-4112-4fc5-bcf0-22d494e62c4d"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
+        "color_scheme": "",
+        "img_style": "space",
+        "text_position": "right",
+        "v_align": "align-center"
+      }
+    },
+    "a857daab-0a05-4d24-aa93-beb7b119eaaf": {
+      "type": "image-with-text",
+      "blocks": {
+        "8fc94724-52a5-494c-aaf1-62afe331adc7": {
+          "type": "heading",
+          "settings": {
+            "heading": "2010",
+            "heading_size": "display"
+          }
+        },
+        "785211cf-b233-4376-ad44-a5ca641acc1d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In 2010, Florian Stichnoth, son of Dirk Stichnoth, began his apprenticeship as a goldsmith in the family business, thus laying the foundation for the third generation.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "8fc94724-52a5-494c-aaf1-62afe331adc7",
+        "785211cf-b233-4376-ad44-a5ca641acc1d"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
+        "color_scheme": "",
+        "img_style": "overlap",
+        "text_position": "left",
+        "v_align": "align-center"
+      }
+    },
+    "2864d7f7-cfda-43a1-8bd2-36c19fa2ef94": {
+      "type": "image-with-text",
+      "blocks": {
+        "b0e3ca51-6be3-460d-ac30-c426415f478f": {
+          "type": "heading",
+          "settings": {
+            "heading": "2021",
+            "heading_size": "display"
+          }
+        },
+        "2fcf063a-3067-417b-9870-bc7dcbfe5287": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Another milestone followed in 2021 when Malte Stichnoth, also a son of Dirk Stichnoth, joined the company. A year later, his brother Florian followed suit.<\/p><p>Over the years, the company has continuously evolved and grown. The family's joy for jewelry and work, as well as their strong ambition, drive them forward.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b0e3ca51-6be3-460d-ac30-c426415f478f",
+        "2fcf063a-3067-417b-9870-bc7dcbfe5287"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
+        "color_scheme": "",
+        "img_style": "overlap",
+        "text_position": "right",
+        "v_align": "align-center"
+      }
+    },
+    "a99e782a-18c9-448a-9cab-c4064f0a4c6d": {
+      "type": "product-list",
+      "blocks": {
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1": {
+          "type": "related_product",
+          "settings": {
+            "product": "gold-bird-necklace"
+          }
+        },
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2": {
+          "type": "related_product",
+          "settings": {
+            "product": "gemstone"
+          }
+        },
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3": {
+          "type": "related_product",
+          "settings": {
+            "product": "choker-with-triangle"
+          }
+        },
+        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2": {
+          "type": "related_product",
+          "settings": {
+            "product": "chain-bracelet"
+          }
+        }
+      },
+      "block_order": [
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1",
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2",
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3",
+        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2"
+      ],
+      "settings": {
+        "title": "Our Recommendations",
+        "color_scheme": "",
+        "show_view_all": true
+      }
+    }
+  },
+  "order": [
+    "fe482c5d-34a9-40b7-84da-c05f0315c2ca",
+    "ad84b7a7-8b64-4366-aeac-e7cd158c5b21",
+    "470cdd73-ca3f-4f78-a301-584a0894a773",
+    "b48ef18c-19ef-4b35-a56c-c595bc3120a9",
+    "fcd5e182-bcf0-410e-acb0-66447f0d08d9",
+    "a857daab-0a05-4d24-aa93-beb7b119eaaf",
+    "2864d7f7-cfda-43a1-8bd2-36c19fa2ef94",
+    "a99e782a-18c9-448a-9cab-c4064f0a4c6d"
+  ]
+}

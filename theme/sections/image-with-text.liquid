@@ -16,7 +16,7 @@
 
           {% if section.settings.img_style == 'overlap' %}
             <img
-              class="img--small"
+              class="img--small{% if section.settings.text_position == 'left' %} img--small--bottom{% endif %}"
               src="{{ section.settings.image_2 | image_url: width: 300 }}"
               width="{{ section.settings.image_2.width }}"
               height="{{ section.settings.image_2.height }}"
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div class="image-text__content">
+        <div class="image-text__content {{ section.settings.text_position }}">
           {% if section.settings.img_style == 'space' %}
             <img
               class="img--small"
@@ -39,7 +39,7 @@
           {%- for block in section.blocks -%}
             {% case block.type %}
               {%- when 'heading' -%}
-                <h3 class="title{% if block.settings.heading_size == 'hero' %} title--hero-light{% endif %}">
+                <h3 class="title{% if block.settings.heading_size == 'display' %} title--hero title--hero-light{% endif %}">
                   {{ block.settings.heading }}
                 </h3>
               {%- when 'text' -%}
@@ -73,6 +73,12 @@
       "label": "Additional Image"
     },
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
       "type": "select",
       "id": "img_style",
       "label": "Images Style",
@@ -87,12 +93,6 @@
         }
       ],
       "default": "overlap"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "background-1"
     },
     {
       "type": "select",
@@ -134,7 +134,7 @@
       "limit": 1,
       "settings": [
         {
-          "type": "text",
+          "type": "inline_richtext",
           "id": "heading",
           "default": "Image with text",
           "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"

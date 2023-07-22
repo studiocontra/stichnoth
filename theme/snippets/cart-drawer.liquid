@@ -84,7 +84,7 @@
                   <thead role="rowgroup">
                     <tr role="row">
                       <th id="CartDrawer-ColumnProductImage" role="columnheader">
-                        <span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span>
+                        <span class="sr-only">{{ 'sections.cart.headings.image' | t }}</span>
                       </th>
                       <th
                         id="CartDrawer-ColumnProduct"
@@ -103,7 +103,7 @@
                         {{ 'sections.cart.headings.total' | t }}
                       </th>
                       <th id="CartDrawer-ColumnQuantity" role="columnheader">
-                        <span class="visually-hidden">{{ 'sections.cart.headings.quantity' | t }}</span>
+                        <span class="sr-only">{{ 'sections.cart.headings.quantity' | t }}</span>
                       </th>
                     </tr>
                   </thead>
@@ -137,13 +137,13 @@
 
                           {%- if item.original_price != item.final_price -%}
                             <div class="cart-item__discounted-prices">
-                              <span class="visually-hidden">
+                              <span class="sr-only">
                                 {{ 'products.product.price.regular_price' | t }}
                               </span>
                               <s class="cart-item__old-price product-option">
                                 {{- item.original_price | money -}}
                               </s>
-                              <span class="visually-hidden">
+                              <span class="sr-only">
                                 {{ 'products.product.price.sale_price' | t }}
                               </span>
                               <strong class="cart-item__final-price product-option">
@@ -232,13 +232,13 @@
                           <div class="cart-item__price-wrapper">
                             {%- if item.original_line_price != item.final_line_price -%}
                               <div class="cart-item__discounted-prices">
-                                <span class="visually-hidden">
+                                <span class="sr-only">
                                   {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price price price--end">
                                   {{ item.original_line_price | money }}
                                 </s>
-                                <span class="visually-hidden">
+                                <span class="sr-only">
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                 <span class="price price--end">
@@ -253,12 +253,10 @@
 
                             {%- if item.variant.available and item.unit_price_measurement -%}
                               <div class="unit-price caption">
-                                <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+                                <span class="sr-only">{{ 'products.product.price.unit_price' | t }}</span>
                                 {{ item.variant.unit_price | money }}
                                 <span aria-hidden="true">/</span>
-                                <span class="visually-hidden"
-                                  >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
-                                >
+                                <span class="sr-only">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                                 {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
                                   {{- item.variant.unit_price_measurement.reference_value -}}
                                 {%- endif -%}
@@ -272,7 +270,7 @@
                           <div class="cart-item__quantity-wrapper">
                             <quantity-input class="quantity cart-quantity">
                               <button class="quantity__button no-js-hidden" name="minus" type="button">
-                                <span class="visually-hidden">
+                                <span class="sr-only">
                                   {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
                                 </span>
                                 {% render 'icon-minus' %}
@@ -296,7 +294,7 @@
                                 data-index="{{ item.index | plus: 1 }}"
                               >
                               <button class="quantity__button no-js-hidden" name="plus" type="button">
-                                <span class="visually-hidden">
+                                <span class="sr-only">
                                   {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
                                 </span>
                                 {% render 'icon-plus' %}
@@ -342,8 +340,8 @@
                 </table>
               </div>
             {%- endif -%}
-            <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
-            <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">
+            <p id="CartDrawer-LiveRegionText" class="sr-only" role="status"></p>
+            <p id="CartDrawer-LineItemStatus" class="sr-only" aria-hidden="true" role="status">
               {{ 'accessibility.loading' | t }}
             </p>
           </div>
@@ -360,7 +358,7 @@
               </span>
             </summary>
             <cart-note class="cart__note field">
-              <label class="visually-hidden" for="CartDrawer-Note">{{ 'sections.cart.note' | t }}</label>
+              <label class="sr-only" for="CartDrawer-Note">{{ 'sections.cart.note' | t }}</label>
               <textarea
                 id="CartDrawer-Note"
                 class="text-area text-area--resize-vertical field__input"

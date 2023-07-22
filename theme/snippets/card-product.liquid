@@ -22,57 +22,55 @@
 
 {%- if card_product and card_product != empty -%}
   <div class="card-product">
-    <div class="card-product__media">
-      {%- if card_product.featured_media -%}
-        <picture>
-          <source srcset="{{ card_product.featured_media | image_url: width: 650 }}" media="(min-width: 450px)">
-          <source srcset="{{ card_product.featured_media | image_url: width: 450 }}">
-          <img
-            src="{{ card_product.featured_media | image_url }}"
-            width="{{ card_product.featured_media.width }}"
-            height="{{ card_product.featured_media.height }}"
-            lazy="true"
-          >
-        </picture>
+    <a href="{{ card_product.url }}">
+      <div class="card-product__media">
+        {%- if card_product.featured_media -%}
+          <picture>
+            <source srcset="{{ card_product.featured_media | image_url: width: 650 }}" media="(min-width: 450px)">
+            <source srcset="{{ card_product.featured_media | image_url: width: 450 }}">
+            <img
+              src="{{ card_product.featured_media | image_url }}"
+              width="{{ card_product.featured_media.width }}"
+              height="{{ card_product.featured_media.height }}"
+              lazy="true"
+            >
+          </picture>
 
-        {%- if card_product.available == false -%}
-          <div class="card__badge">
-            <span
-              id="Badge-{{ section_id }}-{{ card_product.id }}"
-              class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
-            >
-              {{- 'products.product.sold_out' | t -}}
-            </span>
-          </div>
-        {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-          <div class="card__badge">
-            <span
-              id="Badge-{{ section_id }}-{{ card_product.id }}"
-              class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-            >
-              {{- 'products.product.on_sale' | t -}}
-            </span>
-          </div>
+          {%- if card_product.available == false -%}
+            <div class="card__badge">
+              <span
+                id="Badge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+              >
+                {{- 'products.product.sold_out' | t -}}
+              </span>
+            </div>
+          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+            <div class="card__badge">
+              <span
+                id="Badge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+              >
+                {{- 'products.product.on_sale' | t -}}
+              </span>
+            </div>
+          {%- endif -%}
         {%- endif -%}
-      {%- endif -%}
-    </div>
+      </div>
 
-    <div class="card-product__content">
-      <div class="card__information">
+      <div class="card-product__content">
         <h3 class="title title--small">
-          <a href="{{ card_product.url }}">
-            {{ card_product.title | escape }}
-          </a>
+          {{ card_product.title | escape }}
         </h3>
 
-        {% render 'price', product: card_product, price_class: '' %}
+        {% render 'price', product: card_product %}
       </div>
-    </div>
+    </a>
 
     <div class="card-product__content">
       <div class="card-information">
         {%- if show_vendor -%}
-          <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+          <span class="sr-only">{{ 'accessibility.vendor' | t }}</span>
           <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
         {%- endif -%}
 
@@ -206,9 +204,7 @@
     </div>
     <div class="card-product__content">
       <h3 class="title title--small">
-        <a role="link" aria-disabled="true">
-          {{ 'onboarding.product_title' | t }}
-        </a>
+        {{ 'onboarding.product_title' | t }}
       </h3>
     </div>
   </div>
