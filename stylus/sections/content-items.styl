@@ -1,0 +1,84 @@
+.content-items__items
+  +mq(1400)
+    padding-right 16.666%
+
+  .single-item
+    display flex
+    align-items flex-start
+    flex-direction column
+
+    +mq(768)
+      margin-bottom 3em
+    +mq(992)
+      margin-bottom 6em
+      flex-direction row
+
+    &:nth-child(odd)
+      +mq(992)
+        padding-right 8.333%
+      +mq(1400)
+        padding-right 16.666%
+
+    &:nth-child(even)
+      +mq(992)
+        padding-left 8.333%
+      +mq(1400)
+        padding-left 16.666%
+
+
+    .single-item__img
+      position relative
+      flex 0 0 230px
+      border-radius 8px
+      overflow hidden
+      aspect-ratio 1 / 1
+      margin-bottom 2em
+
+      +mq(992)
+        flex 0 0 30%
+        margin-bottom 0
+      +mq(1200)
+        flex 0 0 250px
+
+      img
+        fullAbs()
+        fit()
+
+
+    .single-item__text
+      +mq(992)
+        padding-left 32px
+
+
+.content-items__items--mobile
+  position relative
+  display block
+  width calc(100% + 32px)
+  left -16px
+
+  +mq(768)
+    display none
+
+  .swiper-wrapper
+    padding 0 8px
+
+  .swiper-slide
+    width 235px
+    margin 0 8px
+
+  .content-items__arrows
+    display flex
+    justify-content flex-end
+
+    .swiper-button
+      cursor pointer
+
+      &-disabled
+        opacity 0.3
+
+
+.content-items__items--desktop
+  display none
+
+  +mq(768)
+    display block

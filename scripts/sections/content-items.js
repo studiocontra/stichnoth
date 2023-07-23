@@ -3,19 +3,19 @@
  */
 const mainHeaderApp = Vue.createApp({
   mounted() {
-    new Swiper('.collection-list__slider', {
+    new Swiper('.js-items-content', {
       slidesPerView: 'auto',
       spaceBetween: 0,
       watchOverflow: true,
       centerInsufficientSlides: true,
       centeredSlidesBounds: true,
       navigation: {
-        nextEl: '.js-list-next',
-        prevEl: '.js-list-prev',
+        nextEl: '.js-content-items-next',
+        prevEl: '.js-content-items-prev',
       },
     });
   }
 });
 
 mainHeaderApp.config.compilerOptions.delimiters = ['[[', ']]'];
-mainHeaderApp.mount('.collection-list');
+mainHeaderApp.mount('.content-items');

@@ -21,7 +21,7 @@ const mainHeaderApp = Vue.createApp({
       navigation: {
         nextEl: '.js-hero-next',
         prevEl: '.js-hero-prev',
-      },
+      }
     });
   }
 });

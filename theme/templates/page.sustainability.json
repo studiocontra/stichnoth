@@ -1,0 +1,171 @@
+{
+  "sections": {
+    "fe482c5d-34a9-40b7-84da-c05f0315c2ca": {
+      "type": "hero",
+      "blocks": {
+        "a95498be-f23e-426f-9cf2-120b58ab0124": {
+          "type": "slide",
+          "settings": {
+            "headline": "Sustainability",
+            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+            "button_label": "Learn More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a95498be-f23e-426f-9cf2-120b58ab0124"
+      ],
+      "settings": {
+      }
+    },
+    "4fb2b7f7-da17-43c7-a92c-8c7ed59e8d9a": {
+      "type": "content-items",
+      "blocks": {
+        "eb0a3cd3-57db-462d-9e54-1adec639fc3a": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/emeralds.jpg",
+            "heading": "Emeralds",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "7e8782db-8690-4656-a2c8-fc9eae1d5471": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sapphire.jpg",
+            "heading": "Sapphire",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "ca4c8639-9caa-44b4-9f7e-9d0dbf71d24c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gold.jpg",
+            "heading": "Gold",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "f698a4d7-3cef-414f-808d-2a5c7563bf48": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/silver.jpg",
+            "heading": "Silver",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "73ed96ea-9624-4007-8470-3f6a036fd9ae": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wood.jpg",
+            "heading": "Wood",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "eb0a3cd3-57db-462d-9e54-1adec639fc3a",
+        "7e8782db-8690-4656-a2c8-fc9eae1d5471",
+        "ca4c8639-9caa-44b4-9f7e-9d0dbf71d24c",
+        "f698a4d7-3cef-414f-808d-2a5c7563bf48",
+        "73ed96ea-9624-4007-8470-3f6a036fd9ae"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "text_position": "right",
+        "heading_size": "headline",
+        "heading": "Materials",
+        "text": "<p>The finest materials and unique gemstones have been part of our everyday lives since 1954. In dealing with these, we have further developed processing methods over decades and have paid particular attention to environmentally friendly implementation.<\/p><p>From the use of green energy from solar generation to the recycling of precious metals and the conscious purchase of gemstones that have been proven to be ethically correctly mined: we always follow the philosophy of working in a resource-saving manner and protecting our environment<\/p>"
+      }
+    },
+    "b48ef18c-19ef-4b35-a56c-c595bc3120a9": {
+      "type": "bg-image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+        "color_scheme": "gold",
+        "heading": "Green <strong>Energy<\/strong>",
+        "text": "<p>In addition to buying and processing scrap gold, which makes a significant contribution to recycling, we run part of our production with green energy, which is generated with the help of our photovoltaic system. In addition, when choosing our means of transport, we pay attention to the constant expansion of our electric fleet.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_position": "right"
+      }
+    },
+    "fcd5e182-bcf0-410e-acb0-66447f0d08d9": {
+      "type": "image-with-text",
+      "blocks": {
+        "14e8d3f5-a9a1-4471-8ca2-7afb525129c0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Responsibility",
+            "heading_size": "headline"
+          }
+        },
+        "c4918080-4112-4fc5-bcf0-22d494e62c4d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As a family business with generations of experience, we hold true to our traditions while embracing innovation. We pour our heart and soul into every piece of jewelry we create, using old-world craftsmanship techniques combined with the latest technology to achieve unparalleled results.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "14e8d3f5-a9a1-4471-8ca2-7afb525129c0",
+        "c4918080-4112-4fc5-bcf0-22d494e62c4d"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
+        "color_scheme": "",
+        "img_style": "space",
+        "text_position": "right",
+        "v_align": "align-center"
+      }
+    },
+    "a99e782a-18c9-448a-9cab-c4064f0a4c6d": {
+      "type": "product-list",
+      "blocks": {
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1": {
+          "type": "related_product",
+          "settings": {
+            "product": "gold-bird-necklace"
+          }
+        },
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2": {
+          "type": "related_product",
+          "settings": {
+            "product": "gemstone"
+          }
+        },
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3": {
+          "type": "related_product",
+          "settings": {
+            "product": "choker-with-triangle"
+          }
+        },
+        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2": {
+          "type": "related_product",
+          "settings": {
+            "product": "chain-bracelet"
+          }
+        }
+      },
+      "block_order": [
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1",
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2",
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3",
+        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2"
+      ],
+      "settings": {
+        "title": "Our Recommendations",
+        "color_scheme": "",
+        "show_view_all": true
+      }
+    }
+  },
+  "order": [
+    "fe482c5d-34a9-40b7-84da-c05f0315c2ca",
+    "4fb2b7f7-da17-43c7-a92c-8c7ed59e8d9a",
+    "b48ef18c-19ef-4b35-a56c-c595bc3120a9",
+    "fcd5e182-bcf0-410e-acb0-66447f0d08d9",
+    "a99e782a-18c9-448a-9cab-c4064f0a4c6d"
+  ]
+}

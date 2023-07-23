@@ -1,0 +1,156 @@
+{
+  "sections": {
+    "fe482c5d-34a9-40b7-84da-c05f0315c2ca": {
+      "type": "hero",
+      "blocks": {
+        "a95498be-f23e-426f-9cf2-120b58ab0124": {
+          "type": "slide",
+          "settings": {
+            "headline": "Craftmanship",
+            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+            "button_label": "Learn More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a95498be-f23e-426f-9cf2-120b58ab0124"
+      ],
+      "settings": {
+      }
+    },
+    "fcd5e182-bcf0-410e-acb0-66447f0d08d9": {
+      "type": "image-with-text",
+      "blocks": {
+        "14e8d3f5-a9a1-4471-8ca2-7afb525129c0": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Art of Jewelry Making",
+            "heading_size": "headline"
+          }
+        },
+        "c4918080-4112-4fc5-bcf0-22d494e62c4d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Craftsmanship is the focus of each of our pieces of jewelry. The individuality, creativity and skill of the goldsmiths are reflected in every single piece. This creates something very special for every customer.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "14e8d3f5-a9a1-4471-8ca2-7afb525129c0",
+        "c4918080-4112-4fc5-bcf0-22d494e62c4d"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
+        "color_scheme": "",
+        "img_style": "overlap",
+        "text_position": "left",
+        "v_align": "align-center"
+      }
+    },
+    "00cf1d3e-5305-4bd2-a54f-e78b90dbf19b": {
+      "type": "image-with-accordion",
+      "blocks": {
+        "8507d3e4-e30b-46d6-91ca-b168406afb6e": {
+          "type": "item",
+          "settings": {
+            "heading": "Design",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "466c9452-1b75-4dc1-a7f5-c3d6f942a573": {
+          "type": "item",
+          "settings": {
+            "heading": "Forming Metal",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "6afdaee1-bb6f-4a98-bdcd-611750d4e688": {
+          "type": "item",
+          "settings": {
+            "heading": "Casting",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "9afd3f77-f478-42ef-b326-d1b720dcb5f1": {
+          "type": "item",
+          "settings": {
+            "heading": "Polishing",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "8507d3e4-e30b-46d6-91ca-b168406afb6e",
+        "466c9452-1b75-4dc1-a7f5-c3d6f942a573",
+        "6afdaee1-bb6f-4a98-bdcd-611750d4e688",
+        "9afd3f77-f478-42ef-b326-d1b720dcb5f1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/leather-anchor-bracelet-for-men_925x_1ee66342-cd3d-447d-8067-efcdae229c18.jpg",
+        "color_scheme": "",
+        "text_position": "right"
+      }
+    },
+    "b48ef18c-19ef-4b35-a56c-c595bc3120a9": {
+      "type": "bg-image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+        "color_scheme": "gold",
+        "heading": "Green <strong>Energy<\/strong>",
+        "text": "<p>In addition to buying and processing scrap gold, which makes a significant contribution to recycling, we run part of our production with green energy, which is generated with the help of our photovoltaic system. In addition, when choosing our means of transport, we pay attention to the constant expansion of our electric fleet.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "text_position": "right"
+      }
+    },
+    "a99e782a-18c9-448a-9cab-c4064f0a4c6d": {
+      "type": "product-list",
+      "blocks": {
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1": {
+          "type": "related_product",
+          "settings": {
+            "product": "gold-bird-necklace"
+          }
+        },
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2": {
+          "type": "related_product",
+          "settings": {
+            "product": "gemstone"
+          }
+        },
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3": {
+          "type": "related_product",
+          "settings": {
+            "product": "choker-with-triangle"
+          }
+        },
+        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2": {
+          "type": "related_product",
+          "settings": {
+            "product": "chain-bracelet"
+          }
+        }
+      },
+      "block_order": [
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1",
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2",
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3",
+        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2"
+      ],
+      "settings": {
+        "title": "Our Recommendations",
+        "color_scheme": "",
+        "show_view_all": true
+      }
+    }
+  },
+  "order": [
+    "fe482c5d-34a9-40b7-84da-c05f0315c2ca",
+    "fcd5e182-bcf0-410e-acb0-66447f0d08d9",
+    "00cf1d3e-5305-4bd2-a54f-e78b90dbf19b",
+    "b48ef18c-19ef-4b35-a56c-c595bc3120a9",
+    "a99e782a-18c9-448a-9cab-c4064f0a4c6d"
+  ]
+}

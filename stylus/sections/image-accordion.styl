@@ -1,0 +1,64 @@
+.image-accordion__img
+  margin-bottom 3em
+
+  +mq(768)
+    margin-bottom 0
+
+  img
+    border-radius 8px
+
+
+.image-accordion__content
+  &.left
+    +mq(768)
+      padding-right 4.111%
+      padding-left 8.333%
+    +mq(992)
+      padding-right 8.333%
+      padding-left 16.666%
+
+  &.right
+    +mq(768)
+      padding-right 8.333%
+      padding-left 4.111%
+    +mq(992)
+      padding-right 16.666%
+      padding-left 8.333%
+
+
+  .accordion-item.active
+    .accordion-item__content
+      display block
+
+
+  .accordion-item__headline
+    display flex
+    margin-bottom 2em
+    cursor pointer
+
+    .icon,
+    .title
+      pointer-events none
+
+    .icon
+      width 35px
+      margin-right 20px
+
+
+  .accordion-item__loader
+    width 100%
+    height 3px
+    margin-bottom 2em
+    background-color $gray2
+
+    .progress-bar
+      background-color $black
+      transition width 0.2s ease-in
+
+
+  .accordion-item__content
+    display none
+
+    .text
+      color #6f6f6f
+

@@ -1,0 +1,121 @@
+<div class="custom-block image-accordion">
+  <div class="container">
+    <div class="row {% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
+      <div class="col-md-5">
+        <div class="image-accordion__img">
+          <picture>
+            <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+            <source srcset="{{ section.settings.image | image_url: width: 450 }}">
+            <img
+              src="{{ section.settings.image | image_url }}"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+              lazy="true"
+            >
+          </picture>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="image-accordion__content {{ section.settings.text_position }}">
+          {%- for block in section.blocks -%}
+            <div
+              class="accordion-item"
+              :class="{'active': activeItem === {{ forloop.index0 }}}"
+              @click="openItem({{ forloop.index0 }}, $event)"
+            >
+              <div class="accordion-item__headline">
+                <div class="icon"></div>
+
+                {%- if block.settings.headline != '' -%}
+                  <h3 class="title title--small">
+                    {{ block.settings.heading }}
+                  </h3>
+                {%- endif -%}
+              </div>
+
+              <div class="accordion-item__content">
+                <div class="accordion-item__loader">
+                  <div class="progress-bar"></div>
+                </div>
+                {%- if block.settings.text != '' -%}
+                  <div class="text">
+                    {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with Accordion",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Item headline",
+          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Accordion"
+    }
+  ]
+}
+{% endschema %}

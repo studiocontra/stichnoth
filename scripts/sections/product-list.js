@@ -2,12 +2,6 @@
  * Rotating Features App
  */
 const mainHeaderApp = Vue.createApp({
-	data() {
-		return {
-      currentLocale: '',
-		  isSearchOpen: false
-		}
-	},
   mounted() {
     new Swiper('.product-list__slider', {
       slidesPerView: 'auto',

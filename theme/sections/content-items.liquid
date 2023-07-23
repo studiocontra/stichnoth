@@ -1,0 +1,195 @@
+<div class="custom-block content-items">
+  <div class="container">
+    <div class="row justify-between {% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
+      <div class="col-md-6 col-lg-4">
+        <div class="content-items__headline">
+          {%- if section.settings.headline != '' -%}
+            <h3 class="title{% if block.settings.heading_size == 'display' %} title--hero title--hero-light{% endif %}">
+              {{ section.settings.heading }}
+            </h3>
+          {%- endif -%}
+          {%- if section.settings.text != '' -%}
+            <div class="text">
+              {{ section.settings.text }}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-7">
+        <div class="swiper content-items__items content-items__items--mobile js-items-content">
+          <div class="swiper-wrapper">
+            {%- for block in section.blocks -%}
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__img">
+                    <picture>
+                      <source srcset="{{ block.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+                      <source srcset="{{ block.settings.image | image_url: width: 450 }}">
+                      <img
+                        src="{{ block.settings.image | image_url }}"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                        lazy="true"
+                      >
+                    </picture>
+                  </div>
+
+                  <div class="single-item__text">
+                    {%- if block.settings.headline != '' -%}
+                      <h3 class="title title--small">
+                        {{ block.settings.heading }}
+                      </h3>
+                    {%- endif -%}
+                    {%- if block.settings.text != '' -%}
+                      <div class="text">
+                        {{ block.settings.text }}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+
+          <!-- Swiper Navigation -->
+          <div class="content-items__arrows">
+            <div class="swiper-button js-content-items-prev">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.0914 7.99996L1.45508 7.99996M1.45508 7.99996L8.00053 14.5454M1.45508 7.99996L8.00053 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+              </svg>
+            </div>
+            <div class="swiper-button js-content-items-next">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-items__items content-items__items--desktop">
+          {%- for block in section.blocks -%}
+            <div class="single-item">
+              <div class="single-item__img">
+                <picture>
+                  <source srcset="{{ block.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+                  <source srcset="{{ block.settings.image | image_url: width: 450 }}">
+                  <img
+                    src="{{ block.settings.image | image_url }}"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                    lazy="true"
+                  >
+                </picture>
+              </div>
+
+              <div class="single-item__text">
+                {%- if block.settings.headline != '' -%}
+                  <h3 class="title title--small">
+                    {{ block.settings.heading }}
+                  </h3>
+                {%- endif -%}
+                {%- if block.settings.text != '' -%}
+                  <div class="text">
+                    {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Content with Items",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:sections.all.heading_size.label",
+      "options": [
+        {
+          "value": "headline",
+          "label": "Headline"
+        },
+        {
+          "value": "display",
+          "label": "Hero"
+        }
+      ],
+      "default": "headline"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Image with text",
+      "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "t:sections.image-with-text.blocks.heading.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Image with text",
+          "label": "Headline"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content with Items"
+    }
+  ]
+}
+{% endschema %}
