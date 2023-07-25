@@ -26,9 +26,13 @@
       padding-left 8.333%
 
 
-  .accordion-item.active
+  .accordion-item.closed
     .accordion-item__content
-      display block
+      max-height 0 !important
+      .accordion-item__loader
+        .progress-bar
+          width 0 !important
+          transition none
 
 
   .accordion-item__headline
@@ -43,21 +47,31 @@
     .icon
       width 35px
       margin-right 20px
+      fill $black
 
 
   .accordion-item__loader
+    position relative
     width 100%
     height 3px
     margin-bottom 2em
     background-color $gray2
 
     .progress-bar
+      position absolute
+      top 0
+      left 0
+      width 0
+      height 100%
       background-color $black
-      transition width 0.2s ease-in
+      transition-property width
+      transition-timing-function linear
 
 
   .accordion-item__content
-    display none
+    max-height 0
+    overflow hidden
+    transition max-height 0.3s ease-out
 
     .text
       color #6f6f6f
