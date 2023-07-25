@@ -1,0 +1,87 @@
+<div class="custom-block cta-card-pages">
+  <div class="container">
+    <div class="row">
+      {% for block in section.blocks %}
+        <div class="{% if forloop.length > 1 %}col-lg-6{% else %}col-12{% endif %}">
+          <div class="cta-card-pages__container {% if forloop.length > 1 %}cta-card-pages__container--2col{% endif %}">
+            <a href="{{ block.settings.button_link }}">
+              <picture>
+                <source srcset="{{ block.settings.image | image_url: width: 2000 }}" media="(min-width: 1400px)">
+                <source srcset="{{ block.settings.image | image_url: width: 1500 }}" media="(min-width: 768px)">
+                <source srcset="{{ block.settings.image | image_url: width: 500 }}" media="(min-width: 450px)">
+                <source srcset="{{ block.settings.image | image_url: width: 450 }}">
+                <img
+                  src="{{ block.settings.image | image_url }}"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                >
+              </picture>
+              <div class="cta-card-pages__container-content">
+                <h2 class="title title--hero--small title--hero-light">
+                  {{ block.settings.headline }}
+                </h2>
+
+                {% if forloop.length == 1 %}
+                  {% if block.settings.buton_label != '' %}
+                    <span class="link link--white">
+                      {{ block.settings.button_label }}
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path d="M1 7.5L13.5 7.5M13.5 7.5L7.5 13.5M13.5 7.5L7.5 1.5" stroke="white" stroke-width="1.5" stroke-linecap="square"/>
+                      </svg>
+                    </span>
+                  {% endif %}
+                {% endif %}
+              </div>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner go to page",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "name": "Banner",
+      "type": "banner",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "headline",
+          "default": "Lorem Ipsum dolor",
+          "label": "Headline"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner go to page"
+    }
+  ]
+}
+{% endschema %}

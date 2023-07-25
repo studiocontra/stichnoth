@@ -1,0 +1,63 @@
+.cta-card-pages
+  color $white
+  overflow hidden
+
+
+  .cta-card-pages__container
+    position relative
+    display flex
+    align-items center
+    justify-content center
+    padding 0 32px
+    width 100%
+    z-index 2
+    border-radius 2px
+    min-height 525px
+
+    a
+      color $white
+
+    +mq(768)
+      border-radius 8px
+      min-height 400px
+
+    .cta-card-pages__container-content
+      position relative
+      z-index 1
+      text-align center
+
+      .title--hero--small
+        margin-bottom 20px
+
+    img
+      width 100%
+      height 100%
+      border-radius 2px
+      z-index 0
+      centerAbs()
+      fit()
+
+      +mq(768)
+        border-radius 8px
+
+
+  .cta-card-pages__container--2col
+    border-radius 8px
+    align-items flex-end
+    justify-content flex-start
+    margin-bottom 20px
+    min-height 310px
+
+    +mq(768)
+      margin-bottom 0
+      min-height 400px
+
+    .cta-card-pages__container-content
+      text-align left
+      padding 0 10px
+
+      .title--hero--small
+        margin-bottom 0
+
+    img
+      border-radius 8px
