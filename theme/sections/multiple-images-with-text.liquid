@@ -1,0 +1,145 @@
+<div
+  class="custom-block multiple-images-text"
+  style="background-color: {{ section.settings.color_scheme.settings.background }};"
+>
+  <div class="container">
+    <div class="multiple-images-text__content {% if section.settings.img_style == 'space' %}multiple-images-text__content--space-between{% endif %}">
+      {% if section.settings.headline != '' %}
+        <div class="multiple-images-text__content-title {% if section.settings.headline_align == 'center' %}multiple-images-text__content-title--center{% endif %}">
+          <h2
+            class="title title--hero title--hero-light"
+            style="color: {{ section.settings.color_scheme.settings.text }};"
+          >
+            {{ section.settings.headline }}
+          </h2>
+        </div>
+      {% endif %}
+
+      <div class="multiple-images-text__content-images">
+        <div class="multiple-images-text__images-main">
+          {% if section.settings.main_image %}
+            <picture>
+              <source srcset="{{ section.settings.main_image | image_url: width: 1200 }}" media="(min-width: 1200px)">
+              <source srcset="{{ section.settings.main_image | image_url: width: 750 }}" media="(min-width: 600px)">
+              <source srcset="{{ section.settings.main_image | image_url: width: 450 }}" media="(min-width: 450px)">
+              <source srcset="{{ section.settings.main_image | image_url: width: 350 }}">
+              <img
+                src="{{ section.settings.main_image | image_url }}"
+                class="tit-main"
+                width="{{ section.settings.main_image.width }}"
+                height="{{ section.settings.main_image.height }}"
+              >
+            </picture>
+          {% endif %}
+        </div>
+        {% if section.settings.image_2 %}
+          <div class="multiple-images-text__images-left">
+            <img
+              src="{{ section.settings.image_2 | image_url: width: 250 }}"
+              width="{{ section.settings.image_2.width }}"
+              height="{{ section.settings.image_2.height }}"
+            >
+          </div>
+        {% endif %}
+        {% if section.settings.image_3 %}
+          <div class="multiple-images-text__images-right">
+            <img
+              src="{{ section.settings.image_3 | image_url: width: 250 }}"
+              width="{{ section.settings.image_3.width }}"
+              height="{{ section.settings.image_3.height }}"
+            >
+          </div>
+        {% endif %}
+      </div>
+      <div class="multiple-images-text__content-text">
+        {% if section.settings.text != '' %}
+          <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
+            {{ section.settings.text }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Multiple Images with text",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "headline",
+      "default": "Image with text",
+      "label": "Headline"
+    },
+    {
+      "type": "select",
+      "id": "headline_align",
+      "label": "Headline Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Additional Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Additional Image 2"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "select",
+      "id": "img_style",
+      "label": "Images Style",
+      "options": [
+        {
+          "value": "overlap",
+          "label": "Overlapping"
+        },
+        {
+          "value": "space",
+          "label": "Space"
+        }
+      ],
+      "default": "overlap"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multiple Images with text"
+    }
+  ]
+}
+{% endschema %}

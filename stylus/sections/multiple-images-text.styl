@@ -1,0 +1,148 @@
+.multiple-images-text
+  color $white
+  background-color $gold
+  overflow hidden
+
+.multiple-images-text__content-title--center
+  .title
+    text-align center
+
+.multiple-images-text__content
+  .multiple-images-text__content-images
+    position relative
+    max-width 1200px
+    margin 0 auto
+
+    img
+      border-radius 8px
+      width 100%
+
+    .multiple-images-text__images-main
+      position relative
+      margin 60px auto
+      width 70%
+      max-width 900px
+      border-radius 8px
+
+      +mq(992)
+        width 80%
+      +mq(1200)
+        width 100%
+
+
+    .multiple-images-text__images-left,
+    .multiple-images-text__images-right
+      position absolute
+      border-radius 8px
+      width 25%
+      max-width 210px
+
+      +mq(600)
+        width 20%
+
+    .multiple-images-text__images-left
+      top -25px
+      right 80%
+
+      +mq(576)
+        right auto
+        left 0
+      +mq(768)
+        top 60px
+
+    .multiple-images-text__images-right
+      bottom -35px
+      left 80%
+
+      +mq(576)
+        left auto
+        right 0
+      +mq(768)
+        bottom 25px
+
+
+  .multiple-images-text__content-text
+    text-align center
+    margin 0 auto
+    width 90%
+    max-width 730px
+
+    +mq(576)
+      width 80%
+    +mq(768)
+      width 100%
+
+    .text
+      font-size 14px
+      +mq(768)
+        font-size 16px
+      +mq(992)
+        font-size 18px
+
+
+.multiple-images-text__content--space-between
+  .multiple-images-text__content-images
+    margin-bottom 10px
+    +mq(768)
+      margin-bottom 150px
+
+    +mq(992)
+      margin-bottom 20px
+
+    .multiple-images-text__images-main
+      margin 20px auto 80px
+      width 100%
+      max-width 250px
+      max-height 490px
+
+      +mq(450)
+        max-width 260px
+      +mq(768)
+        margin 10px auto 60px
+      +mq(992)
+        max-width 300px
+      +mq(1200)
+        max-width 390px
+
+    .multiple-images-text__images-left,
+    .multiple-images-text__images-right
+      max-width 180px
+      max-height 480px
+      top 80px
+
+      +mq(576)
+        max-width 220px
+      +mq(992)
+         max-width 250px
+      +mq(1200)
+         max-width 344px
+
+    .multiple-images-text__images-left
+      left -45%
+
+      +mq(450)
+        left -30%
+      +mq(650)
+        left -27%
+      +mq(768)
+        left -5%
+      +mq(1200)
+        left -10%
+
+    .multiple-images-text__images-right
+      right -45%
+
+      +mq(450)
+        right -30%
+      +mq(650)
+        right -27%
+      +mq(768)
+        right -5%
+      +mq(1200)
+        right -10%
+
+  .multiple-images-text__content-text
+    max-width 530px
+
+    +mq(1200)
+      max-width 630px
