@@ -1,0 +1,156 @@
+<div
+  class="custom-block cols-image-text"
+  style="background-color: {{ section.settings.color_scheme.settings.background }};"
+>
+  <div class="container">
+    {%- if section.settings.headline != '' -%}
+      <div class="cols-image-text__title">
+        <h3 class="title" style="color: {{ section.settings.color_scheme.settings.headline }};">
+          {{ section.settings.headline }}
+        </h3>
+      </div>
+    {%- endif -%}
+
+    {% if section.blocks %}
+      <!-- Mobile -->
+      <div class="cols-image-text__content cols-image-text__content--mobile">
+        <!-- Swiper -->
+        <div class="swiper cols-image-text-slider js-cols-image-text-slider">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <div class="cols-card">
+                  {% if block.settings.main_image != '' %}
+                    <div class="cols-card__image">
+                      <picture>
+                        <source
+                          srcset="{{ block.settings.main_image | image_url: width: 650 }}"
+                          media="(min-width: 450px)"
+                        >
+                        <source srcset="{{ block.settings.main_image | image_url: width: 450 }}">
+                        <img
+                          src="{{ block.settings.main_image | image_url }}"
+                          width="{{ block.settings.main_image.width }}"
+                          height="{{ block.settings.main_image.height }}"
+                          lazy="true"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.text != '' %}
+                    <div class="cols-card__text">
+                      <div class="text text--medium" style="color: {{ section.settings.color_scheme.settings.text }};">
+                        {{ block.settings.text }}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="cols-image-text-slider-nav">
+            <div class="cols-image-text-slider-prev js-cols-image-text-slider-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                <path d="M14.25 8L1.75 8M1.75 8L7.75 14M1.75 8L7.75 2" stroke="black" stroke-width="1.5" stroke-linecap="square"/>
+              </svg>
+            </div>
+            <div class="cols-image-text-slider-next js-cols-image-text-slider-next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                <path d="M0.75 8L13.25 8M13.25 8L7.25 14M13.25 8L7.25 2" stroke="black" stroke-width="1.5" stroke-linecap="square"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Mobile -->
+
+      <!-- Desktop -->
+      <div class="cols-image-text__content cols-image-text__content--desktop">
+        <div class="row">
+          {% for block in section.blocks %}
+            <div class="col-md-6">
+              <div class="cols-card">
+                {% if block.settings.main_image != '' %}
+                  <div class="cols-card__image">
+                    <picture>
+                      <source
+                        srcset="{{ block.settings.main_image | image_url: width: 650 }}"
+                        media="(min-width: 450px)"
+                      >
+                      <source srcset="{{ block.settings.main_image | image_url: width: 450 }}">
+                      <img
+                        src="{{ block.settings.main_image | image_url }}"
+                        width="{{ block.settings.main_image.width }}"
+                        height="{{ block.settings.main_image.height }}"
+                        lazy="true"
+                      >
+                    </picture>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.text != '' %}
+                  <div class="cols-card__text">
+                    <div class="text text--medium" style="color: {{ section.settings.color_scheme.settings.text }};">
+                      {{ block.settings.text }}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- END Desktop -->
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Columns Image Text",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "headline",
+      "default": "Image with text",
+      "label": "Headline"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Column",
+      "name": "Column",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "main_image",
+          "label": "Main Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Columns Image Text"
+    }
+  ]
+}
+{% endschema %}

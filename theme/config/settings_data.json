@@ -87,13 +87,15 @@
       "normal": {
         "settings": {
           "background": "#ffffff",
-          "text": "#000000",
+          "headline": "#000000",
+          "text": "#5C676B",
           "button": "#957153"
         }
       },
       "dark": {
         "settings": {
           "background": "#1a1c1d",
+          "headline": "#ffffff",
           "text": "#ffffff",
           "button": "#ffffff"
         }
@@ -101,6 +103,7 @@
       "gold": {
         "settings": {
           "background": "#957153",
+          "headline": "#ffffff",
           "text": "#ffffff",
           "button": "#ffffff"
         }

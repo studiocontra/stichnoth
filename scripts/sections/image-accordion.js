@@ -39,7 +39,7 @@ const mainHeaderApp = Vue.createApp({
       contentWrapper.querySelector('.progress-bar').style.width = '100%';
     },
     nextItem() {
-      this.activeItem = this.activeItem += 1;
+      this.activeItem += 1;
       if(this.activeItem > this.totalItems) this.activeItem = 0;
 
       this.openItem(this.activeItem);

@@ -1,0 +1,92 @@
+.cols-image-text__title
+  display grid
+  grid-template-columns 1fr
+  margin-bottom 20px
+
+  +mq(992)
+    grid-template-columns 1fr 50%
+
+  .title
+    text-align center
+    +mq(992)
+      text-align left
+
+
+.cols-image-text__content
+  .col-md-6
+    &:nth-child(odd)
+      padding-bottom 30px
+      padding-top 0
+
+    &:nth-child(even)
+      padding-top 160px
+      padding-bottom 0
+
+  .cols-card__text
+    width 95%
+
+    +mq(992)
+      width 80%
+
+
+  .cols-card__image
+    position relative
+    border-radius 8px
+    width 100%
+    margin-bottom 30px
+
+    img
+      width 100%
+      border-radius 8px
+
+
+
+.cols-image-text__content--mobile
+  display block
+
+  +mq(992)
+    display none
+
+  .cols-image-text-slider-nav
+    position relative
+    display flex
+    bottom 0
+    margin 0
+    padding 0
+    justify-content flex-end
+    gap 10px
+
+    .cols-image-text-slider-prev,
+    .cols-image-text-slider-next
+      position relative
+      top 0
+      margin 0
+      padding 16px
+      cursor pointer
+
+    .cols-image-text-slider-next[aria-disabled=true],
+    .cols-image-text-slider-prev[aria-disabled=true]
+      svg
+        opacity 0.4
+
+        path
+          stroke $gray3
+
+    .cols-image-text-slider-next[aria-disabled=false],
+    .cols-image-text-slider-prev[aria-disabled=false]
+      svg
+        opacity 1
+
+        path
+          stroke $black
+
+
+.cols-image-text__content--desktop
+    display none
+
+    +mq(992)
+      display block
+
+
+
+
