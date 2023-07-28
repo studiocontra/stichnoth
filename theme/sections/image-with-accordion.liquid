@@ -41,7 +41,7 @@
                   </svg>
                 </div>
 
-                {%- if block.settings.headline != '' -%}
+                {%- if block.settings.headline != blank -%}
                   <h3 class="title title--small">
                     {{ block.settings.heading }}
                   </h3>
@@ -52,7 +52,7 @@
                 <div class="accordion-item__loader">
                   <div class="progress-bar" :style="styleObject"></div>
                 </div>
-                {%- if block.settings.text != '' -%}
+                {%- if block.settings.text != blank -%}
                   <div class="text">
                     {{ block.settings.text }}
                   </div>

@@ -180,6 +180,19 @@
         "v_align": "align-center"
       }
     },
+    "2c63a911-b309-4e19-a316-a9e15c70c9dd": {
+      "type": "multiple-images-with-text",
+      "settings": {
+        "headline": "Legacy & <strong>Innovation<\/strong>",
+        "headline_align": "left",
+        "text": "<p>The now third generation is ready and leading the company into a new era. Malte and Florian Stichnoth are preparing the company for the future with their new approaches, without losing sight of the values and heritage of the past decades.<\/p>",
+        "main_image": "shopify:\/\/shop_images\/image-1.jpg",
+        "image_2": "shopify:\/\/shop_images\/image-2.png",
+        "image_3": "shopify:\/\/shop_images\/image-3.png",
+        "color_scheme": "gold",
+        "img_style": "overlap"
+      }
+    },
     "a99e782a-18c9-448a-9cab-c4064f0a4c6d": {
       "type": "product-list",
       "blocks": {
@@ -229,6 +242,7 @@
     "fcd5e182-bcf0-410e-acb0-66447f0d08d9",
     "a857daab-0a05-4d24-aa93-beb7b119eaaf",
     "2864d7f7-cfda-43a1-8bd2-36c19fa2ef94",
+    "2c63a911-b309-4e19-a316-a9e15c70c9dd",
     "a99e782a-18c9-448a-9cab-c4064f0a4c6d"
   ]
 }

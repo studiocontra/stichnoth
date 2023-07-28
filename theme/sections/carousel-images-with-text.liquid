@@ -1,11 +1,11 @@
 <div
-  class="custom-block multiple-images-text"
+  class="custom-block carousel-images-text"
   style="background-color: {{ section.settings.color_scheme.settings.background }};"
 >
   <div class="container">
-    <div class="multiple-images-text__content {% if section.settings.img_style == 'space' %}multiple-images-text__content--space-between{% endif %}">
-      {% if section.settings.headline != '' %}
-        <div class="multiple-images-text__content-title {% if section.settings.headline_align == 'center' %}multiple-images-text__content-title--center{% endif %}">
+    <div class="carousel-images-text__content {% if section.settings.img_style == 'space' %}carousel-images-text__content--space-between{% endif %}">
+      {%- if section.settings.headline != blank -%}
+        <div class="carousel-images-text__content-title">
           <h2
             class="title title--hero title--hero-light"
             style="color: {{ section.settings.color_scheme.settings.headline }};"
@@ -13,50 +13,37 @@
             {{ section.settings.headline }}
           </h2>
         </div>
-      {% endif %}
+      {%- endif -%}
 
-      <div class="multiple-images-text__content-images">
-        <div class="multiple-images-text__images-main">
-          {% if section.settings.main_image %}
-            <picture>
-              <source srcset="{{ section.settings.main_image | image_url: width: 1200 }}" media="(min-width: 1200px)">
-              <source srcset="{{ section.settings.main_image | image_url: width: 750 }}" media="(min-width: 600px)">
-              <source srcset="{{ section.settings.main_image | image_url: width: 450 }}" media="(min-width: 450px)">
-              <source srcset="{{ section.settings.main_image | image_url: width: 350 }}">
-              <img
-                src="{{ section.settings.main_image | image_url }}"
-                class="tit-main"
-                width="{{ section.settings.main_image.width }}"
-                height="{{ section.settings.main_image.height }}"
-              >
-            </picture>
-          {% endif %}
+      {%- if section.blocks -%}
+        <div class="swiper carousel-images-text-slider js-carousel-images-text-slider">
+          <div class="swiper-wrapper">
+            {%- for block in section.blocks -%}
+              <div class="swiper-slide">
+                <div class="carousel-images-with-text__images">
+                  <picture>
+                    <source srcset="{{ block.settings.main_image | image_url: width: 750 }}" media="(min-width: 600px)">
+                    <source srcset="{{ block.settings.main_image | image_url: width: 450 }}">
+                    <img
+                      src="{{ block.settings.main_image | image_url }}"
+                      class="tit-main"
+                      width="{{ block.settings.main_image.width }}"
+                      height="{{ block.settings.main_image.height }}"
+                    >
+                  </picture>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
         </div>
-        {% if section.settings.image_2 %}
-          <div class="multiple-images-text__images-left">
-            <img
-              src="{{ section.settings.image_2 | image_url: width: 250 }}"
-              width="{{ section.settings.image_2.width }}"
-              height="{{ section.settings.image_2.height }}"
-            >
-          </div>
-        {% endif %}
-        {% if section.settings.image_3 %}
-          <div class="multiple-images-text__images-right">
-            <img
-              src="{{ section.settings.image_3 | image_url: width: 250 }}"
-              width="{{ section.settings.image_3.width }}"
-              height="{{ section.settings.image_3.height }}"
-            >
-          </div>
-        {% endif %}
-      </div>
-      <div class="multiple-images-text__content-text">
-        {% if section.settings.text != '' %}
+      {%- endif -%}
+
+      <div class="carousel-images-text__content-text">
+        {%- if section.settings.text != blank -%}
           <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
             {{ section.settings.text }}
           </div>
-        {% endif %}
+        {%- endif -%}
       </div>
     </div>
   </div>
@@ -75,22 +62,6 @@
       "id": "headline",
       "default": "Image with text",
       "label": "Headline"
-    },
-    {
-      "type": "select",
-      "id": "headline_align",
-      "label": "Headline Alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        }
-      ],
-      "default": "left"
     },
     {
       "type": "richtext",

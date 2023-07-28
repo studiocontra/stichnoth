@@ -1,0 +1,52 @@
+.contact-form__text
+  margin-bottom 60px
+  text-align center
+
+  +mq(768)
+    text-align left
+  +mq(992)
+    margin-bottom 0
+
+  .text
+    color $gray2
+    max-width 500px
+    margin 0 auto
+
+    +mq(768)
+      margin 0
+
+
+.contact-form__form
+  margin-bottom 20px
+
+  .form-group
+    display flex
+    flex-direction column
+
+    &:not(:last-child)
+      margin-bottom 20px
+
+    label
+      margin-bottom 10px
+
+    input, textarea
+      min-height 48px
+      border-radius 8px
+      background-color $gray3
+      padding 8px 16px
+      border 0
+      line-height 1.3
+      font-family 'monument', sans-serif
+      font-weight 500
+      font-size 16px
+
+      &:focus
+        outline 1px solid $gray
+
+    textarea
+      min-height 150px
+      resize none
+      padding 16px
+
+    .cta
+      width 100%

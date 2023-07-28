@@ -56,28 +56,32 @@
           "type": "item",
           "settings": {
             "heading": "Design",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/leather-anchor-bracelet-for-men_925x_1ee66342-cd3d-447d-8067-efcdae229c18.jpg"
           }
         },
         "466c9452-1b75-4dc1-a7f5-c3d6f942a573": {
           "type": "item",
           "settings": {
             "heading": "Forming Metal",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/inspired-woman_925x_123c6235-96ac-4932-af6e-9488a6cc3b9f.jpg"
           }
         },
         "6afdaee1-bb6f-4a98-bdcd-611750d4e688": {
           "type": "item",
           "settings": {
             "heading": "Casting",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/womens-hand-moon-bracelet-_925x_ee830176-d9b0-4bb5-b89f-4abc27feebc7.jpg"
           }
         },
         "9afd3f77-f478-42ef-b326-d1b720dcb5f1": {
           "type": "item",
           "settings": {
             "heading": "Polishing",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/guardian-angel-earring-closeup_925x_b61ecee1-27ed-4979-a55e-f0a565a9d70b.jpg"
           }
         }
       },
@@ -88,21 +92,49 @@
         "9afd3f77-f478-42ef-b326-d1b720dcb5f1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/leather-anchor-bracelet-for-men_925x_1ee66342-cd3d-447d-8067-efcdae229c18.jpg",
         "color_scheme": "",
         "text_position": "right"
       }
     },
-    "b48ef18c-19ef-4b35-a56c-c595bc3120a9": {
-      "type": "bg-image-with-text",
+    "6044598f-93e7-416f-831a-071dc8a9bd21": {
+      "type": "cols-image-text",
+      "blocks": {
+        "b1d94a3a-644a-41b8-aefa-04a9e74fe4cf": {
+          "type": "Column",
+          "settings": {
+            "main_image": "shopify:\/\/shop_images\/leather-anchor-bracelet-for-men_925x_1ee66342-cd3d-447d-8067-efcdae229c18.jpg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "5a44de06-c4b5-405a-bc02-d3b871a28ab2": {
+          "type": "Column",
+          "settings": {
+            "main_image": "shopify:\/\/shop_images\/womens-hand-moon-bracelet-_925x_ee830176-d9b0-4bb5-b89f-4abc27feebc7.jpg",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b1d94a3a-644a-41b8-aefa-04a9e74fe4cf",
+        "5a44de06-c4b5-405a-bc02-d3b871a28ab2"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+        "headline": "Tradition meeets the modern era",
+        "color_scheme": "normal"
+      }
+    },
+    "34ea2921-9de1-471c-8fff-ca3ccb1ff286": {
+      "type": "multiple-images-with-text",
+      "disabled": true,
+      "settings": {
+        "headline": "Image with text",
+        "headline_align": "left",
+        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+        "main_image": "shopify:\/\/shop_images\/pretty-gold-necklace_925x_6702d22b-71b5-4fa4-88c2-15e081a9fd66.jpg",
+        "image_2": "shopify:\/\/shop_images\/origami-crane-necklace_925x_b99847a8-b0f4-4117-86ad-a89bbb7388c0.jpg",
+        "image_3": "shopify:\/\/shop_images\/silver-threader-necklace_925x_9a422010-9e42-4294-8dcb-7676bcca66d8.jpg",
         "color_scheme": "gold",
-        "heading": "Green <strong>Energy<\/strong>",
-        "text": "<p>In addition to buying and processing scrap gold, which makes a significant contribution to recycling, we run part of our production with green energy, which is generated with the help of our photovoltaic system. In addition, when choosing our means of transport, we pay attention to the constant expansion of our electric fleet.<\/p>",
-        "button_label": "",
-        "button_link": "",
-        "text_position": "right"
+        "img_style": "space"
       }
     },
     "a99e782a-18c9-448a-9cab-c4064f0a4c6d": {
@@ -150,7 +182,8 @@
     "fe482c5d-34a9-40b7-84da-c05f0315c2ca",
     "fcd5e182-bcf0-410e-acb0-66447f0d08d9",
     "00cf1d3e-5305-4bd2-a54f-e78b90dbf19b",
-    "b48ef18c-19ef-4b35-a56c-c595bc3120a9",
+    "6044598f-93e7-416f-831a-071dc8a9bd21",
+    "34ea2921-9de1-471c-8fff-ca3ccb1ff286",
     "a99e782a-18c9-448a-9cab-c4064f0a4c6d"
   ]
 }

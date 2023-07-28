@@ -4,7 +4,7 @@
 >
   <div class="container">
     <div class="multiple-images-text__content {% if section.settings.img_style == 'space' %}multiple-images-text__content--space-between{% endif %}">
-      {% if section.settings.headline != '' %}
+      {% if section.settings.headline != blank %}
         <div class="multiple-images-text__content-title {% if section.settings.headline_align == 'center' %}multiple-images-text__content-title--center{% endif %}">
           <h2
             class="title title--hero title--hero-light"
@@ -52,7 +52,7 @@
         {% endif %}
       </div>
       <div class="multiple-images-text__content-text">
-        {% if section.settings.text != '' %}
+        {% if section.settings.text != blank %}
           <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
             {{ section.settings.text }}
           </div>

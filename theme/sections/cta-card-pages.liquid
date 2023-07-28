@@ -22,7 +22,7 @@
                 </h2>
 
                 {% if forloop.length == 1 %}
-                  {% if block.settings.buton_label != '' %}
+                  {% if block.settings.buton_label != blank %}
                     <span class="link link--white">
                       {{ block.settings.button_label }}
 

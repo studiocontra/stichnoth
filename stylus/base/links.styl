@@ -1,21 +1,14 @@
 .cta
-  position absolute
   display flex
   align-items center
+  justify-content center
   background-color $white
   padding 16px
+  border 0
   border-radius 4px
   transition background 0.2s ease-in
-  bottom 16px
-  left 16px
-  right 16px
   cursor pointer
 
-  +mq(450)
-    right auto
-  +mq(768)
-    bottom 32px
-    left 32px
 
   &:hover
     background-color $black2
@@ -31,7 +24,6 @@
     display block
     color $black
     font-size 14px
-    text-align center
     text-transform uppercase
     transition color 0.2s ease-in
     font('headline', 500)
@@ -46,6 +38,17 @@
     path
       stroke $black
       transition stroke 0.2s ease-in
+
+
+.cta--black
+  background-color $black
+  border 1px solid $black
+
+  span
+    color $white
+
+  &:hover
+    background-color white
 
 
 .link

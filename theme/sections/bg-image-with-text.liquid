@@ -6,7 +6,7 @@
     <div class="row justify-between align-bottom{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
       {% if section.settings.image %}
         <div class="col-12">
-          {%- if section.settings.heading != '' -%}
+          {%- if section.settings.heading != blank -%}
             <div class="bg-image-text__headline">
               <h3
                 class="title title--hero title--hero-light"
@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="bg-image-text__content">
-            {%- if section.settings.text != '' -%}
+            {%- if section.settings.text != blank -%}
               <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
                 {{ section.settings.text }}
               </div>
@@ -42,7 +42,7 @@
         </div>
       {% else %}
         <div class="col-md-6">
-          {%- if section.settings.heading != '' -%}
+          {%- if section.settings.heading != blank -%}
             <div class="bg-image-text__headline">
               <h3
                 class="title title--hero title--hero-light"
@@ -55,7 +55,7 @@
         </div>
         <div class="col-md-6">
           <div class="bg-image-text__content bg-image-text__content--padding">
-            {%- if section.settings.text != '' -%}
+            {%- if section.settings.text != blank -%}
               <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
                 {{ section.settings.text }}
               </div>

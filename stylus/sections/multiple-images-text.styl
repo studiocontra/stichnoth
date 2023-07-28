@@ -23,11 +23,18 @@
       width 70%
       max-width 900px
       border-radius 8px
+      aspect-ratio 4 / 3
 
+      +mq(768)
+        aspect-ratio 16 / 10
       +mq(992)
         width 80%
       +mq(1200)
         width 100%
+
+      img
+        fullAbs()
+        fit()
 
 
     .multiple-images-text__images-left,

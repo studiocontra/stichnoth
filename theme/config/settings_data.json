@@ -88,14 +88,14 @@
         "settings": {
           "background": "#ffffff",
           "headline": "#000000",
-          "text": "#5C676B",
+          "text": "#5c676b",
           "button": "#957153"
         }
       },
       "dark": {
         "settings": {
           "background": "#1a1c1d",
-          "headline": "#ffffff",
+          "headline": "#fff",
           "text": "#ffffff",
           "button": "#ffffff"
         }
