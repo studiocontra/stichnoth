@@ -1,0 +1,120 @@
+{% assign total_images = 0 %}
+
+<div
+  class="custom-block carousel-images-text"
+  style="background-color: {{ section.settings.color_scheme.settings.background }};"
+>
+  <div class="container">
+    {%- if section.settings.headline != blank -%}
+      <div class="carousel-images-text__content-title">
+        <h2
+          class="title title--hero title--hero-light"
+          style="color: {{ section.settings.color_scheme.settings.headline }};"
+        >
+          {{ section.settings.headline }}
+        </h2>
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- if section.blocks -%}
+    <div class="swiper carousel-images-text-slider js-carousel-images-text-slider">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% assign total_images = forloop.length %}
+          <div class="swiper-slide">
+            <div class="carousel-images-text__images">
+              <picture>
+                <source srcset="{{ block.settings.image | image_url: width: 750 }}" media="(min-width: 600px)">
+                <source srcset="{{ block.settings.image | image_url: width: 450 }}">
+                <img
+                  src="{{ block.settings.image | image_url }}"
+                  class="tit-main"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                >
+              </picture>
+            </div>
+          </div>
+        {% endfor %}
+
+        {%- if total_images > 3 and total_images < 6 -%}
+          {%- for block in section.blocks -%}
+            <div class="swiper-slide">
+              <div class="carousel-images-text__images">
+                <picture>
+                  <source srcset="{{ block.settings.image | image_url: width: 750 }}" media="(min-width: 600px)">
+                  <source srcset="{{ block.settings.image | image_url: width: 450 }}">
+                  <img
+                    src="{{ block.settings.image | image_url }}"
+                    class="tit-main"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                  >
+                </picture>
+              </div>
+            </div>
+          {% endfor %}
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="container">
+    <div class="carousel-images-text__content-text">
+      {%- if section.settings.text != blank -%}
+        <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
+          {{ section.settings.text }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Carousel Images with text",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "headline",
+      "default": "Image with text",
+      "label": "Headline"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Main Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel Images with text"
+    }
+  ]
+}
+{% endschema %}
