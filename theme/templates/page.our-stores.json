@@ -2,13 +2,108 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "83647ed6-86b0-4d5a-b04c-33229c844fa6": {
+      "type": "stores",
+      "blocks": {
+        "22d0c751-1d03-4ed4-82bf-2fcaee0100ea": {
+          "type": "menu-item",
+          "settings": {
+            "heading": "Hannover"
+          }
+        },
+        "cc154c43-6b88-40a2-8ca6-9cb86efe88a4": {
+          "type": "menu-item",
+          "settings": {
+            "heading": "Hamburg"
+          }
+        },
+        "404105c0-3695-4d11-8c01-8c90db06019f": {
+          "type": "menu-item",
+          "settings": {
+            "heading": "Bremen"
+          }
+        },
+        "7d8495fc-f2e2-4185-ae22-30e6365509c3": {
+          "type": "menu-item",
+          "settings": {
+            "heading": "Frankfurt"
+          }
+        },
+        "ca4b232c-2740-4639-82f8-0a3d403aeda8": {
+          "type": "anchor",
+          "settings": {
+            "headline": "Hannover",
+            "anchor": "Hannover"
+          }
+        },
+        "c507a402-8429-423d-95f1-1b6385776019": {
+          "type": "store",
+          "settings": {
+            "style": "full",
+            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
+            "name": "Stichnoth Store",
+            "description": "<p>Georgstraße 35, 30159 Hannover<\/p><p>Monday - Saturday<\/p><p>11 AM to 7 PM<\/p>",
+            "button_label": "Book an Appointment",
+            "button_link": ""
+          }
+        },
+        "567b18c2-ac8a-48cb-b581-4ee143d318bc": {
+          "type": "store",
+          "settings": {
+            "style": "img-left",
+            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
+            "image_2": "shopify:\/\/shop_images\/story-1-1.jpg",
+            "name": "Stichnoth Store",
+            "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
+            "button_label": "Book an Appointment",
+            "button_link": ""
+          }
+        },
+        "50c52354-1675-45d7-b4b3-013d6be08b6e": {
+          "type": "anchor",
+          "settings": {
+            "headline": "Hamburg",
+            "anchor": "Hamburg"
+          }
+        },
+        "9913dab7-ff26-4c7e-b903-1e80ac5a08b6": {
+          "type": "store",
+          "settings": {
+            "style": "img-right",
+            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
+            "image_2": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+            "name": "Stichnoth Store",
+            "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
+            "button_label": "Book an Appointment",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "22d0c751-1d03-4ed4-82bf-2fcaee0100ea",
+        "cc154c43-6b88-40a2-8ca6-9cb86efe88a4",
+        "404105c0-3695-4d11-8c01-8c90db06019f",
+        "7d8495fc-f2e2-4185-ae22-30e6365509c3",
+        "ca4b232c-2740-4639-82f8-0a3d403aeda8",
+        "c507a402-8429-423d-95f1-1b6385776019",
+        "567b18c2-ac8a-48cb-b581-4ee143d318bc",
+        "50c52354-1675-45d7-b4b3-013d6be08b6e",
+        "9913dab7-ff26-4c7e-b903-1e80ac5a08b6"
+      ],
+      "settings": {
+        "headline": "Find a Store",
+        "color_scheme": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "83647ed6-86b0-4d5a-b04c-33229c844fa6"
   ]
 }

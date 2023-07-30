@@ -29,11 +29,7 @@
 
   .swiper-wrapper
     align-items center
-    padding 0 0 50px
-    min-height 470px
-
-    +mq(600)
-      min-height 610px
+    padding 50px 0 150px
 
   .swiper-slide
     position relative
@@ -46,7 +42,7 @@
     aspect-ratio 94/163
 
     +mq(600)
-      width 390px !important
+      width 390px
       aspect-ratio 13/16
 
     .carousel-images-text__images
@@ -61,11 +57,7 @@
         centerAbs()
         fit()
 
-  .swiper-slide-active
-    width 230px !important
-    transform scaleY(1.1) translateY(0) !important
-    aspect-ratio 13/16
-    transform-origin center
 
-    +mq(600)
-      width 390px !important
+  .swiper-slide-active
+    transform translateY(0) !important
+    transform-origin center

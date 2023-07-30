@@ -1,4 +1,4 @@
-<div class="custom-block stores">
+<div class="custom-block stores" style="background-color: {{ section.settings.color_scheme.settings.background }};">
   <div class="container">
     {% if section.settings.headline != blank %}
       <div class="stores__headline">
@@ -7,6 +7,80 @@
         </h1>
       </div>
     {% endif %}
+
+    <nav class="stores__nav">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'menu-item' -%}
+          <a
+            href="javascript:void(0);"
+            :class="{'active': activeSection === {{ block.settings.heading | downcase }}}"
+            @click="goToSection('{{ block.settings.heading | downcase }}')"
+          >
+            {{ block.settings.heading }}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'anchor' -%}
+        <div class="stores__region js-store-anchor" data-anchor="{{ block.settings.anchor | downcase }}">
+          <h2 class="title title--big" style="color: {{ section.settings.color_scheme.settings.headline }};">
+            {{ block.settings.headline }}
+          </h2>
+        </div>
+      {%- endif -%}
+
+      {%- if block.type == 'store' -%}
+        <div class="single-store single-store--{{ block.settings.style }}">
+          {% if block.settings.image %}
+            <div class="store__images">
+              <div class="main-img">
+                <picture>
+                  <source srcset="{{ block.settings.image | image_url: width: 2000 }}" media="(min-width: 1200px)">
+                  <source srcset="{{ block.settings.image | image_url: width: 1200 }}" media="(min-width: 750px)">
+                  <source srcset="{{ block.settings.image | image_url: width: 750 }}" media="(min-width: 450px)">
+                  <source srcset="{{ block.settings.image | image_url: width: 450 }}">
+                  <img
+                    src="{{ block.settings.image | image_url }}"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                  >
+                </picture>
+              </div>
+              {% if block.settings.image_2 %}
+                <div class="addon-img">
+                  <picture>
+                    <img
+                      src="{{ block.settings.image_2 | image_url: width: 250 }}"
+                      width="{{ block.settings.image_2.width }}"
+                      height="{{ block.settings.image_2.height }}"
+                    >
+                  </picture>
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+          <div class="store__text">
+            <h3 class="title" style="color: {{ section.settings.color_scheme.settings.headline }};">
+              {{ block.settings.name }}
+            </h3>
+
+            <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
+              {{ block.settings.description }}
+            </div>
+
+            <a href="" class="link">
+              {{ block.settings.button_label }}
+
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
   </div>
 </div>
 
@@ -23,16 +97,6 @@
       "id": "headline",
       "default": "Lorem ipsum",
       "label": "Headline"
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "t:sections.image-with-text.settings.image.label"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_2",
-      "label": "Additional Image"
     },
     {
       "type": "color_scheme",
@@ -63,14 +127,57 @@
           "id": "headline",
           "default": "Location 1",
           "label": "Location Name"
+        },
+        {
+          "type": "text",
+          "id": "anchor",
+          "default": "Location 1",
+          "label": "Anchor (same text as in menu item)"
         }
       ]
     },
     {
       "type": "store",
       "name": "Store",
-      "limit": 1,
       "settings": [
+        {
+          "type": "header",
+          "content": "Settings"
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "options": [
+            {
+              "value": "full",
+              "label": "Full Size"
+            },
+            {
+              "value": "img-left",
+              "label": "Image Left"
+            },
+            {
+              "value": "img-right",
+              "label": "Image Right"
+            }
+          ],
+          "default": "full",
+          "label": "Store Style"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Additional Image"
+        },
         {
           "type": "text",
           "id": "name",

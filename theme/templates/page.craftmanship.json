@@ -123,18 +123,37 @@
         "color_scheme": "normal"
       }
     },
-    "34ea2921-9de1-471c-8fff-ca3ccb1ff286": {
-      "type": "multiple-images-with-text",
-      "disabled": true,
+    "42a39faa-d535-4789-93c5-2098cfd17a78": {
+      "type": "carousel-images-text",
+      "blocks": {
+        "97512d57-a4e9-423f-9ab4-0566efcebcc0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/womens-hand-moon-bracelet-_925x_ee830176-d9b0-4bb5-b89f-4abc27feebc7.jpg"
+          }
+        },
+        "e15823a9-8c1f-4265-a32a-e1a0de6c305c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/inspired-woman_925x_e671cbd6-adbd-469a-8046-b659ec2421be.jpg"
+          }
+        },
+        "1a0bb5f2-c4d6-4b21-8e0f-21506eb7a05e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/origami-crane-necklace-gold_925x_50984072-5938-4b10-81ad-f46ce24b6fe6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "97512d57-a4e9-423f-9ab4-0566efcebcc0",
+        "e15823a9-8c1f-4265-a32a-e1a0de6c305c",
+        "1a0bb5f2-c4d6-4b21-8e0f-21506eb7a05e"
+      ],
       "settings": {
-        "headline": "Image with text",
-        "headline_align": "left",
+        "headline": "Celebrating<strong> Artisans<\/strong>",
         "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-        "main_image": "shopify:\/\/shop_images\/pretty-gold-necklace_925x_6702d22b-71b5-4fa4-88c2-15e081a9fd66.jpg",
-        "image_2": "shopify:\/\/shop_images\/origami-crane-necklace_925x_b99847a8-b0f4-4117-86ad-a89bbb7388c0.jpg",
-        "image_3": "shopify:\/\/shop_images\/silver-threader-necklace_925x_9a422010-9e42-4294-8dcb-7676bcca66d8.jpg",
-        "color_scheme": "gold",
-        "img_style": "space"
+        "color_scheme": "gold"
       }
     },
     "a99e782a-18c9-448a-9cab-c4064f0a4c6d": {
@@ -183,7 +202,7 @@
     "fcd5e182-bcf0-410e-acb0-66447f0d08d9",
     "00cf1d3e-5305-4bd2-a54f-e78b90dbf19b",
     "6044598f-93e7-416f-831a-071dc8a9bd21",
-    "34ea2921-9de1-471c-8fff-ca3ccb1ff286",
+    "42a39faa-d535-4789-93c5-2098cfd17a78",
     "a99e782a-18c9-448a-9cab-c4064f0a4c6d"
   ]
 }

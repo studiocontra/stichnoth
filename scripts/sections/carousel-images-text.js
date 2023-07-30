@@ -7,7 +7,6 @@ const mainHeaderApp = Vue.createApp({
       loop: true,
       speed: 1000,
       slidesPerView: "auto",
-      spaceBetween: 0,
       watchOverflow: true,
       centerInsufficientSlides: true,
       centeredSlides: true,
