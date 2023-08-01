@@ -83,6 +83,44 @@
             "button_label": "Book an Appointment",
             "button_link": ""
           }
+        },
+        "8b067f1b-9bd0-46ed-9e53-2a89c74d9041": {
+          "type": "anchor",
+          "settings": {
+            "headline": "Bremen",
+            "anchor": "Bremen"
+          }
+        },
+        "a6316373-e578-40c4-bf57-3e497b5c35c1": {
+          "type": "store",
+          "settings": {
+            "style": "full",
+            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
+            "image_2": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+            "name": "Stichnoth Store",
+            "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
+            "button_label": "Book an Appointment",
+            "button_link": ""
+          }
+        },
+        "042cb788-becd-487c-acbc-51645888f354": {
+          "type": "anchor",
+          "settings": {
+            "headline": "Frankfurt",
+            "anchor": "Frankfurt"
+          }
+        },
+        "7c954495-f6e2-468e-906e-66d6f0ce9648": {
+          "type": "store",
+          "settings": {
+            "style": "img-right",
+            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
+            "image_2": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+            "name": "Stichnoth Store",
+            "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
+            "button_label": "Book an Appointment",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
@@ -94,7 +132,11 @@
         "c507a402-8429-423d-95f1-1b6385776019",
         "567b18c2-ac8a-48cb-b581-4ee143d318bc",
         "50c52354-1675-45d7-b4b3-013d6be08b6e",
-        "9913dab7-ff26-4c7e-b903-1e80ac5a08b6"
+        "9913dab7-ff26-4c7e-b903-1e80ac5a08b6",
+        "8b067f1b-9bd0-46ed-9e53-2a89c74d9041",
+        "a6316373-e578-40c4-bf57-3e497b5c35c1",
+        "042cb788-becd-487c-acbc-51645888f354",
+        "7c954495-f6e2-468e-906e-66d6f0ce9648"
       ],
       "settings": {
         "headline": "Find a Store",

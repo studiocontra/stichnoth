@@ -22,9 +22,10 @@
     gap 0 82px
 
   a
+    color $gray
     font-size clamp(16px, 1.5vw, 24px)
     text-transform uppercase
-    font('headline', 400)
+    font('headline', 500)
     margin-bottom 16px
 
     &::after
@@ -36,11 +37,11 @@
       opacity 0
       transition opacity 0.3s ease-in
 
-  &.active
-    color $gold
+    &.active
+      color $gold
 
-    &::after
-      opacity 1
+      &::after
+        opacity 1
 
 
 .stores__region

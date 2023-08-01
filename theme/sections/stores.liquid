@@ -13,7 +13,9 @@
         {%- if block.type == 'menu-item' -%}
           <a
             href="javascript:void(0);"
+            class="js-stores-nav-item"
             :class="{'active': activeSection === {{ block.settings.heading | downcase }}}"
+            data-section="{{ block.settings.heading | downcase }}"
             @click="goToSection('{{ block.settings.heading | downcase }}')"
           >
             {{ block.settings.heading }}
@@ -48,7 +50,7 @@
                   >
                 </picture>
               </div>
-              {% if block.settings.image_2 %}
+              {% if block.settings.style != 'full' and block.settings.image_2 %}
                 <div class="addon-img">
                   <picture>
                     <img
