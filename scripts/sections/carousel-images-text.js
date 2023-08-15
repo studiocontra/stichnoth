@@ -4,14 +4,14 @@
 const mainHeaderApp = Vue.createApp({
   mounted() {
     new Swiper('.js-carousel-images-text-slider', {
-      loop: true,
+      loop: false,
       speed: 1000,
-      slidesPerView: "auto",
+      slidesPerView: 'auto',
       watchOverflow: true,
-      centerInsufficientSlides: true,
       centeredSlides: true,
+      initialSlide: 1,
       autoplay: {
-        delay: 5000,
+        delay: 3000,
       },
     });
   }

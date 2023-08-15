@@ -32,15 +32,6 @@ class FacetFiltersForm extends HTMLElement {
   static renderPage(searchParams, event, updateURLHash = true) {
     FacetFiltersForm.searchParamsPrev = searchParams;
     const sections = FacetFiltersForm.getSections();
-    const countContainer = document.getElementById('ProductCount');
-    const countContainerDesktop = document.getElementById('ProductCountDesktop');
-    document.getElementById('ProductGridContainer').querySelector('.collection').classList.add('loading');
-    if (countContainer) {
-      countContainer.classList.add('loading');
-    }
-    if (countContainerDesktop) {
-      countContainerDesktop.classList.add('loading');
-    }
 
     sections.forEach((section) => {
       const url = `${window.location.pathname}?section_id=${section.section}&${searchParams}`;
@@ -90,14 +81,10 @@ class FacetFiltersForm extends HTMLElement {
 
   static renderProductCount(html) {
     const count = new DOMParser().parseFromString(html, 'text/html').getElementById('ProductCount').innerHTML;
+
     const container = document.getElementById('ProductCount');
-    const containerDesktop = document.getElementById('ProductCountDesktop');
     container.innerHTML = count;
     container.classList.remove('loading');
-    if (containerDesktop) {
-      containerDesktop.innerHTML = count;
-      containerDesktop.classList.remove('loading');
-    }
   }
 
   static renderFilters(html, event) {
@@ -225,10 +212,93 @@ FacetFiltersForm.searchParamsPrev = window.location.search.slice(1);
 customElements.define('facet-filters-form', FacetFiltersForm);
 FacetFiltersForm.setListeners();
 
+// class PriceRange extends HTMLElement {
+//   constructor() {
+//     super();
+//     this.querySelectorAll('input').forEach((element) =>
+//       element.addEventListener('change', this.onRangeChange.bind(this))
+//     );
+//     this.setMinAndMaxValues();
+//     // this.buildSliders();
+//   }
+
+//   onRangeChange(event) {
+//     this.adjustToValidValues(event.currentTarget);
+//     this.setMinAndMaxValues();
+//   }
+
+//   buildSliders() {
+//     const rangeInput = this.querySelectorAll(".range-input input");
+//     const priceInput = this.querySelectorAll('input[type="number"]');
+//     const range = this.querySelector(".slider .progress");
+
+//     let minPrice = parseInt(priceInput[0].value);
+//     let maxPrice = parseInt(priceInput[1].value);
+//     let minVal = parseInt(rangeInput[0].value);
+//     let maxVal = parseInt(rangeInput[1].value);
+//     let priceGap = 1;
+
+
+//     priceInput.forEach(input => {
+//       input.addEventListener("input", e => {
+//         console.log(e);
+//         if ((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max) {
+//           if (e.target.className === "input-min") {
+//             rangeInput[0].value = minPrice;
+//             range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+//           } else {
+//             rangeInput[1].value = maxPrice;
+//             range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+//           }
+//         }
+//       });
+//     });
+
+//     rangeInput.forEach(input => {
+//       input.addEventListener("input", e => {
+//         if ((maxVal - minVal) < priceGap) {
+//           if (e.target.className === "range-min") {
+//             rangeInput[0].value = maxVal - priceGap
+//           } else {
+//             rangeInput[1].value = minVal + priceGap;
+//           }
+//         } else {
+//           priceInput[0].value = minVal;
+//           priceInput[1].value = maxVal;
+//           range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+//           range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+//         }
+//       });
+//     });
+
+//   }
+
+//   setMinAndMaxValues() {
+//     const priceInput = this.querySelectorAll('input[type="number"]');
+//     const minInput = priceInput[0];
+//     const maxInput = priceInput[1];
+
+//     if (maxInput.value) minInput.setAttribute('max', maxInput.value);
+//     if (minInput.value) maxInput.setAttribute('min', minInput.value);
+
+//     if (minInput.value === '') maxInput.setAttribute('min', 0);
+//     if (maxInput.value === '') minInput.setAttribute('max', maxInput.getAttribute('max'));
+//   }
+
+//   adjustToValidValues(input) {
+//     const value = Number(input.value);
+//     const min = Number(input.getAttribute('min'));
+//     const max = Number(input.getAttribute('max'));
+
+//     if (value < min) input.value = min;
+//     if (value > max) input.value = max;
+//   }
+// }
+
 class PriceRange extends HTMLElement {
   constructor() {
     super();
-    this.querySelectorAll('input').forEach((element) =>
+    this.querySelectorAll('input[type="number"]').forEach((element) =>
       element.addEventListener('change', this.onRangeChange.bind(this))
     );
     this.setMinAndMaxValues();
@@ -236,15 +306,19 @@ class PriceRange extends HTMLElement {
 
   onRangeChange(event) {
     this.adjustToValidValues(event.currentTarget);
-    this.setMinAndMaxValues();
+    // this.setMinAndMaxValues();
   }
 
   setMinAndMaxValues() {
-    const inputs = this.querySelectorAll('input');
+    const inputs = this.querySelectorAll('input[type="number"]');
     const minInput = inputs[0];
     const maxInput = inputs[1];
+
+    console.log(minInput);
+
     if (maxInput.value) minInput.setAttribute('max', maxInput.value);
     if (minInput.value) maxInput.setAttribute('min', minInput.value);
+
     if (minInput.value === '') maxInput.setAttribute('min', 0);
     if (maxInput.value === '') minInput.setAttribute('max', maxInput.getAttribute('max'));
   }

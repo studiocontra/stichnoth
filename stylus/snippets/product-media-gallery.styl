@@ -1,0 +1,106 @@
+.carousel-products
+  .container
+    max-width none
+    padding-right 0
+
+  .swiper-slide
+    position relative
+    width 290px
+    margin-right 16px
+    border-radius 8px
+    aspect-ratio 1.1 / 1
+
+    +mq(768)
+      width 350px
+      margin-right 20px
+    +mq(992)
+      width 550px
+
+    img
+      border-radius 8px
+      width 100%
+      height 100%
+      centerAbs()
+      fit()
+
+
+  .swiper-carousel-products-navigation
+    position relative
+    display flex
+    bottom 40px
+    margin 0 20px 0 0
+    padding 0
+    justify-content flex-end
+    gap 10px
+    z-index 2
+    pointer-events none
+
+    +mq(768)
+      bottom 80px
+
+
+  .swiper-carousel-products-button-prev,
+  .swiper-carousel-products-button-next
+    position relative
+    top 0
+    margin 0
+    padding 16px
+    cursor pointer
+    width 32px
+    height 32px
+    text-align center
+    border-radius 4px
+    background-color $white
+    pointer-events all
+
+    +mq(768)
+      width 44px
+      height 44px
+      border-radius 4px
+
+    svg
+      centerAbs()
+      pointer-events all
+
+
+  .swiper-carousel-products-button-prev[aria-disabled=true],
+  .swiper-carousel-products-button-next[aria-disabled=true]
+    opacity 0.8
+
+    svg
+      opacity 0.4
+
+      path
+        stroke $gray3
+
+
+  .swiper-carousel-products-button-prev[aria-disabled=false],
+  .swiper-carousel-products-button-next[aria-disabled=false]
+    opacity 1
+
+    svg
+      opacity 1
+
+      path
+        stroke $black
+
+
+  .swiper-carousel-products-pagination
+    top 0
+    width 51px
+    background-color $white
+    border-radius 4px
+    position relative
+    display flex
+    justify-content center
+    align-items center
+    padding 0
+    margin 0
+    line-height 1
+
+    span
+      line-height 1
+
+    +mq(768)
+      width 53px
+      border-radius 4px

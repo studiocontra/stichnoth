@@ -1,6 +1,6 @@
-<div class="custom-block collection-list color-{{ section.settings.color_scheme }}">
+<div class="custom-block home-collection-list color-{{ section.settings.color_scheme }}">
   {%- unless section.settings.title == blank -%}
-    <div class="collection-list__headline">
+    <div class="home-collection-list__headline">
       <h2 class="title">
         {{ section.settings.title }}
       </h2>
@@ -21,7 +21,7 @@
     </div>
   {%- endunless -%}
 
-  <div class="swiper collection-list__slider">
+  <div class="swiper home-collection-list__slider">
     <div class="swiper-wrapper">
       {%- for block in section.blocks -%}
         <div class="swiper-slide">
@@ -32,6 +32,7 @@
           {% render 'card-collection',
             card_collection: card_collection,
             placeholder_image: placeholder_image,
+            counter: false,
             forloop: forloop
           %}
         </div>
@@ -39,7 +40,7 @@
     </div>
 
     <!-- Swiper Navigation -->
-    <div class="collection-list__slider__arrows">
+    <div class="home-collection-list__slider__arrows">
       <div class="swiper-button js-list-prev">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M15.0914 7.99996L1.45508 7.99996M1.45508 7.99996L8.00053 14.5454M1.45508 7.99996L8.00053 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
@@ -57,8 +58,6 @@
 {% schema %}
 {
   "name": "t:sections.collection-list.name",
-  "tag": "section",
-  "class": "section section-collection-list",
   "max_blocks": 15,
   "disabled_on": {
     "groups": ["header", "footer"]
