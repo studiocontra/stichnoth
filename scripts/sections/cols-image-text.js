@@ -1,6 +1,3 @@
-/**
- * Rotating Features App
- */
 const colsImageText = Vue.createApp({
   mounted() {
     new Swiper('.js-cols-image-text-slider', {

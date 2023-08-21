@@ -29,6 +29,8 @@
     {% render 'meta-tags' %}
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
     {{ 'fonts.css' | asset_url | stylesheet_tag }}
     {{ 'custom.min.css' | asset_url | stylesheet_tag }}
@@ -76,7 +78,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async defer></script>
 
     <script src="{{ 'custom.min.js' | asset_url }}" defer="defer"></script>
 

@@ -1,7 +1,4 @@
-/**
- * Rotating Features App
- */
-const mainHeaderApp = Vue.createApp({
+const homeCollectionListApp = Vue.createApp({
   mounted() {
     new Swiper('.home-collection-list__slider', {
       slidesPerView: 'auto',
@@ -18,5 +15,5 @@ const mainHeaderApp = Vue.createApp({
   }
 });
 
-mainHeaderApp.config.compilerOptions.delimiters = ['[[', ']]'];
-mainHeaderApp.mount('.home-collection-list');
+homeCollectionListApp.config.compilerOptions.delimiters = ['[[', ']]'];
+homeCollectionListApp.mount('.home-collection-list');

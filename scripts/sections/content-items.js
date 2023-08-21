@@ -1,7 +1,4 @@
-/**
- * Rotating Features App
- */
-const mainHeaderApp = Vue.createApp({
+const contentItems = Vue.createApp({
   mounted() {
     new Swiper('.js-items-content', {
       slidesPerView: 'auto',
@@ -17,5 +14,5 @@ const mainHeaderApp = Vue.createApp({
   }
 });
 
-mainHeaderApp.config.compilerOptions.delimiters = ['[[', ']]'];
-mainHeaderApp.mount('.content-items');
+contentItems.config.compilerOptions.delimiters = ['[[', ']]'];
+contentItems.mount('.content-items');

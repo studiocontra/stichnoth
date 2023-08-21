@@ -4,6 +4,28 @@
   .title--small
     font-weight 300
 
+  .cart-labels
+  .single-cart-product
+    padding 0
+
+  .cart__footer
+    background none
+    padding 24px 0
+
+    .cta
+      width auto
+      margin-left auto
+
+
+.wrap-cart-form
+  container cart-container / inline-size
+  height 100%
+
+.cart__form
+  height 100%
+  display flex
+  flex-direction column
+
 
 .cart__headline
   padding-bottom 50px
@@ -13,22 +35,18 @@
   display grid
   grid-template-columns 75px auto 80px
   column-gap 20px
-  padding 10px 0
+  padding 10px 32px
   margin-bottom 32px
   border-bottom 1px solid rgba($black, 0.2)
 
-  +mq(768)
-    grid-template-columns 150px auto 100px
-    column-gap 32px
-  +mq(992)
-    grid-template-columns 150px auto 200px 100px
 
 .cart__label
   color $black
   text-transform uppercase
   font-size 14px
   letter-spacing 0.075em
-  font(400)
+  margin-bottom 10px
+  font('headline', 700)
 
   &.product
     grid-column 1 / 3
@@ -36,79 +54,74 @@
   &.qty
     display none
 
-    +mq(992)
-      display block
-      grid-column 3 / 4
-
   &.total
-    grid-column 3 / 4
+    display none
+    grid-column 4 / 5
     text-align right
-
-    +mq(992)
-      grid-column 4 / 5
 
 
 // Products
 .single-cart-product
   display grid
-  grid-template-columns 75px auto 80px
-  grid-template-rows 1fr 1fr
+  grid-template-columns 100px auto 100px
+  grid-template-rows auto auto 40px
   column-gap 20px
-  row-gap 16px
+  row-gap 0
   align-items center
   margin-bottom 32px
+  padding 0 32px
 
-  +mq(768)
-    grid-template-columns 150px auto 100px
-    column-gap 32px
-  +mq(992)
-    grid-template-columns 150px auto 200px 100px
 
 .cart-product__img
   position relative
-  width 75px
-  height @width
+  width 100px
+  aspect-ratio 1 / 1.5
   grid-column 1 / 2
-  grid-row span 2
-
-  +mq(768)
-    width 150px
-    height @width
+  grid-row span 3
+  align-self start
 
   img
     fullAbs()
     fit()
+    border-radius 4px
+
 
 .cart-product__info
+  align-self start
   grid-column 2 / 3
   grid-row 1 / 2
+  margin-bottom 16px
 
-  +mq(992)
-    grid-row span 2
 
-  a
-    display block
-    color $black
-    margin-bottom 16px
+.cart-product__name
+  display block
+  color $black
+  font-size 14px
+  margin-bottom 0
+  font('headline', 700)
 
-  span
-    color rgba($black, 0.5)
+
+.cart-product__price
+  color $gray2
+  grid-column 2 / 3
+  grid-row 3 / 4
+  align-self start
+  font('headline', 400)
+
+.cart-product__price--desktop
+  display none
+  grid-column 2 / 3
+  grid-row 1 / 2
+  align-self center
 
 
 .cart-product__quantity
   display flex
   flex-direction column
+  align-self start
   align-items flex-start
   grid-column 2 / 3
   grid-row 2 / 3
-
-  +mq(576)
-    align-items center
-    flex-direction row
-    margin-right 32px
-  +mq(992)
-    grid-column 3 / 4
-    grid-row span 2
 
   .cart-quantity
     display flex
@@ -116,17 +129,12 @@
     align-items center
     flex 0 0 40px
     width 100%
-    max-width 150px
-    padding 10px
+    max-width 100px
+    padding 8px
     margin-right 0
+    border-radius 4px
     border 1px solid $black
     margin-bottom 16px
-
-    +mq(576)
-      width auto
-      flex 0 0 120px
-      margin-bottom 0
-      margin-right 32px
 
     .add,
     .remove
@@ -138,125 +146,144 @@
     svg
       width 16px
 
-  .cart-delete
-    svg
-      width 22px
+
+.cart-product__delete
+  text-align right
+  align-self start
+  grid-column 3 / 4
+  grid-row 1 / 2
+
+  svg
+    fill $gray2
+    width 22px
 
 
 .cart-product__total
+  align-self start
   grid-column 3 / 4
-  grid-row span 2
+  grid-row 3
   text-align right
-
-  +mq(992)
-    grid-column 4 / 5
+  font-size 20px
+  font('headline', 400)
 
 
 
 // Cart Footer
 .cart__footer
-  padding 80px 0
+  margin-top auto
+  padding 24px
   text-align right
+  background-color $white2
   border-top 1px solid rgba($black, 0.2)
 
   .cart-totals
     display flex
     justify-content flex-end
+    align-items center
     margin-bottom 32px
     border 0
 
-    span
-      text-transform uppercase
-      font-size 14px
-      letter-spacing 0.075em
-      font(400)
+    .title--small
+      margin-right 32px
+      margin-bottom 0
+      @extend .cart__label
 
     p
-      margin-left 20px
-      font-weight 500
+      text-align right
+      font-size 20px
+      font('headline', 400)
 
-.cart__input
-  max-width 750px
-  text-align right
-  margin-bottom 32px
-  margin-left auto
-
-  label
-    span
-      display block
-      font-size 14px
-      font-style italic
-
-    &.error
-      color tomato
-
-  input
-    display block
-    height 40px
-    width 200px
-    margin 20px 0
-    margin-left auto
-
-    &.parsley-error
-      border 2px solid tomato
-
-  p
-    font-size 14px
-    font-style italic
-
-
-.cart__input--checkbox
-  display flex
-  align-items center
-  justify-content flex-end
-  position relative
-
-  label
-    font-size 16px
-
-    a
-      text-decoration underline
-      color $black
-
-
-  input
-    position absolute
-    right 0
-    height 30px
-    width 30px
-    opacity 0
-    cursor pointer
-
-  .input
-    display inline-block
-    height 30px
-    width 30px
-    margin-left 20px
-    border 1px solid $black
-    text-align center
-    pointer-events none
-
-    svg
-      width 32px
-      fill $black
-      opacity 0
-      position relative
-      top -1px
-      left -1px
-
-  &.parsley-error
-    .input
-      border 2px solid tomato
-
-  input:checked
-    & + .input
-      background-color $yellow
-
-      svg
-        opacity 1
+  .cta
+    width 100%
 
 
 // Empty cart
 .cart--empty
   text-align center
   margin-bottom 40%
+
+
+
+/**
+* Container Queries
+*/
+// 576px viweport
+@container cart-container (min-width: 527px)
+  .cart-product__name
+    font-size 16px
+
+  .cart-product__quantity
+    align-items center
+    flex-direction row
+    margin-right 32px
+
+    .cart-quantity
+      width auto
+      flex 0 0 120px
+      margin-bottom 0
+      margin-right 32px
+
+// 768px viweport
+@container cart-container (min-width: 687px)
+  .cart-labels
+    grid-template-columns 150px auto 100px
+    column-gap 32px
+
+  .single-cart-product
+    padding 0
+    grid-template-columns 150px auto 100px
+    column-gap 32px
+
+  .cart-product__img
+    width 150px
+
+
+// 992px viweport
+@container cart-container (min-width: 911px)
+  .wrap-cart-form
+    padding 0
+
+  .cart-labels
+    grid-template-columns 150px auto 150px 50px 100px
+
+  .cart__label
+    &.qty
+      display block
+      grid-column 3 / 4
+    &.total
+      display block
+      grid-column 5 / 6
+
+  .single-cart-product
+    grid-template-columns 150px auto 150px 50px 100px
+    grid-template-rows 1fr 1fr
+
+  .cart-product__img
+    align-self center
+    grid-row span 2
+
+  .cart-product__info
+    align-self center
+    grid-row span 2
+
+  .cart-product__price
+    display none
+
+  .cart-product__price--desktop
+    display block
+
+  .cart-product__quantity
+    grid-column 3 / 4
+    grid-row span 2
+    align-self center
+
+  .cart-product__delete
+    align-self center
+    text-align left
+    grid-column 4 / 5
+    grid-row span 2
+
+  .cart-product__total
+    align-self center
+    grid-row span 2
+    grid-column 5 / 6

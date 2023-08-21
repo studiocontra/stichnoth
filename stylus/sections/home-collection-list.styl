@@ -20,8 +20,13 @@
       width 22% !important
 
     &:nth-child(even)
-      width 90% !important
+      width 80vw !important
       max-width 800px
+
+      +mq(768)
+        width 60vw !important
+      +mq(1200)
+        width 40vw !important
 
     &:nth-child(3n + 1)
       transform translateY(20%)

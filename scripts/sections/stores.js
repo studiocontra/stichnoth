@@ -1,23 +1,26 @@
-/**
- * Rotating Features App
- */
-const mainHeaderApp = Vue.createApp({
+const storesApp = Vue.createApp({
   data() {
     return {
       activeSection: null,
       targetSectionTop: null,
+      allLinks: null,
+      storesNav: 88,
     };
   },
   mounted() {
+    this.allLinks = document.querySelectorAll('.js-stores-nav-item');
+    this.storesNav = document.querySelector('.stores__nav').offsetHeight;
+
     window.addEventListener('scroll', () => this.activeOnScroll());
   },
   methods: {
     activeOnScroll() {
-      document.querySelectorAll('.js-stores-nav-item').forEach(item => {
+      this.allLinks.forEach(item => {
         const targetSection = document.querySelector(`.js-store-anchor[data-anchor="${item.dataset['section']}"]`);
         const targetTop = targetSection.getBoundingClientRect().top + window.scrollY;
 
-        if(window.scrollY > targetTop) {
+        if((window.scrollY + this.storesNav) > targetTop) {
+          this.allLinks.forEach(link => link.classList.remove('active'));
           item.classList.add('active');
         } else {
           item.classList.remove('active');
@@ -26,10 +29,9 @@ const mainHeaderApp = Vue.createApp({
     },
     goToSection(target) {
       const targetSection = document.querySelector(`.js-store-anchor[data-anchor="${target}"]`).getBoundingClientRect().top + window.scrollY;
-      const storesNav = document.querySelector('.stores__nav').offsetHeight;
 
       this.activeSection = target;
-      this.targetSectionTop = targetSection - storesNav;
+      this.targetSectionTop = targetSection - this.storesNav;
 
       window.scrollTo({
         top: this.targetSectionTop,
@@ -39,5 +41,5 @@ const mainHeaderApp = Vue.createApp({
   }
 });
 
-mainHeaderApp.config.compilerOptions.delimiters = ['[[', ']]'];
-mainHeaderApp.mount('.stores');
+storesApp.config.compilerOptions.delimiters = ['[[', ']]'];
+storesApp.mount('.stores');

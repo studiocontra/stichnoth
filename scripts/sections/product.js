@@ -50,7 +50,6 @@ productAccordionApp.mount('.product__accordion');
 const productFaqsApp = Vue.createApp({
   data() {
     return {
-      isAdding: false,
       activeFaqsAccordion: null
     };
   },
@@ -92,8 +91,7 @@ const productFormApp = Vue.createApp({
         'items': [{
           'id': product,
           'quantity': qty
-        }],
-        'sections': 'cart-drawer'
+        }]
       };
 
       fetch(`${window.Shopify.routes.root}cart/add.js`, {
@@ -106,6 +104,10 @@ const productFormApp = Vue.createApp({
         .then(res => {
           res.json();
           this.isAdding = false;
+
+          updateCart();
+
+          mainHeaderApp.$data.isCartOpen = true;
 
           // window.location.href = `${window.Shopify.routes.root}cart`;
         })

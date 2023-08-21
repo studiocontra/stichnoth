@@ -1,7 +1,4 @@
-/**
- * Rotating Features App
- */
-const mainHeaderApp = Vue.createApp({
+const imageAccordion = Vue.createApp({
   data() {
     return {
       activeItem: 0,
@@ -54,5 +51,5 @@ const mainHeaderApp = Vue.createApp({
   }
 });
 
-mainHeaderApp.config.compilerOptions.delimiters = ['[[', ']]'];
-mainHeaderApp.mount('.image-accordion');
+imageAccordion.config.compilerOptions.delimiters = ['[[', ']]'];
+imageAccordion.mount('.image-accordion');

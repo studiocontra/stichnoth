@@ -20,6 +20,12 @@
             <div class="product-form">
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
+              <div class="product__price">
+                <span class="price__label">{{ 'sections.cart.headings.price' | t }}</span>
+
+                {% render 'price', product: product %}
+              </div>
+
               <div class="product-form__add">
                 <button
                   id="ProductSubmitButton-{{ section_id }}"

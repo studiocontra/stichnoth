@@ -1,0 +1,22 @@
+.shopify-challenge__container
+  padding 100px 0 40px
+
+  >p
+    margin-bottom 2em
+
+  input[type="submit"]
+    margin-top 2em
+    color $white
+    font-size 14px
+    text-transform uppercase
+
+    font('headline', 500)
+
+    @extend .cta
+    @extend .cta--black
+
+    +mq(768)
+      font-size 16px
+
+    &:hover
+      color $gold

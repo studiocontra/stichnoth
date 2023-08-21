@@ -1,7 +1,4 @@
-/**
- * Rotating Features App
- */
-const mainHeaderApp = Vue.createApp({
+const carouselImagesText = Vue.createApp({
   mounted() {
     new Swiper('.js-carousel-images-text-slider', {
       loop: false,
@@ -17,5 +14,5 @@ const mainHeaderApp = Vue.createApp({
   }
 });
 
-mainHeaderApp.config.compilerOptions.delimiters = ['[[', ']]'];
-mainHeaderApp.mount('.carousel-images-text');
+carouselImagesText.config.compilerOptions.delimiters = ['[[', ']]'];
+carouselImagesText.mount('.carousel-images-text');

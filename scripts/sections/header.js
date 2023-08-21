@@ -1,18 +1,22 @@
-/**
- * Rotating Features App
- */
 const mainHeaderApp = Vue.createApp({
 	data() {
 		return {
       currentLocale: '',
 		  isSearchOpen: false,
       isMenuOpen: false,
+      flagResize: false,
+      isCartOpen: false,
 		}
 	},
   mounted() {
-    const headerHeight = document.querySelector('header').offsetHeight;
-    console.log(headerHeight);
-    document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+    window.addEventListener('resize', () => {
+      if(window.innerWidth > 768 && !this.flagResize) {
+        this.isMenuOpen = false;
+        this.flagResize = true;
+      } else if (window.innerWidth <= 768 && this.flagResize) {
+        this.flagResize = false;
+      }
+    });
   },
   methods: {
     changeLocale(target, formId) {
@@ -22,9 +26,13 @@ const mainHeaderApp = Vue.createApp({
         document.getElementById(formId).submit();
       }, 200);
     },
-    toggleMenu() {
+    setMenuTop() {
       const headerHeight = document.querySelector('header').offsetHeight;
       document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+    },
+    toggleMenu() {
+      this.setMenuTop();
+      this.isMenuOpen = !this.isMenuOpen;
     }
   }
 });

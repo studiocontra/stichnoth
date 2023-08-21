@@ -1,7 +1,4 @@
-/**
- * Rotating Features App
- */
-const mainHeaderApp = Vue.createApp({
+const mainHeroApp = Vue.createApp({
 	data() {
 		return {
       currentLocale: '',
@@ -26,5 +23,5 @@ const mainHeaderApp = Vue.createApp({
   }
 });
 
-mainHeaderApp.config.compilerOptions.delimiters = ['[[', ']]'];
-mainHeaderApp.mount('.hero');
+mainHeroApp.config.compilerOptions.delimiters = ['[[', ']]'];
+mainHeroApp.mount('.hero');

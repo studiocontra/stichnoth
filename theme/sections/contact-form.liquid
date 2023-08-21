@@ -23,21 +23,6 @@
                 {% render 'icon-success' %}
                 {{ 'templates.contact.form.post_success' | t }}
               </h2>
-            {%- elsif form.errors -%}
-              <div class="form__message">
-                <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
-                  {% render 'icon-error' %}
-                  {{ 'templates.contact.form.error_heading' | t }}
-                </h2>
-              </div>
-              <ul class="form-status-list caption-large" role="list">
-                <li>
-                  <a href="#ContactForm-email" class="link">
-                    {{ form.errors.translated_fields.email | capitalize }}
-                    {{ form.errors.messages.email }}
-                  </a>
-                </li>
-              </ul>
             {%- endif -%}
             <div class="form-group">
               <label class="field__label" for="ContactForm-name">
@@ -50,6 +35,7 @@
                 type="text"
                 id="ContactForm-name"
                 aria-required="true"
+                required
                 name="contact[{{ 'templates.contact.form.name' | t }}]"
                 value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
               >
@@ -69,21 +55,8 @@
                 autocapitalize="off"
                 value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
                 aria-required="true"
-                {% if form.errors contains 'email' %}
-                  aria-invalid="true"
-                  aria-describedby="ContactForm-email-error"
-                {% endif %}
+                required
               >
-              {%- if form.errors contains 'email' -%}
-                <small class="contact__field-error" id="ContactForm-email-error">
-                  <span class="sr-only">{{ 'accessibility.error' | t }}</span>
-                  <span class="form__message">
-                    {%- render 'icon-error' -%}
-                    {{- form.errors.translated_fields.email | capitalize }}
-                    {{ form.errors.messages.email -}}
-                  </span>
-                </small>
-              {%- endif -%}
             </div>
             {% comment %}
               <div class="field">

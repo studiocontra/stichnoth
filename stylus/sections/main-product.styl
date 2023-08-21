@@ -1,6 +1,43 @@
 .product-form
+  display flex
+  flex-wrap wrap
+
+  .product__price
+    margin-bottom 1em
+
+    .price__label
+      display block
+      text-transform uppercase
+      color $gray2
+      letter-spacing 0.075em
+      margin-bottom 6px
+
+  .wrap-price
+    display inline-block
+    font-size 24px
+
+  .price--sale
+    display none
+
+    .price-item--regular
+      display block
+      font-size 0.75em
+      color $gray2
+
+  .wrap-price--on-sale
+    .price--regular
+      display none
+
+    .price--sale
+      display block
+
+
+  .product-form__add
+    flex 1 1 100%
+
   .add-to-cart
     width 100%
+    height 66px
 
     &:hover
       .spinner
