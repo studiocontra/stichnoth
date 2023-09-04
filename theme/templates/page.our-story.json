@@ -81,11 +81,24 @@
     },
     "b48ef18c-19ef-4b35-a56c-c595bc3120a9": {
       "type": "bg-image-with-text",
+      "disabled": true,
       "settings": {
         "color_scheme": "dark",
         "heading": "1979 & <strong>1980<\/strong>",
         "text": "<p>Horst Stichnoth passed on his craftsmanship and love for jewelry to his sons Jörg and Dirk Stichnoth, both of whom started their apprenticeship as goldsmiths in 1979 and 1980. The foundation for the continuation of the business in the second generation was laid.<\/p>",
         "button_label": "",
+        "button_link": "",
+        "text_position": "right"
+      }
+    },
+    "3fe4b049-bf6a-4622-835c-486966585dcf": {
+      "type": "bg-image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Out_story_stichnoth_1980_1983.png",
+        "color_scheme": "dark",
+        "heading": "1980 & <strong>1983<\/strong>",
+        "text": "<p>Horst Stichnoth passed on his craftsmanship and love for jewelry to his sons Jörg and Dirk Stichnoth, both of whom started their apprenticeship as goldsmiths in 1980 and 1983. The foundation for the continuation of the business in the second generation was laid.<\/p>",
+        "button_label": "Button label",
         "button_link": "",
         "text_position": "right"
       }
@@ -96,14 +109,14 @@
         "14e8d3f5-a9a1-4471-8ca2-7afb525129c0": {
           "type": "heading",
           "settings": {
-            "heading": "19XX",
+            "heading": "1983",
             "heading_size": "display"
           }
         },
         "c4918080-4112-4fc5-bcf0-22d494e62c4d": {
           "type": "text",
           "settings": {
-            "text": "<p>After completing their apprenticeship and\/or simultaneously studying at the Zeichenakademie Hanau, Jörg and Dirk Stichnoth joined the family-run business in 19XX. The second store of the Goldschmiede Stichnoth was opened at Georgstraße 52 in Hannover.<\/p><p>In the following years, additional stores were opened in Berlin, Frankfurt, Bremen, and Hamburg.<\/p>"
+            "text": "<p>After completing their apprenticeship and their studies at the Zeichenakademie Hanau, Dirk and Jörg entered the family run business 1979 and 1983. The second store of the Goldschmiede Stichnoth was opened at Georgstraße 52 in Hannover.In the following years, additional stores were opened in Berlin, Frankfurt, Bremen, and Hamburg. <\/p>"
           }
         }
       },
@@ -143,7 +156,6 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/story-1-1.jpg",
-        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
         "color_scheme": "",
         "img_style": "overlap",
         "text_position": "left",
@@ -239,6 +251,7 @@
     "ad84b7a7-8b64-4366-aeac-e7cd158c5b21",
     "470cdd73-ca3f-4f78-a301-584a0894a773",
     "b48ef18c-19ef-4b35-a56c-c595bc3120a9",
+    "3fe4b049-bf6a-4622-835c-486966585dcf",
     "fcd5e182-bcf0-410e-acb0-66447f0d08d9",
     "a857daab-0a05-4d24-aa93-beb7b119eaaf",
     "2864d7f7-cfda-43a1-8bd2-36c19fa2ef94",

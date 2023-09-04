@@ -33,6 +33,13 @@ const mainHeaderApp = Vue.createApp({
     toggleMenu() {
       this.setMenuTop();
       this.isMenuOpen = !this.isMenuOpen;
+    },
+    openDropdown(target, e) {
+      if(window.innerWidth <= 768) {
+        console.log(target);
+        e.preventDefault();
+        document.querySelector(`.submenu[data-id="${target}"]`).classList.toggle('active');
+      }
     }
   }
 });

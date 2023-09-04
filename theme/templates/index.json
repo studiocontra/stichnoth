@@ -6,7 +6,7 @@
         "a0dc6a88-5046-4036-b5ff-09f2910afc88": {
           "type": "slide",
           "settings": {
-            "headline": "Lorem ipsum dolor",
+            "headline": "AN INVESTMENT IN LIFE",
             "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
             "button_label": "Learn More",
             "button_link": ""
@@ -15,7 +15,7 @@
         "5a1e862b-7ff7-4b8e-8ca2-bc79bf5c948d": {
           "type": "slide",
           "settings": {
-            "headline": "New slide",
+            "headline": "We celebrate artisans",
             "image": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
             "button_label": "Learn More",
             "button_link": ""
@@ -105,10 +105,10 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
         "color_scheme": "gold",
-        "heading": "1979 & <strong>1980<\/strong>",
-        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-        "button_label": "Button label",
-        "button_link": "",
+        "heading": "Bespoke <strong>Brilliance<\/strong>",
+        "text": "<p>An essential part of our offer consists of products manufactured individually according to your wishes. Together we will design a piece of jewelry that matches your ideas, which is characterized by durability and uniqueness. Immerse yourself with us in the unique world of unlimited creative possibilities!<\/p>",
+        "button_label": "BOOK AN APPOINTMENT",
+        "button_link": "shopify:\/\/pages\/contact",
         "text_position": "right"
       }
     },
@@ -125,14 +125,14 @@
         "3a196355-84fa-4be8-90fd-a265e7507fdd": {
           "type": "text",
           "settings": {
-            "text": "<p>For three generations, traditional manufacturing processes have met modern techniques in our manufactory. Goldschmiede Stichnoth stands for craftsmanship at the highest level. True to the motto “Made in Germany”, all pieces of jewelry are made in our manufactory in Hanover.<\/p>"
+            "text": "<p>Discover the artistry of Stichnoth, where tradition meets innovation. Our family-owned jewelry store combines old-world craftsmanship with the latest technology, creating exquisite custom pieces, expert remodeling services, and tailored business works.<\/p>"
           }
         },
         "b0064ab3-a468-4609-b115-2bc0580540da": {
           "type": "button",
           "settings": {
-            "button_label": "contact",
-            "button_link": "shopify:\/\/pages\/contact"
+            "button_label": "Craftsmanship",
+            "button_link": "shopify:\/\/pages\/craftmanship"
           }
         }
       },

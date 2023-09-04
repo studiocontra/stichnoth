@@ -3,38 +3,72 @@
     <div class="row justify-between {{ section.settings.v_align }}{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
       <div class="{% if section.settings.img_style == 'space' %}col-md-7{% else %}col-md-6{% endif %}">
         <div class="image-text__img">
-          <picture>
-            <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
-            <source srcset="{{ section.settings.image | image_url: width: 450 }}">
-            <img
-              src="{{ section.settings.image | image_url }}"
-              width="{{ section.settings.image.width }}"
-              height="{{ section.settings.image.height }}"
-              lazy="true"
-            >
-          </picture>
+          {% if section.settings.video != blank %}
+            <div class="wrap-video">
+              <div class="video">
+                <iframe
+                  src="https://player.vimeo.com/video/{{ section.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
+                  muted
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          {% else %}
+            <picture>
+              <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+              <source srcset="{{ section.settings.image | image_url: width: 450 }}">
+              <img
+                src="{{ section.settings.image | image_url }}"
+                width="{{ section.settings.image.width }}"
+                height="{{ section.settings.image.height }}"
+                lazy="true"
+              >
+            </picture>
+          {% endif %}
 
           {% if section.settings.img_style == 'overlap' %}
-            <img
-              class="img--small{% if section.settings.text_position == 'left' %} img--small--bottom{% endif %}"
-              src="{{ section.settings.image_2 | image_url: width: 300 }}"
-              width="{{ section.settings.image_2.width }}"
-              height="{{ section.settings.image_2.height }}"
-              lazy="true"
-            >
+            {% if section.settings.video_2 != blank %}
+              <iframe
+                src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
+                muted
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            {% else %}
+              <img
+                class="img--small{% if section.settings.text_position == 'left' %} img--small--bottom{% endif %}"
+                src="{{ section.settings.image_2 | image_url: width: 300 }}"
+                width="{{ section.settings.image_2.width }}"
+                height="{{ section.settings.image_2.height }}"
+                lazy="true"
+              >
+            {% endif %}
           {% endif %}
         </div>
       </div>
       <div class="col-md-5">
         <div class="image-text__content {{ section.settings.text_position }}">
           {% if section.settings.img_style == 'space' %}
-            <img
-              class="img--small"
-              src="{{ section.settings.image_2 | image_url: width: 300 }}"
-              width="{{ section.settings.image_2.width }}"
-              height="{{ section.settings.image_2.height }}"
-              lazy="true"
-            >
+            {% if section.settings.video_2 != blank %}
+              <iframe
+                src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
+                muted
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            {% else %}
+              <img
+                class="img--small"
+                src="{{ section.settings.image_2 | image_url: width: 300 }}"
+                width="{{ section.settings.image_2.width }}"
+                height="{{ section.settings.image_2.height }}"
+                lazy="true"
+              >
+            {% endif %}
           {% endif %}
           {%- for block in section.blocks -%}
             {% case block.type %}
@@ -46,6 +80,17 @@
                 <div class="text">
                   {{ block.settings.text }}
                 </div>
+              {%- when 'button' -%}
+                <a
+                  href="{{ block.settings.button_link }}"
+                  class="link"
+                >
+                  {{ block.settings.button_label }}
+
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+                  </svg>
+                </a>
             {%- endcase -%}
           {%- endfor -%}
         </div>
@@ -63,14 +108,68 @@
   },
   "settings": [
     {
+      "type": "select",
+      "id": "main_media_ratio",
+      "label": "Main Media Aspect Ratio",
+      "options": [
+        {
+          "value": "square",
+          "label": "1:1 (850 x 850)"
+        },
+        {
+          "value": "landscape",
+          "label": "16:9 (850 x 480)"
+        },
+        {
+          "value": "vertical",
+          "label": "2:1 (850 x 1700)"
+        }
+      ],
+      "default": "square"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
+      "type": "select",
+      "id": "addon_media_ratio",
+      "label": "Additional Media Aspect Ratio",
+      "options": [
+        {
+          "value": "square",
+          "label": "1:1 (250 x 250)"
+        },
+        {
+          "value": "landscape",
+          "label": "16:9 (250 x 140)"
+        },
+        {
+          "value": "vertical",
+          "label": "2:1 (250 x 500)"
+        }
+      ],
+      "default": "square"
+    },
+    {
       "type": "image_picker",
       "id": "image_2",
       "label": "Additional Image"
+    },
+    {
+      "type": "header",
+      "content": "Videos"
+    },
+    {
+      "type": "text",
+      "id": "video",
+      "label": "Main Video"
+    },
+    {
+      "type": "text",
+      "id": "video_2",
+      "label": "Additional Video"
     },
     {
       "type": "color_scheme",

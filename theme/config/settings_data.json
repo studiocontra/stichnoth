@@ -1,6 +1,6 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo-web.png",
+    "logo": "shopify:\/\/shop_images\/Logo_Stichnoth_complete.svg",
     "logo_mobile": "shopify:\/\/shop_images\/logo-mobile.png",
     "favicon": "shopify:\/\/shop_images\/favicon.png",
     "social_facebook_link": "https:\/\/www.facebook.com\/goldschmiede.stichnoth",
@@ -43,7 +43,7 @@
           "color_scheme": "",
           "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
           "headline": "Work with us",
-          "content": "<p>If you would like to become part of an innovative company that has been shaped by decades of tradition, apply now! <\/p><p>We are always interested in talented employees who enjoy creativity and craftsmanship.<\/p>",
+          "content": "<p>If you would like to become part of an innovative company that has been shaped by decades of tradition, apply now!<\/p>",
           "button_label": "Go to Careers",
           "button_link": "shopify:\/\/pages\/our-story"
         }
@@ -95,7 +95,7 @@
       "dark": {
         "settings": {
           "background": "#1a1c1d",
-          "headline": "#fff",
+          "headline": "#ffffff",
           "text": "#ffffff",
           "button": "#ffffff"
         }

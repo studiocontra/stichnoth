@@ -24,6 +24,27 @@
                 {{ section.settings.text }}
               </div>
             {%- endif -%}
+
+            {%- if section.settings.button_link != blank -%}
+              <a
+                href="{{ section.settings.button_link }}"
+                class="link"
+                style="color: {{ section.settings.color_scheme.settings.button }}"
+              >
+                {{ section.settings.button_label }}
+
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    style="stroke: {{ section.settings.color_scheme.settings.button }}"
+                    d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke-width="1.6" stroke-linecap="square"/>
+                </svg>
+              </a>
+            {%- endif -%}
           </div>
         </div>
         <div class="col-md-6 col-lg-8">
@@ -59,6 +80,27 @@
               <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
                 {{ section.settings.text }}
               </div>
+            {%- endif -%}
+
+            {%- if section.settings.button_link != blank -%}
+              <a
+                href="{{ section.settings.button_link }}"
+                class="link"
+                style="color: {{ section.settings.color_scheme.settings.button }}"
+              >
+                {{ section.settings.button_label }}
+
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    style="stroke: {{ section.settings.color_scheme.settings.button }}"
+                    d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke-width="1.6" stroke-linecap="square"/>
+                </svg>
+              </a>
             {%- endif -%}
           </div>
         </div>

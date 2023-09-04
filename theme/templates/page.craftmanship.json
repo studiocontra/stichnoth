@@ -56,39 +56,66 @@
           "type": "item",
           "settings": {
             "heading": "Design",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Experience the art of designing, from exploring the possibilities of different materials to creating unique pieces that harmoniously blend aesthetics and functionality. <\/p>",
             "image": "shopify:\/\/shop_images\/leather-anchor-bracelet-for-men_925x_1ee66342-cd3d-447d-8067-efcdae229c18.jpg"
           }
         },
-        "466c9452-1b75-4dc1-a7f5-c3d6f942a573": {
+        "3ac0132b-66ea-4601-a629-9e953093b269": {
           "type": "item",
           "settings": {
-            "heading": "Forming Metal",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "image": "shopify:\/\/shop_images\/inspired-woman_925x_123c6235-96ac-4932-af6e-9488a6cc3b9f.jpg"
+            "heading": "3d modeling",
+            "text": "<p>Whenever a individual piece of jewelry will be designed together with the client, a 3D model will be generated to give the client a better understanding of the piece.<\/p>",
+            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg"
+          }
+        },
+        "c7c3ffb4-2f5f-494c-b4cd-7a91c5b3af49": {
+          "type": "item",
+          "settings": {
+            "heading": "3D printing",
+            "text": "<p>Once the 3D file has digitally been created, the printer will print a model using a special wax.<\/p>",
+            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg"
           }
         },
         "6afdaee1-bb6f-4a98-bdcd-611750d4e688": {
           "type": "item",
           "settings": {
             "heading": "Casting",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>The wax model, which has the exact measurements, will be dipped into a plaster mold. Once the wax has been removed, the negative mold will be filled with the final material.<\/p>",
             "image": "shopify:\/\/shop_images\/womens-hand-moon-bracelet-_925x_ee830176-d9b0-4bb5-b89f-4abc27feebc7.jpg"
+          }
+        },
+        "466c9452-1b75-4dc1-a7f5-c3d6f942a573": {
+          "type": "item",
+          "settings": {
+            "heading": "Forming Metal",
+            "text": "<p>If the piece has stones, the second to last step includes the setting of various stones.<\/p>",
+            "image": "shopify:\/\/shop_images\/inspired-woman_925x_123c6235-96ac-4932-af6e-9488a6cc3b9f.jpg"
+          }
+        },
+        "f39b727b-2fbc-4600-b4d8-f366e4a798bd": {
+          "type": "item",
+          "settings": {
+            "heading": "Stone Setting",
+            "text": "<p>If the piece has stones, the second to last step includes the setting of various stones.<\/p>",
+            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg"
           }
         },
         "9afd3f77-f478-42ef-b326-d1b720dcb5f1": {
           "type": "item",
           "settings": {
             "heading": "Polishing",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>The final step before the piece gets presented includes the finish of the surface. Wit might be a shiny polish but could also mean a matte finish.<\/p>",
             "image": "shopify:\/\/shop_images\/guardian-angel-earring-closeup_925x_b61ecee1-27ed-4979-a55e-f0a565a9d70b.jpg"
           }
         }
       },
       "block_order": [
         "8507d3e4-e30b-46d6-91ca-b168406afb6e",
-        "466c9452-1b75-4dc1-a7f5-c3d6f942a573",
+        "3ac0132b-66ea-4601-a629-9e953093b269",
+        "c7c3ffb4-2f5f-494c-b4cd-7a91c5b3af49",
         "6afdaee1-bb6f-4a98-bdcd-611750d4e688",
+        "466c9452-1b75-4dc1-a7f5-c3d6f942a573",
+        "f39b727b-2fbc-4600-b4d8-f366e4a798bd",
         "9afd3f77-f478-42ef-b326-d1b720dcb5f1"
       ],
       "settings": {
@@ -103,14 +130,14 @@
           "type": "Column",
           "settings": {
             "main_image": "shopify:\/\/shop_images\/leather-anchor-bracelet-for-men_925x_1ee66342-cd3d-447d-8067-efcdae229c18.jpg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "text": "<p>The importance of preserving traditional techniques and skills cannot be overstated, as they form the foundation of the industry.<\/p>"
           }
         },
         "5a44de06-c4b5-405a-bc02-d3b871a28ab2": {
           "type": "Column",
           "settings": {
             "main_image": "shopify:\/\/shop_images\/womens-hand-moon-bracelet-_925x_ee830176-d9b0-4bb5-b89f-4abc27feebc7.jpg",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "text": "<p>The use of new tools and techniques helps to speed up production without sacrificing quality or artistry. <\/p>"
           }
         }
       },
@@ -152,7 +179,7 @@
       ],
       "settings": {
         "headline": "Celebrating<strong> Artisans<\/strong>",
-        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+        "text": "<p>A tool would be nothing without the unique skills of our goldsmiths who operate them. That is why we are particularly proud of our manufactory, which includes 20 goldsmiths - from trainees to master craftsmen who have been working for decades with us. We are always committed to passing on knowledge to future generations and therefore regularly train young people with great commitment.<\/p>",
         "color_scheme": "gold"
       }
     },
@@ -195,6 +222,25 @@
         "color_scheme": "",
         "show_view_all": true
       }
+    },
+    "0ac027b2-de09-4bd1-86cb-fb6c7ca17801": {
+      "type": "cta-card-pages",
+      "blocks": {
+        "576d3f4b-9c3e-4a6c-a8ae-e33feaaba4cc": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+            "headline": "About <strong>Sustainability<\/strong>",
+            "button_label": "Know More",
+            "button_link": "shopify:\/\/pages\/sustainability"
+          }
+        }
+      },
+      "block_order": [
+        "576d3f4b-9c3e-4a6c-a8ae-e33feaaba4cc"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -203,6 +249,7 @@
     "00cf1d3e-5305-4bd2-a54f-e78b90dbf19b",
     "6044598f-93e7-416f-831a-071dc8a9bd21",
     "42a39faa-d535-4789-93c5-2098cfd17a78",
-    "a99e782a-18c9-448a-9cab-c4064f0a4c6d"
+    "a99e782a-18c9-448a-9cab-c4064f0a4c6d",
+    "0ac027b2-de09-4bd1-86cb-fb6c7ca17801"
   ]
 }

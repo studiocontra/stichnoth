@@ -83,9 +83,28 @@
           <ul>
             {%- for link in section.settings.menu.links -%}
               <li>
-                <a href="{{ link.url }}" class="menu__link{% if link.current %} menu__link--active{% endif %}">
-                  {{ link.handle }}
+                <a
+                  href="{{ link.url }}"
+                  class="menu__link{% if link.current %} menu__link--active{% endif %}"
+                  @click="openDropdown('menu-{{forloop.index0}}', $event)"
+                >
+                  {{ link.title }}
                 </a>
+
+                {% if link.links %}
+                  <ul class="submenu" data-id="menu-{{forloop.index0}}">
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <a
+                          href="{{ childlink.url }}"
+                          class="menu__link{% if childlink.current %} menu__link--active{% endif %}"
+                        >
+                          {{ childlink.title }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
               </li>
             {%- endfor -%}
           </ul>

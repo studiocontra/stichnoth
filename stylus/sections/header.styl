@@ -31,7 +31,7 @@ header
   gap 0 12px
   width 80px
 
-  +mq(768)
+  +mq(992)
     display none
 
   .modal__toggle-open
@@ -46,7 +46,7 @@ header
   background none
   cursor pointer
 
-  +mq(768)
+  +mq(992)
     display none
 
   .header__hamburger__inner
@@ -109,7 +109,7 @@ header
   gap 0 4px
   align-items center
 
-  +mq(768)
+  +mq(992)
     display flex
 
   .bull
@@ -125,7 +125,7 @@ header
 
 
 .header__locale--mobile
-  +mq(768)
+  +mq(992)
     display none
 
 
@@ -135,14 +135,14 @@ header
     display none
     width 145px
 
-    +mq(768)
+    +mq(992)
       display block
 
   .logo--mobile
     display block
     width 25px
 
-    +mq(768)
+    +mq(992)
       display none
 
 
@@ -154,7 +154,7 @@ header
   width 80px
   gap 0 16px
 
-  +mq(768)
+  +mq(992)
     width 120px
     flex-direction row
     justify-content flex-end
@@ -188,7 +188,7 @@ header
   .header__search
     display none
 
-    +mq(768)
+    +mq(992)
       display block
 
 
@@ -209,7 +209,7 @@ header
   margin-left auto
   flex 1 1 100%
 
-  +mq(768)
+  +mq(992)
     display block
     text-align center
 
@@ -222,7 +222,30 @@ header
     padding 0 12px
     margin 0 12px
 
+    &:hover
+      +mq(992)
+        .submenu
+          display block
+
+  .submenu
+    display none
+    position relative
+    width 100%
+    padding 0
+
+    +mq(992)
+      position absolute
+      top 100%
+      left 0
+      text-align center
+      padding 16px 0
+
+    &.active
+      display block
+
+
   .menu__link
+    display flex
     color $black
     text-decoration none
     font('headline')
@@ -230,13 +253,23 @@ header
     &:hover
       font-weight 500
 
+    svg
+      width 30px
+      height @width
+      transform translateY(3px)
+
+      +mq(992)
+        width 25px
+        height @width
+        transform translateY(-3px)
+
   .menu__link--active
     font-weight 500
 
   .header__locale
     display flex
 
-    +mq(768)
+    +mq(992)
       display none
 
 
@@ -263,6 +296,10 @@ header
     display block
     margin-bottom 1em
     font-size clamp(16px, 6vw, 24px)
+
+  .submenu
+    .menu__link
+      font-size clamp(14px, 5vw, 20px)
 
   .header__locale
     margin-top auto

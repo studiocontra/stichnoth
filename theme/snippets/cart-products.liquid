@@ -1,6 +1,8 @@
 <div class="wrap-cart-form">
   {% if cart == empty %}
-    <div>Cart is empty</div>
+    <div class="cart__empty">
+      <span class="title title--small"> Cart is empty </span>
+    </div>
   {% else %}
     <form
       class="cart__form"
