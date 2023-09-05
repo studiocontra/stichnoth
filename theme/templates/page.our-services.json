@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "headline": "Our Services",
-            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+            "image": "shopify:\/\/shop_images\/Rectangle_1_69efeb75-f935-4262-8640-799705f59c93.png",
             "button_label": "Learn More",
             "button_link": ""
           }
@@ -25,14 +25,14 @@
         "3cb64149-e4c2-42a4-a8f6-ab778b33dae9": {
           "type": "heading",
           "settings": {
-            "heading": "1959",
-            "heading_size": "display"
+            "heading": "Custom and bespoke",
+            "heading_size": "headline"
           }
         },
         "72bf12ed-09ec-4bbe-b189-bbb4cab20f85": {
           "type": "text",
           "settings": {
-            "text": "<p>In 1959, Horst Stichnoth expanded his goldsmith business to Hannover and has since been working with his wife Anneliese Stichnoth, constantly filled with joy and ambition, to further develop and grow the company. The Goldschmiede Stichnoth has always been recognized as a training company.<\/p>"
+            "text": "<p>As Goldschmiede Stichnoth, we have set ourselves the goal of letting every piece of jewelry tell a story. Individually manufactured products are an expression of love and personality. Together with our goldsmiths you have the opportunity to implement your own ideas and wishes. You are welcome to make an appointment in one of our shops or get advice online.<\/p>"
           }
         }
       },
@@ -41,9 +41,13 @@
         "72bf12ed-09ec-4bbe-b189-bbb4cab20f85"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
-        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
         "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/Rectangle_3_f800adfa-f60d-4768-86b1-79434c002406.png",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/Rectangle_2_c872cdbb-cd2a-498b-b4d9-cb869a69a942.png",
+        "video": "",
+        "video_2": "",
         "img_style": "space",
         "text_position": "right",
         "v_align": "align-center"
@@ -55,25 +59,37 @@
         "117fcb7c-fc9f-468f-be5f-ddcfdaa8daa8": {
           "type": "heading",
           "settings": {
-            "heading": "1954",
-            "heading_size": "display"
+            "heading": "Crafting for businesses",
+            "heading_size": "headline"
           }
         },
         "9019c496-1454-47bc-a888-f2c1c339cb75": {
           "type": "text",
           "settings": {
-            "text": "<p>The Goldschmiede Stichnoth was founded in 1954 by Horst Stichnoth in Lehrte near Hannover, after passing the master craftsman examination and completing his studies at the Zeichenakademie Hanau.<\/p>"
+            "text": "<p>Are you a company interested in professional and reliable cooperation?<\/p><p>Feel free to contact us. We offer a wide range of B2B services - from design to production.<\/p>"
+          }
+        },
+        "e44b193f-2472-4f03-afc1-2a85d2dba673": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify:\/\/pages\/contact"
           }
         }
       },
       "block_order": [
         "117fcb7c-fc9f-468f-be5f-ddcfdaa8daa8",
-        "9019c496-1454-47bc-a888-f2c1c339cb75"
+        "9019c496-1454-47bc-a888-f2c1c339cb75",
+        "e44b193f-2472-4f03-afc1-2a85d2dba673"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
-        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
         "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/Rectangle_1-1_622f2638-f8c8-4cc2-8f6e-9b6e59a47c75.png",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/Rectangle_2-1_9b6120eb-6b99-4637-97fd-aa17f6550c41.png",
+        "video": "",
+        "video_2": "",
         "img_style": "overlap",
         "text_position": "left",
         "v_align": "align-center"
@@ -85,25 +101,37 @@
         "14e8d3f5-a9a1-4471-8ca2-7afb525129c0": {
           "type": "heading",
           "settings": {
-            "heading": "19XX",
-            "heading_size": "display"
+            "heading": "Remodeling",
+            "heading_size": "headline"
           }
         },
         "c4918080-4112-4fc5-bcf0-22d494e62c4d": {
           "type": "text",
           "settings": {
-            "text": "<p>After completing their apprenticeship and\/or simultaneously studying at the Zeichenakademie Hanau, Jörg and Dirk Stichnoth joined the family-run business in 19XX. The second store of the Goldschmiede Stichnoth was opened at Georgstraße 52 in Hannover.<\/p><p>In the following years, additional stores were opened in Berlin, Frankfurt, Bremen, and Hamburg.<\/p>"
+            "text": "<p>Since we always try to give \"old\" a new shine, adjustments, conversions or refurbishments are of course also part of our range of services for you.<\/p>"
+          }
+        },
+        "55e0f4cd-302d-4e1e-842f-8f42b9c92d9e": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify:\/\/pages\/contact"
           }
         }
       },
       "block_order": [
         "14e8d3f5-a9a1-4471-8ca2-7afb525129c0",
-        "c4918080-4112-4fc5-bcf0-22d494e62c4d"
+        "c4918080-4112-4fc5-bcf0-22d494e62c4d",
+        "55e0f4cd-302d-4e1e-842f-8f42b9c92d9e"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
-        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
         "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/Rectangle_12_007ba470-9ba7-4f09-b7cb-589fe0c839ae.png",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/Rectangle_13_3571043f-86fe-494e-b48c-bfaec772f8a8.png",
+        "video": "",
+        "video_2": "",
         "img_style": "overlap",
         "text_position": "right",
         "v_align": "align-center"
@@ -115,16 +143,16 @@
         "10b2ce4c-5aca-4f58-bbd4-bcec0c3d267b": {
           "type": "banner",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bg-cta-card-pages.jpg",
+            "image": "shopify:\/\/shop_images\/Rectangle_1-2_ac41c1b9-6066-4882-8aef-811a13c5af56.png",
             "headline": "Stores",
             "button_label": "Learn More",
-            "button_link": ""
+            "button_link": "shopify:\/\/pages\/stores"
           }
         },
         "2c654050-9520-47a3-abd6-0923ea0e92c7": {
           "type": "banner",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-1.jpg",
+            "image": "shopify:\/\/shop_images\/Rectangle_2-2.png",
             "headline": "Appointment",
             "button_label": "Learn More",
             "button_link": ""

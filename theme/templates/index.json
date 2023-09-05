@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "headline": "AN INVESTMENT IN LIFE",
-            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+            "image": "shopify:\/\/shop_images\/Hero_1.jpg",
             "button_label": "Learn More",
             "button_link": ""
           }
@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "headline": "We celebrate artisans",
-            "image": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+            "image": "shopify:\/\/shop_images\/hero-2.jpg",
             "button_label": "Learn More",
             "button_link": ""
           }
@@ -92,9 +92,13 @@
         "4f079cf2-7ac4-42a4-b2b8-142909603d32"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/womens-hand-moon-bracelet-_925x_ee830176-d9b0-4bb5-b89f-4abc27feebc7.jpg",
-        "image_2": "shopify:\/\/shop_images\/moon-friendship-bracelet_925x_873b8179-5e77-41bf-963b-0b8005e9cfa5.jpg",
-        "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/crafting_excelence_img1_044ff7cf-f86d-4178-be1d-c5cb8c5fbdf6.jpg",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/crafting_excelence_img2.jpg",
+        "video": "",
+        "video_2": "",
+        "color_scheme": "normal",
         "img_style": "overlap",
         "text_position": "right",
         "v_align": "align-bottom"
@@ -103,8 +107,8 @@
     "80658265-3e2b-4689-b761-537e4df465f3": {
       "type": "bg-image-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
-        "color_scheme": "gold",
+        "image": "shopify:\/\/shop_images\/Bespoke-brilliance_2f065b3c-4bd5-4465-a802-da87e9608c97.jpg",
+        "video": "",
         "heading": "Bespoke <strong>Brilliance<\/strong>",
         "text": "<p>An essential part of our offer consists of products manufactured individually according to your wishes. Together we will design a piece of jewelry that matches your ideas, which is characterized by durability and uniqueness. Immerse yourself with us in the unique world of unlimited creative possibilities!<\/p>",
         "button_label": "BOOK AN APPOINTMENT",
@@ -131,8 +135,8 @@
         "b0064ab3-a468-4609-b115-2bc0580540da": {
           "type": "button",
           "settings": {
-            "button_label": "Craftsmanship",
-            "button_link": "shopify:\/\/pages\/craftmanship"
+            "button_label": "Our Services",
+            "button_link": "shopify:\/\/pages\/services"
           }
         }
       },
@@ -142,8 +146,12 @@
         "b0064ab3-a468-4609-b115-2bc0580540da"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/leather-anchor-bracelet-for-men_925x_1ee66342-cd3d-447d-8067-efcdae229c18.jpg",
-        "image_2": "shopify:\/\/shop_images\/anchor-bracelet-for-men_925x_1e3d669e-1b26-494e-b1c4-b58255c4b97f.jpg",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/timeless-craftsmanship-img1.jpg",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/timeless-craftsmanship-img2.jpg",
+        "video": "",
+        "video_2": "",
         "color_scheme": "",
         "img_style": "space",
         "text_position": "right",

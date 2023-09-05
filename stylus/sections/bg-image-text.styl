@@ -7,6 +7,25 @@
     border-radius 8px
 
 
+.bg-image-text__video
+  position relative
+  aspect-ratio 16 / 9
+  overflow hidden
+  border-radius 8px
+
+  .video
+    position absolute
+    top 50%
+    left 50%
+    width auto
+    height 100%
+    aspect-ratio 16 / 9
+    transform translate(-50%, -50%)
+
+    iframe
+      fullAbs()
+
+
 .bg-image-text__content
   margin-bottom 3em
 

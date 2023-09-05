@@ -36,7 +36,6 @@ const mainHeaderApp = Vue.createApp({
     },
     openDropdown(target, e) {
       if(window.innerWidth <= 768) {
-        console.log(target);
         e.preventDefault();
         document.querySelector(`.submenu[data-id="${target}"]`).classList.toggle('active');
       }

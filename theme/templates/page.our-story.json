@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "headline": "Our Story",
-            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+            "image": "shopify:\/\/shop_images\/Rectangle_1.png",
             "button_label": "Learn More",
             "button_link": ""
           }
@@ -41,9 +41,13 @@
         "9019c496-1454-47bc-a888-f2c1c339cb75"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
-        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
         "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
+        "video": "",
+        "video_2": "",
         "img_style": "overlap",
         "text_position": "left",
         "v_align": "align-center"
@@ -71,9 +75,13 @@
         "72bf12ed-09ec-4bbe-b189-bbb4cab20f85"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
-        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
         "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/Rectangle_12.png",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/Rectangle_13.png",
+        "video": "",
+        "video_2": "",
         "img_style": "overlap",
         "text_position": "right",
         "v_align": "align-center"
@@ -84,6 +92,7 @@
       "disabled": true,
       "settings": {
         "color_scheme": "dark",
+        "video": "",
         "heading": "1979 & <strong>1980<\/strong>",
         "text": "<p>Horst Stichnoth passed on his craftsmanship and love for jewelry to his sons Jörg and Dirk Stichnoth, both of whom started their apprenticeship as goldsmiths in 1979 and 1980. The foundation for the continuation of the business in the second generation was laid.<\/p>",
         "button_label": "",
@@ -94,8 +103,9 @@
     "3fe4b049-bf6a-4622-835c-486966585dcf": {
       "type": "bg-image-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Out_story_stichnoth_1980_1983.png",
         "color_scheme": "dark",
+        "image": "shopify:\/\/shop_images\/Out_story_stichnoth_1980_1983.png",
+        "video": "",
         "heading": "1980 & <strong>1983<\/strong>",
         "text": "<p>Horst Stichnoth passed on his craftsmanship and love for jewelry to his sons Jörg and Dirk Stichnoth, both of whom started their apprenticeship as goldsmiths in 1980 and 1983. The foundation for the continuation of the business in the second generation was laid.<\/p>",
         "button_label": "Button label",
@@ -125,9 +135,13 @@
         "c4918080-4112-4fc5-bcf0-22d494e62c4d"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
-        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
         "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/Rectangle_3.png",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/Rectangle_2-1.png",
+        "video": "",
+        "video_2": "",
         "img_style": "space",
         "text_position": "right",
         "v_align": "align-center"
@@ -155,8 +169,13 @@
         "785211cf-b233-4376-ad44-a5ca641acc1d"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
         "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/Rectangle_3-1.png",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/2010-2.jpg",
+        "video": "",
+        "video_2": "",
         "img_style": "overlap",
         "text_position": "left",
         "v_align": "align-center"
@@ -184,12 +203,16 @@
         "2fcf063a-3067-417b-9870-bc7dcbfe5287"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
-        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
         "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/Rectangle_12-1.png",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/Rectangle_13-1.png",
+        "video": "",
+        "video_2": "",
         "img_style": "overlap",
         "text_position": "right",
-        "v_align": "align-center"
+        "v_align": "align-bottom"
       }
     },
     "2c63a911-b309-4e19-a316-a9e15c70c9dd": {
@@ -220,29 +243,48 @@
             "product": "gemstone"
           }
         },
+        "51dc98dc-4dfe-4f9f-a5c6-0129e0a913e0": {
+          "type": "text",
+          "settings": {
+            "text": "Artisanal Masterpieces"
+          }
+        },
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3": {
           "type": "related_product",
           "settings": {
             "product": "choker-with-triangle"
-          }
-        },
-        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2": {
-          "type": "related_product",
-          "settings": {
-            "product": "chain-bracelet"
           }
         }
       },
       "block_order": [
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1",
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2",
-        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3",
-        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2"
+        "51dc98dc-4dfe-4f9f-a5c6-0129e0a913e0",
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3"
       ],
       "settings": {
         "title": "Our Recommendations",
         "color_scheme": "",
         "show_view_all": true
+      }
+    },
+    "19e1c3b5-b8ef-4ecc-a7ae-87564eb44c63": {
+      "type": "cta-card-pages",
+      "blocks": {
+        "3bdeaafb-f700-4980-a8b9-cae01c01fa81": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bg-cta-card-pages.jpg",
+            "headline": "About <strong>Craftmanship<\/strong>",
+            "button_label": "Know More",
+            "button_link": "shopify:\/\/pages\/craftmanship"
+          }
+        }
+      },
+      "block_order": [
+        "3bdeaafb-f700-4980-a8b9-cae01c01fa81"
+      ],
+      "settings": {
       }
     }
   },
@@ -256,6 +298,7 @@
     "a857daab-0a05-4d24-aa93-beb7b119eaaf",
     "2864d7f7-cfda-43a1-8bd2-36c19fa2ef94",
     "2c63a911-b309-4e19-a316-a9e15c70c9dd",
-    "a99e782a-18c9-448a-9cab-c4064f0a4c6d"
+    "a99e782a-18c9-448a-9cab-c4064f0a4c6d",
+    "19e1c3b5-b8ef-4ecc-a7ae-87564eb44c63"
   ]
 }

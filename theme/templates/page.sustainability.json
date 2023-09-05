@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "headline": "Sustainability",
-            "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+            "image": "shopify:\/\/shop_images\/sustainability-hero.jpg",
             "button_label": "Learn More",
             "button_link": ""
           }
@@ -81,13 +81,14 @@
     "b48ef18c-19ef-4b35-a56c-c595bc3120a9": {
       "type": "bg-image-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
         "color_scheme": "gold",
+        "image": "shopify:\/\/shop_images\/green-energy.jpg",
+        "video": "",
         "heading": "Green <strong>Energy<\/strong>",
         "text": "<p>In addition to buying and processing scrap gold, which makes a significant contribution to recycling, we run part of our production with green energy, which is generated with the help of our photovoltaic system. In addition, when choosing our means of transport, we pay attention to the constant expansion of our electric fleet.<\/p>",
         "button_label": "",
         "button_link": "",
-        "text_position": "right"
+        "text_position": "left"
       }
     },
     "fcd5e182-bcf0-410e-acb0-66447f0d08d9": {
@@ -112,9 +113,13 @@
         "c4918080-4112-4fc5-bcf0-22d494e62c4d"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/story-1-1.jpg",
-        "image_2": "shopify:\/\/shop_images\/story-1-2.png",
         "color_scheme": "",
+        "main_media_ratio": "square",
+        "image": "shopify:\/\/shop_images\/responsibility-1.jpg",
+        "addon_media_ratio": "square",
+        "image_2": "shopify:\/\/shop_images\/responsibility-2.jpg",
+        "video": "",
+        "video_2": "",
         "img_style": "space",
         "text_position": "right",
         "v_align": "align-center"
@@ -135,29 +140,48 @@
             "product": "gemstone"
           }
         },
+        "839cfdd3-20b2-4abf-ac5e-6de769916b60": {
+          "type": "text",
+          "settings": {
+            "text": "Artisanal Masterpieces"
+          }
+        },
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3": {
           "type": "related_product",
           "settings": {
             "product": "choker-with-triangle"
-          }
-        },
-        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2": {
-          "type": "related_product",
-          "settings": {
-            "product": "chain-bracelet"
           }
         }
       },
       "block_order": [
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1",
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2",
-        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3",
-        "bd3622f7-bfac-4346-9ccc-39ec4a8c6cb2"
+        "839cfdd3-20b2-4abf-ac5e-6de769916b60",
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3"
       ],
       "settings": {
         "title": "Our Recommendations",
         "color_scheme": "",
         "show_view_all": true
+      }
+    },
+    "d66a2f22-b62c-459b-b3a9-085796a16787": {
+      "type": "cta-card-pages",
+      "blocks": {
+        "5358ade3-b759-4256-9fb1-11ed05397729": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-our-story.jpg",
+            "headline": "About<strong> Our Story<\/strong>",
+            "button_label": "KnowMore",
+            "button_link": "shopify:\/\/pages\/our-story"
+          }
+        }
+      },
+      "block_order": [
+        "5358ade3-b759-4256-9fb1-11ed05397729"
+      ],
+      "settings": {
       }
     }
   },
@@ -166,6 +190,7 @@
     "4fb2b7f7-da17-43c7-a92c-8c7ed59e8d9a",
     "b48ef18c-19ef-4b35-a56c-c595bc3120a9",
     "fcd5e182-bcf0-410e-acb0-66447f0d08d9",
-    "a99e782a-18c9-448a-9cab-c4064f0a4c6d"
+    "a99e782a-18c9-448a-9cab-c4064f0a4c6d",
+    "d66a2f22-b62c-459b-b3a9-085796a16787"
   ]
 }

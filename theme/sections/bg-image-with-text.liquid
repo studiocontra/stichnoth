@@ -3,8 +3,8 @@
   style="background-color: {{ section.settings.color_scheme.settings.background }};"
 >
   <div class="container">
-    <div class="row justify-between align-bottom{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
-      {% if section.settings.image %}
+    <div class="row justify-between align-bottom{% if section.settings.text_position == 'right' %} direction-md-reverse{% endif %}">
+      {% if section.settings.image or section.settings.video != blank %}
         <div class="col-12">
           {%- if section.settings.heading != blank -%}
             <div class="bg-image-text__headline">
@@ -48,18 +48,32 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-8">
-          <div class="bg-image-text__img">
-            <picture>
-              <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
-              <source srcset="{{ section.settings.image | image_url: width: 450 }}">
-              <img
-                src="{{ section.settings.image | image_url }}"
-                width="{{ section.settings.image.width }}"
-                height="{{ section.settings.image.height }}"
-                lazy="true"
-              >
-            </picture>
-          </div>
+          {% if section.settings.video != blank %}
+            <div class="bg-image-text__video">
+              <div class="video">
+                <iframe
+                  src="https://player.vimeo.com/video/{{ section.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
+                  muted
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          {% else %}
+            <div class="bg-image-text__img">
+              <picture>
+                <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+                <source srcset="{{ section.settings.image | image_url: width: 450 }}">
+                <img
+                  src="{{ section.settings.image | image_url }}"
+                  width="{{ section.settings.image.width }}"
+                  height="{{ section.settings.image.height }}"
+                  lazy="true"
+                >
+              </picture>
+            </div>
+          {% endif %}
         </div>
       {% else %}
         <div class="col-md-6">
@@ -118,15 +132,20 @@
   },
   "settings": [
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "background-1"
+      "type": "text",
+      "id": "video",
+      "label": "Main Video"
     },
     {
       "type": "inline_richtext",

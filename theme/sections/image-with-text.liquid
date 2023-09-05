@@ -1,4 +1,7 @@
-<div class="custom-block image-text{% if section.settings.img_style == 'space' %} image-text--space{% endif %}">
+<div
+  class="custom-block image-text{% if section.settings.img_style == 'space' %} image-text--space{% endif %}"
+  style="background-color: {{ section.settings.color_scheme.settings.background }};"
+>
   <div class="container">
     <div class="row justify-between {{ section.settings.v_align }}{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
       <div class="{% if section.settings.img_style == 'space' %}col-md-7{% else %}col-md-6{% endif %}">
@@ -73,22 +76,26 @@
           {%- for block in section.blocks -%}
             {% case block.type %}
               {%- when 'heading' -%}
-                <h3 class="title{% if block.settings.heading_size == 'display' %} title--hero title--hero-light{% endif %}">
+                <h3
+                  class="title{% if block.settings.heading_size == 'display' %} title--hero title--hero-light{% endif %}"
+                  style="color: {{ section.settings.color_scheme.settings.headline }};"
+                >
                   {{ block.settings.heading }}
                 </h3>
               {%- when 'text' -%}
-                <div class="text">
+                <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
                   {{ block.settings.text }}
                 </div>
               {%- when 'button' -%}
                 <a
                   href="{{ block.settings.button_link }}"
                   class="link"
+                  style="color: {{ section.settings.color_scheme.settings.button }}"
                 >
                   {{ block.settings.button_label }}
 
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+                    <path style="color: {{ section.settings.color_scheme.settings.button }}" d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
                   </svg>
                 </a>
             {%- endcase -%}
@@ -107,6 +114,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
     {
       "type": "select",
       "id": "main_media_ratio",
@@ -170,12 +183,6 @@
       "type": "text",
       "id": "video_2",
       "label": "Additional Video"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "background-1"
     },
     {
       "type": "select",

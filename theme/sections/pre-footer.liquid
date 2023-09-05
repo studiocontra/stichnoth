@@ -2,41 +2,35 @@
   <div class="pre-footer__shape"></div>
 
   <div class="container">
-    <div class="row align-bottom">
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="pre-footer__img">
-          <picture>
-            <source srcset="{{ section.settings.image | image_url: width: 450 }}" media="(min-width: 450px)">
-            <source srcset="{{ section.settings.image | image_url: width: 250 }}">
-            <img
-              src="{{ section.settings.image | image_url }}"
-              width="{{ section.settings.image.width }}"
-              height="{{ section.settings.image.height }}"
-            >
-          </picture>
-        </div>
+    <div class="pre-footer__img">
+      <picture>
+        <source srcset="{{ section.settings.image | image_url: width: 450 }}" media="(min-width: 450px)">
+        <source srcset="{{ section.settings.image | image_url: width: 250 }}">
+        <img
+          src="{{ section.settings.image | image_url }}"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+        >
+      </picture>
+    </div>
+
+    <div class="pre-footer__content">
+      <h4 class="title title--hero--small">
+        {{ section.settings.headline }}
+      </h4>
+
+      <div class="text">
+        {{ section.settings.content }}
       </div>
 
-      <div class="col-md-8 col-lg-9">
-        <div class="pre-footer__content">
-          <h4 class="title title--hero--small">
-            {{ section.settings.headline }}
-          </h4>
-
-          <div class="text">
-            {{ section.settings.content }}
-          </div>
-
-          {% if section.settings.button_link %}
-            <a href="{{ section.settings.button_link }}" class="link link--black">
-              {{ section.settings.button_label }}
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
-              </svg>
-            </a>
-          {% endif %}
-        </div>
-      </div>
+      {% if section.settings.button_link %}
+        <a href="{{ section.settings.button_link }}" class="link link--black">
+          {{ section.settings.button_label }}
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+          </svg>
+        </a>
+      {% endif %}
     </div>
   </div>
 </div>

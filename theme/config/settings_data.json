@@ -40,8 +40,8 @@
       "pre-footer": {
         "type": "pre-footer",
         "settings": {
-          "color_scheme": "",
-          "image": "shopify:\/\/shop_images\/portrait-of-store-owner-in-his-store.jpg",
+          "color_scheme": "gold",
+          "image": "shopify:\/\/shop_images\/Work-with-us.jpg",
           "headline": "Work with us",
           "content": "<p>If you would like to become part of an innovative company that has been shaped by decades of tradition, apply now!<\/p>",
           "button_label": "Go to Careers",
@@ -50,33 +50,11 @@
       },
       "footer": {
         "type": "footer",
-        "blocks": {
-          "footer-0": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
-            }
-          },
-          "footer-1": {
-            "type": "text",
-            "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "footer-0",
-          "footer-1"
-        ],
         "settings": {
           "footer_logo": "shopify:\/\/shop_images\/logo-footer.png",
           "footer_top_text": "<p>Honoring heritage with timeless traditions, seamlessly woven into the brilliance of modern innovation.<\/p>",
-          "color_scheme": "",
           "show_social": true,
-          "enable_language_selector": true,
-          "payment_enable": true
+          "enable_language_selector": true
         }
       }
     },

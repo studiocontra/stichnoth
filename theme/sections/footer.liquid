@@ -51,21 +51,13 @@
                 <h3 class="title title--footer">Our world</h3>
 
                 <ul>
-                  <li>
-                    <a href=""> Home </a>
-                  </li>
-                  <li>
-                    <a href=""> Our Products </a>
-                  </li>
-                  <li>
-                    <a href=""> About us </a>
-                  </li>
-                  <li>
-                    <a href=""> Services </a>
-                  </li>
-                  <li>
-                    <a href=""> Stores </a>
-                  </li>
+                  {%- for link in section.settings.menu_footer.links -%}
+                    <li>
+                      <a href="{{ link.url }}">
+                        {{ link.title }}
+                      </a>
+                    </li>
+                  {%- endfor -%}
                 </ul>
               </div>
             </div>
@@ -253,12 +245,6 @@
       "label": "Footer Top Text"
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "background-1"
-    },
-    {
       "type": "header",
       "content": "t:sections.footer.settings.header__2.content",
       "info": "t:sections.footer.settings.header__2.info"
@@ -281,25 +267,11 @@
       "label": "t:sections.footer.settings.enable_language_selector.label"
     },
     {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__7.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "payment_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.payment_enable.label"
+      "type": "link_list",
+      "id": "menu_footer",
+      "default": "footer",
+      "label": "Menu"
     }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type": "link_list"
-      },
-      {
-        "type": "text"
-      }
-    ]
-  }
+  ]
 }
 {% endschema %}

@@ -6,6 +6,15 @@
   +mq(768)
     padding 56px 0 75px
 
+  .container
+    display flex
+    align-items flex-end
+    flex-wrap wrap
+    gap 32px
+
+    +mq(768)
+      flex-wrap nowrap
+
 
 .pre-footer__shape
   position absolute
@@ -14,17 +23,16 @@
   width 100%
   background-color $white
 
-  +mq(768)
-    height 10%
-  +mq(1200)
-    height 30%
 
 .pre-footer__img
   position relative
+  flex 1 1 100%
+  max-width 400px
   margin-bottom 2em
   aspect-ratio 1 / 1.2
 
   +mq(768)
+    flex 0 0 350px
     margin-bottom 0
 
   img
@@ -34,38 +42,24 @@
 
 
 .pre-footer__content
-  display flex
-  flex-wrap wrap
-  align-items center
+  display block
+  flex 1 1 100%
 
   +mq(768)
-    padding-left 5%
+    flex 0 1 auto
 
   .title
     flex 1 1 100%
 
   .text
     +mq(768)
-      margin-bottom 1em
       padding-right 2%
-    +mq(1200)
-      margin-bottom -1em
-      flex 1 0 65%
     +mq(1450)
-      flex 1 0 70%
       padding-right 0
 
   .link
-    display flex
-    flex 1 1 100%
-    justify-content flex-end
+    text-align right
 
     +mq(768)
-      justify-content flex-start
-    +mq(1200)
-      flex 0 0 27%
-      align-self flex-end
-      justify-content flex-end
-    +mq(1450)
-      flex 0 0 25%
+      text-align left
 
