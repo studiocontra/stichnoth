@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row justify-between {{ section.settings.v_align }}{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
       <div class="{% if section.settings.img_style == 'space' %}col-md-7{% else %}col-md-6{% endif %}">
-        <div class="image-text__img">
+        <div class="image-text__media">
           {% if section.settings.video != blank %}
             <div class="wrap-video">
               <div class="video">
@@ -138,7 +138,7 @@
           "label": "2:1 (850 x 1700)"
         }
       ],
-      "default": "square"
+      "default": "vertical"
     },
     {
       "type": "image_picker",

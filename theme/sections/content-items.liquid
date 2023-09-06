@@ -3,7 +3,7 @@
     <div class="row justify-between {% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
       <div class="col-md-6 col-lg-4">
         <div class="content-items__headline">
-          {%- if section.settings.headline != blank -%}
+          {%- if section.settings.heading != blank -%}
             <h3 class="title{% if block.settings.heading_size == 'display' %} title--hero title--hero-light{% endif %}">
               {{ section.settings.heading }}
             </h3>
@@ -83,7 +83,7 @@
               </div>
 
               <div class="single-item__text">
-                {%- if block.settings.headline != blank -%}
+                {%- if block.settings.heading != blank -%}
                   <h3 class="title title--small">
                     {{ block.settings.heading }}
                   </h3>
