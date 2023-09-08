@@ -6,9 +6,10 @@
   "author": "Contra",
   "license": "MIT",
   "scripts": {
-    "watch:stylus": "stylus -w ./stylus -o ./theme/assets/custom.min.css -c",
+    "watch:stylus": "stylus -w ./stylus/_main.styl -o ./theme/assets/custom.min.css -c",
+    "watch:stylusC": "stylus -w ./stylus/customer.styl -o ./theme/assets/customer-custom.min.css -c",
     "watch:babel": "babel ./scripts --watch --out-file ./theme/assets/custom.min.js",
-    "dev": "concurrently --kill-others \"npm run watch:stylus\" \"npm run watch:babel\"",
+    "dev": "concurrently --kill-others \"npm run watch:stylus\"  \"npm run watch:stylusC\" \"npm run watch:babel\"",
     "t:dev": "shopify theme dev --store=https://stichnoth.myshopify.com --path=./theme/",
     "t:pull": "shopify theme pull --store=https://stichnoth.myshopify.com --path=./theme/",
     "t:push": "shopify theme push --store=https://stichnoth.myshopify.com --path=./theme/"

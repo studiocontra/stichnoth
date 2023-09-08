@@ -17,7 +17,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-            {% else %}
+            {% elsif section.settings.image != blank %}
               <picture>
                 <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
                 <source srcset="{{ section.settings.image | image_url: width: 450 }}">
@@ -41,7 +41,7 @@
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowfullscreen
                 ></iframe>
-              {% else %}
+              {% elsif section.settings.image != blank %}
                 <img
                   src="{{ section.settings.image_2 | image_url: width: 300 }}"
                   width="{{ section.settings.image_2.width }}"
@@ -65,7 +65,7 @@
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowfullscreen
                 ></iframe>
-              {% else %}
+              {% elsif section.settings.image != blank %}
                 <img
                   src="{{ section.settings.image_2 | image_url: width: 300 }}"
                   width="{{ section.settings.image_2.width }}"
