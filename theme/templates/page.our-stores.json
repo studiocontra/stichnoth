@@ -46,7 +46,7 @@
           "type": "store",
           "settings": {
             "style": "full",
-            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
+            "image": "shopify:\/\/shop_images\/hannover.jpg",
             "name": "Stichnoth Store",
             "description": "<p>Georgstraße 35, 30159 Hannover<\/p><p>Monday - Saturday<\/p><p>11 AM to 7 PM<\/p>",
             "button_label": "Book an Appointment",
@@ -57,8 +57,8 @@
           "type": "store",
           "settings": {
             "style": "img-left",
-            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
-            "image_2": "shopify:\/\/shop_images\/story-1-1.jpg",
+            "image": "shopify:\/\/shop_images\/default.jpg",
+            "image_2": "shopify:\/\/shop_images\/hannover-2-2.jpg",
             "name": "Stichnoth Store",
             "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
             "button_label": "Book an Appointment",
@@ -76,10 +76,10 @@
           "type": "store",
           "settings": {
             "style": "img-right",
-            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
-            "image_2": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+            "image": "shopify:\/\/shop_images\/hamburg-1.jpg",
+            "image_2": "shopify:\/\/shop_images\/hamburg-2.jpg",
             "name": "Stichnoth Store",
-            "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
+            "description": "<p>Große Bleichen 8, 20354 Hamburg<\/p><p>Tuesday - Saturday<\/p><p>11AM to 7PM<\/p>",
             "button_label": "Book an Appointment",
             "button_link": ""
           }
@@ -95,10 +95,9 @@
           "type": "store",
           "settings": {
             "style": "full",
-            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
-            "image_2": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+            "image": "shopify:\/\/shop_images\/bremen.jpg",
             "name": "Stichnoth Store",
-            "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
+            "description": "<p>Schnoor 37, 28195 Bremen<\/p><p>Monday, Wednesday - Saturday<\/p><p>11 AM to 7 PM<\/p>",
             "button_label": "Book an Appointment",
             "button_link": ""
           }
@@ -113,11 +112,10 @@
         "7c954495-f6e2-468e-906e-66d6f0ce9648": {
           "type": "store",
           "settings": {
-            "style": "img-right",
-            "image": "shopify:\/\/shop_images\/side-of-a-white-metropolitan-building-with-large-windows.jpg",
-            "image_2": "shopify:\/\/shop_images\/modern-bamboo-wristwatch.jpg",
+            "style": "img-left",
+            "image": "shopify:\/\/shop_images\/default.jpg",
             "name": "Stichnoth Store",
-            "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
+            "description": "<p>Katharinenpforte 6, 60313 Frankfurt am Main<\/p><p>Tuesday - Saturday<\/p><p>11 AM to 7 PM<\/p>",
             "button_label": "Book an Appointment",
             "button_link": ""
           }
