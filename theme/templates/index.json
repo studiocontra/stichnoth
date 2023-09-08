@@ -92,13 +92,13 @@
         "4f079cf2-7ac4-42a4-b2b8-142909603d32"
       ],
       "settings": {
+        "color_scheme": "normal",
         "main_media_ratio": "square",
         "image": "shopify:\/\/shop_images\/crafting_excelence_img1_044ff7cf-f86d-4178-be1d-c5cb8c5fbdf6.jpg",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/crafting_excelence_img2.jpg",
         "video": "",
         "video_2": "",
-        "color_scheme": "normal",
         "img_style": "overlap",
         "text_position": "right",
         "v_align": "align-bottom"
@@ -107,6 +107,7 @@
     "80658265-3e2b-4689-b761-537e4df465f3": {
       "type": "bg-image-with-text",
       "settings": {
+        "color_scheme": "gold",
         "image": "shopify:\/\/shop_images\/Bespoke-brilliance_2f065b3c-4bd5-4465-a802-da87e9608c97.jpg",
         "video": "",
         "heading": "Bespoke <strong>Brilliance<\/strong>",
@@ -146,13 +147,13 @@
         "b0064ab3-a468-4609-b115-2bc0580540da"
       ],
       "settings": {
+        "color_scheme": "",
         "main_media_ratio": "square",
         "image": "shopify:\/\/shop_images\/timeless-craftsmanship-img1.jpg",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/timeless-craftsmanship-img2.jpg",
         "video": "",
         "video_2": "",
-        "color_scheme": "",
         "img_style": "space",
         "text_position": "right",
         "v_align": "align-bottom"

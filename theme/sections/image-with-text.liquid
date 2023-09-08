@@ -6,9 +6,9 @@
     <div class="row justify-between {{ section.settings.v_align }}{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
       <div class="{% if section.settings.img_style == 'space' %}col-md-7{% else %}col-md-6{% endif %}">
         <div class="image-text__media">
-          {% if section.settings.video != blank %}
-            <div class="wrap-video">
-              <div class="video">
+          <div class="wrap-media wrap-media--{{ section.settings.main_media_ratio }}">
+            {% if section.settings.video != blank %}
+              <div class="wrap-video">
                 <iframe
                   src="https://player.vimeo.com/video/{{ section.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
                   muted
@@ -17,62 +17,65 @@
                   allowfullscreen
                 ></iframe>
               </div>
-            </div>
-          {% else %}
-            <picture>
-              <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
-              <source srcset="{{ section.settings.image | image_url: width: 450 }}">
-              <img
-                src="{{ section.settings.image | image_url }}"
-                width="{{ section.settings.image.width }}"
-                height="{{ section.settings.image.height }}"
-                lazy="true"
-              >
-            </picture>
-          {% endif %}
+            {% else %}
+              <picture>
+                <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+                <source srcset="{{ section.settings.image | image_url: width: 450 }}">
+                <img
+                  src="{{ section.settings.image | image_url }}"
+                  width="{{ section.settings.image.width }}"
+                  height="{{ section.settings.image.height }}"
+                  lazy="true"
+                >
+              </picture>
+            {% endif %}
+          </div>
 
           {% if section.settings.img_style == 'overlap' %}
-            {% if section.settings.video_2 != blank %}
-              <iframe
-                src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
-                muted
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            {% else %}
-              <img
-                class="img--small{% if section.settings.text_position == 'left' %} img--small--bottom{% endif %}"
-                src="{{ section.settings.image_2 | image_url: width: 300 }}"
-                width="{{ section.settings.image_2.width }}"
-                height="{{ section.settings.image_2.height }}"
-                lazy="true"
-              >
-            {% endif %}
+            <div class="wrap-media wrap-media--small wrap-media--{{ section.settings.addon_media_ratio }} {% if section.settings.text_position == 'left' %} img--small--bottom{% endif %}">
+              {% if section.settings.video_2 != blank %}
+                <iframe
+                  src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
+                  muted
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              {% else %}
+                <img
+                  src="{{ section.settings.image_2 | image_url: width: 300 }}"
+                  width="{{ section.settings.image_2.width }}"
+                  height="{{ section.settings.image_2.height }}"
+                  lazy="true"
+                >
+              {% endif %}
+            </div>
           {% endif %}
         </div>
       </div>
       <div class="col-md-5">
         <div class="image-text__content {{ section.settings.text_position }}">
           {% if section.settings.img_style == 'space' %}
-            {% if section.settings.video_2 != blank %}
-              <iframe
-                src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
-                muted
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            {% else %}
-              <img
-                class="img--small"
-                src="{{ section.settings.image_2 | image_url: width: 300 }}"
-                width="{{ section.settings.image_2.width }}"
-                height="{{ section.settings.image_2.height }}"
-                lazy="true"
-              >
-            {% endif %}
+            <div class="wrap-media wrap-media--small wrap-media--{{ section.settings.addon_media_ratio }}">
+              {% if section.settings.video_2 != blank %}
+                <iframe
+                  src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
+                  muted
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              {% else %}
+                <img
+                  src="{{ section.settings.image_2 | image_url: width: 300 }}"
+                  width="{{ section.settings.image_2.width }}"
+                  height="{{ section.settings.image_2.height }}"
+                  lazy="true"
+                >
+              {% endif %}
+            </div>
           {% endif %}
+
           {%- for block in section.blocks -%}
             {% case block.type %}
               {%- when 'heading' -%}
@@ -121,6 +124,10 @@
       "default": "background-1"
     },
     {
+      "type": "header",
+      "content": "Image or Videos"
+    },
+    {
       "type": "select",
       "id": "main_media_ratio",
       "label": "Main Media Aspect Ratio",
@@ -135,7 +142,7 @@
         },
         {
           "value": "vertical",
-          "label": "2:1 (850 x 1700)"
+          "label": "1:2 (850 x 1700)"
         }
       ],
       "default": "vertical"
@@ -144,6 +151,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "text",
+      "id": "video",
+      "label": "Main Video"
     },
     {
       "type": "select",
@@ -160,7 +172,7 @@
         },
         {
           "value": "vertical",
-          "label": "2:1 (250 x 500)"
+          "label": "1:2 (250 x 500)"
         }
       ],
       "default": "square"
@@ -171,18 +183,13 @@
       "label": "Additional Image"
     },
     {
-      "type": "header",
-      "content": "Videos"
-    },
-    {
-      "type": "text",
-      "id": "video",
-      "label": "Main Video"
-    },
-    {
       "type": "text",
       "id": "video_2",
       "label": "Additional Video"
+    },
+    {
+      "type": "header",
+      "content": "Section Properties"
     },
     {
       "type": "select",

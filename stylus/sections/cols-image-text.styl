@@ -31,13 +31,39 @@
 
   .cols-card__image
     position relative
-    border-radius 8px
     width 100%
     margin-bottom 30px
 
+    .wrap-media
+      position relative
+      border-radius 8px
+      overflow hidden
+
+    .wrap-media--vertical
+      aspect-ratio 1 / 1.25
+
+    .wrap-media--square
+      aspect-ratio 1 / 1
+
+    .wrap-media--landscape
+      aspect-ratio 16 / 9
+
     img
       width 100%
-      border-radius 8px
+      fullAbs()
+      fit()
+
+    .wrap-video
+      position absolute
+      top 50%
+      left 50%
+      width auto
+      height 100%
+      aspect-ratio 16 / 9
+      transform translate(-50%, -50%)
+
+      iframe
+        fullAbs()
 
 
 

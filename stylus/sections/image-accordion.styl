@@ -1,11 +1,27 @@
-.image-accordion__img
+.image-accordion__media
   margin-bottom 3em
 
   +mq(768)
     margin-bottom 0
 
-  img
+  .wrap-media
+    position relative
     border-radius 8px
+    overflow hidden
+
+  .wrap-media--vertical
+    aspect-ratio 1 / 1.25
+
+  .wrap-media--square
+    aspect-ratio 1 / 1
+
+  .wrap-media--landscape
+    aspect-ratio 16 / 9
+
+  img
+    width 100%
+    fullAbs()
+    fit()
 
 
 .image-accordion__content

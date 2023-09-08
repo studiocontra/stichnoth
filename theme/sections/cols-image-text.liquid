@@ -22,19 +22,33 @@
                 <div class="cols-card">
                   {% if block.settings.main_image != blank %}
                     <div class="cols-card__image">
-                      <picture>
-                        <source
-                          srcset="{{ block.settings.main_image | image_url: width: 650 }}"
-                          media="(min-width: 450px)"
-                        >
-                        <source srcset="{{ block.settings.main_image | image_url: width: 450 }}">
-                        <img
-                          src="{{ block.settings.main_image | image_url }}"
-                          width="{{ block.settings.main_image.width }}"
-                          height="{{ block.settings.main_image.height }}"
-                          lazy="true"
-                        >
-                      </picture>
+                      <div class="wrap-media wrap-media--{{block.settings.media_ratio}}">
+                        {% if block.settings.video != blank %}
+                          <div class="wrap-video">
+                            <iframe
+                              src="https://player.vimeo.com/video/{{ block.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
+                              muted
+                              frameborder="0"
+                              allow="autoplay; fullscreen; picture-in-picture"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                        {% else %}
+                          <picture>
+                            <source
+                              srcset="{{ block.settings.main_image | image_url: width: 650 }}"
+                              media="(min-width: 450px)"
+                            >
+                            <source srcset="{{ block.settings.main_image | image_url: width: 450 }}">
+                            <img
+                              src="{{ block.settings.main_image | image_url }}"
+                              width="{{ block.settings.main_image.width }}"
+                              height="{{ block.settings.main_image.height }}"
+                              lazy="true"
+                            >
+                          </picture>
+                        {% endif %}
+                      </div>
                     </div>
                   {% endif %}
 
@@ -73,19 +87,33 @@
               <div class="cols-card">
                 {% if block.settings.main_image != blank %}
                   <div class="cols-card__image">
-                    <picture>
-                      <source
-                        srcset="{{ block.settings.main_image | image_url: width: 650 }}"
-                        media="(min-width: 450px)"
-                      >
-                      <source srcset="{{ block.settings.main_image | image_url: width: 450 }}">
-                      <img
-                        src="{{ block.settings.main_image | image_url }}"
-                        width="{{ block.settings.main_image.width }}"
-                        height="{{ block.settings.main_image.height }}"
-                        lazy="true"
-                      >
-                    </picture>
+                    <div class="wrap-media wrap-media--{{block.settings.media_ratio}}">
+                      {% if block.settings.video != blank %}
+                        <div class="wrap-video">
+                          <iframe
+                            src="https://player.vimeo.com/video/{{ block.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
+                            muted
+                            frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      {% else %}
+                        <picture>
+                          <source
+                            srcset="{{ block.settings.main_image | image_url: width: 650 }}"
+                            media="(min-width: 450px)"
+                          >
+                          <source srcset="{{ block.settings.main_image | image_url: width: 450 }}">
+                          <img
+                            src="{{ block.settings.main_image | image_url }}"
+                            width="{{ block.settings.main_image.width }}"
+                            height="{{ block.settings.main_image.height }}"
+                            lazy="true"
+                          >
+                        </picture>
+                      {% endif %}
+                    </div>
                   </div>
                 {% endif %}
 
@@ -137,6 +165,31 @@
           "type": "image_picker",
           "id": "main_image",
           "label": "Main Image"
+        },
+        {
+          "type": "text",
+          "id": "video",
+          "label": "Main Video"
+        },
+        {
+          "type": "select",
+          "id": "media_ratio",
+          "label": "Media Aspect Ratio",
+          "options": [
+            {
+              "value": "square",
+              "label": "1:1 (850 x 850)"
+            },
+            {
+              "value": "landscape",
+              "label": "16:9 (850 x 480)"
+            },
+            {
+              "value": "vertical",
+              "label": "1:2 (850 x 1700)"
+            }
+          ],
+          "default": "vertical"
         },
         {
           "type": "richtext",

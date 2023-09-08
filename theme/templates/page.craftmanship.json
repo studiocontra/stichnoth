@@ -61,7 +61,7 @@
             "icon": "shopify:\/\/shop_images\/icon-design_0b68519e-1e8f-414c-ae17-914b8c3eb75f.png",
             "heading": "Design",
             "text": "<p>Experience the art of designing, from exploring the possibilities of different materials to creating unique pieces that harmoniously blend aesthetics and functionality. <\/p>",
-            "image": "shopify:\/\/shop_images\/Rectangle_3_f800adfa-f60d-4768-86b1-79434c002406.png"
+            "image": "shopify:\/\/shop_images\/design.jpg"
           }
         },
         "3ac0132b-66ea-4601-a629-9e953093b269": {
@@ -70,7 +70,7 @@
             "icon": "shopify:\/\/shop_images\/icon-3d-modeling.png",
             "heading": "3d modeling",
             "text": "<p>Whenever a individual piece of jewelry will be designed together with the client, a 3D model will be generated to give the client a better understanding of the piece.<\/p>",
-            "image": "shopify:\/\/shop_images\/Rectangle_12_007ba470-9ba7-4f09-b7cb-589fe0c839ae.png"
+            "image": "shopify:\/\/shop_images\/3d-modeling.jpg"
           }
         },
         "c7c3ffb4-2f5f-494c-b4cd-7a91c5b3af49": {
@@ -79,7 +79,7 @@
             "icon": "shopify:\/\/shop_images\/icon-3d-printing.png",
             "heading": "3D printing",
             "text": "<p>Once the 3D file has digitally been created, the printer will print a model using a special wax.<\/p>",
-            "image": "shopify:\/\/shop_images\/Rectangle_1-1_622f2638-f8c8-4cc2-8f6e-9b6e59a47c75.png"
+            "image": "shopify:\/\/shop_images\/3d-printing.jpg"
           }
         },
         "6afdaee1-bb6f-4a98-bdcd-611750d4e688": {
@@ -88,7 +88,7 @@
             "icon": "shopify:\/\/shop_images\/icon-casting.png",
             "heading": "Casting",
             "text": "<p>The wax model, which has the exact measurements, will be dipped into a plaster mold. Once the wax has been removed, the negative mold will be filled with the final material.<\/p>",
-            "image": "shopify:\/\/shop_images\/craftmanship-2.jpg"
+            "image": "shopify:\/\/shop_images\/casting.jpg"
           }
         },
         "466c9452-1b75-4dc1-a7f5-c3d6f942a573": {
@@ -97,7 +97,7 @@
             "icon": "shopify:\/\/shop_images\/icon-forming.png",
             "heading": "Forming Metal",
             "text": "<p>If the piece has stones, the second to last step includes the setting of various stones.<\/p>",
-            "image": "shopify:\/\/shop_images\/Rectangle_12_007ba470-9ba7-4f09-b7cb-589fe0c839ae.png"
+            "image": "shopify:\/\/shop_images\/forming.jpg"
           }
         },
         "f39b727b-2fbc-4600-b4d8-f366e4a798bd": {
@@ -106,7 +106,7 @@
             "icon": "shopify:\/\/shop_images\/icon-stone-setting.png",
             "heading": "Stone Setting",
             "text": "<p>If the piece has stones, the second to last step includes the setting of various stones.<\/p>",
-            "image": "shopify:\/\/shop_images\/Rectangle_2-1_9b6120eb-6b99-4637-97fd-aa17f6550c41.png"
+            "image": "shopify:\/\/shop_images\/stone-setting.jpg"
           }
         },
         "9afd3f77-f478-42ef-b326-d1b720dcb5f1": {
@@ -115,7 +115,7 @@
             "icon": "shopify:\/\/shop_images\/icon-polishing.png",
             "heading": "Polishing",
             "text": "<p>The final step before the piece gets presented includes the finish of the surface. Wit might be a shiny polish but could also mean a matte finish.<\/p>",
-            "image": "shopify:\/\/shop_images\/image_221.png"
+            "image": "shopify:\/\/shop_images\/polishing.jpg"
           }
         }
       },

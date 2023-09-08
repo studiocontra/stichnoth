@@ -224,6 +224,9 @@ header
 
     &:hover
       +mq(992)
+        svg
+          rotate 180deg
+
         .submenu
           display block
 
@@ -246,7 +249,7 @@ header
 
   .menu__link
     display flex
-    color $black
+    color $black2
     text-decoration none
     font('headline')
 
@@ -254,14 +257,19 @@ header
       font-weight 500
 
     svg
-      width 30px
+      display inline-block
+      width 12px
       height @width
-      transform translateY(3px)
+      margin-left 5px
+      fill $black2
+      translate 0 -3px
 
       +mq(992)
-        width 25px
+        width 10px
         height @width
-        transform translateY(-3px)
+        margin-left 10px
+        translate 0 6px
+
 
   .menu__link--active
     font-weight 500
