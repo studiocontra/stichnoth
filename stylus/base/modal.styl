@@ -1,0 +1,58 @@
+.wrap-modal
+  position fixed
+  top 0
+  left 0
+  z-index 1000
+  display flex
+  visibility hidden
+  align-items center
+  justify-content center
+  width 100%
+  height 100%
+  opacity 0
+  pointer-events none
+  transition all .3s ease-in
+
+  &::before
+    display block
+    background-color rgba(black, 0.97)
+    content ''
+    fullAbs()
+
+  &.active
+    visibility visible
+    opacity 1
+    pointer-events all
+
+    .modal__content
+      top 0
+      opacity 1
+
+
+.modal__close
+  position absolute
+  right 32px
+  top 32px
+
+  svg
+    position relative
+    width 30px
+    pointer-events none
+
+    path
+      fill $black
+
+
+.modal__content
+  position relative
+  top 15px
+  max-width 850px
+  width 95%
+  opacity 0
+  transition all 0.3s ease
+
+
+.modal__body
+  text-align center
+  max-height 80vh
+  overflow auto

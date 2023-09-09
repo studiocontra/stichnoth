@@ -1,4 +1,12 @@
-.customer:not(.account):not(.order)
+.customer
+  padding-top 80px
+  padding-left 0
+  padding-right 0
+  max-width none
+
+
+.customer.login
+.customer.register
   max-width 500px
 
   .wrap-form
@@ -8,11 +16,54 @@
       margin-top 1em
 
 
+// Login
 .customer.login
   .recover-password
     text-align center
     margin 0 auto 2em
 
+
+// Register
 .customer.register
   .have-account
     text-align center
+
+
+// Account
+.customer.account
+  .title--small
+    margin-bottom 2em
+
+  .account__headline
+    margin-bottom 5em
+
+  .account__details
+    .cta
+      margin-bottom 1.5em
+
+  .account__orders
+    .cta
+      display inline-flex
+
+  .no-orders
+    color $black
+
+
+// Addresses
+.customer.addresses
+  .addresses__headline
+    margin-bottom 4em
+
+    .cta
+      display inline-flex
+
+  .addresses__form
+    +mq(600)
+      padding 0 5%
+    +mq(1200)
+      padding 0 10%
+
+    .link
+      background none
+      margin 0 auto
+      border 0
