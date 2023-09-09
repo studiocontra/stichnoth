@@ -1,143 +1,177 @@
-<div class="wrap-cart-form">
+<div class="wrap-cart-products">
+  <div class="cart__headline">
+    <h1 class="title title--medium">
+      {{ 'sections.cart.title' | t }}
+    </h1>
+
+    <div class="text">
+      <p>
+        {{ 'sections.cart.description' | t }}
+      </p>
+    </div>
+  </div>
+
   {% if cart == empty %}
     <div class="cart__empty">
-      <span class="title title--small"> Cart is empty </span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M10 3h4v11h-4V3m0 18v-4h4v4h-4Z"/>
+      </svg>
+
+      <h2 class="title title--small">
+        {{ 'sections.cart.empty' | t }}
+      </h2>
+
+      <div class="text">
+        <p>
+          {{ 'sections.cart.empty_description' | t }}
+        </p>
+      </div>
+
+      <div class="cart__footer">
+        <a href="{{ routes.all_products_collection_url }}" class="cta cta--black">
+          <span>
+            {{ 'general.continue_shopping' | t }}
+          </span>
+        </a>
+      </div>
     </div>
   {% else %}
-    <form
-      class="cart__form"
-      action="/cart"
-      method="post"
-      novalidate
-    >
-      <div class="cart-labels">
-        <span class="cart__label product">
-          {{ 'sections.cart.headings.product' | t }}
-        </span>
-        <span class="cart__label qty">
-          {{ 'sections.cart.headings.quantity' | t }}
-        </span>
-        <span class="cart__label total">
-          {{ 'sections.cart.headings.total' | t }}
-        </span>
-      </div>
-
-      <div class="cart__products">
-        {% for item in cart.items %}
-          <div class="single-cart-product">
-            <div class="cart-product__img">
-              <img src="{{ item | image_url: width: 500 }}" alt="{{ item.title | escape }}">
-            </div>
-
-            <div class="cart-product__info">
-              <a href="{{ item.url }}" class="cart-product__name">
-                {{ item.title }}
-              </a>
-              <div class="cart-product__desc">
-                {{ item.description }}
-              </div>
-              <span class="cart-product__price cart-product__price--desktop">
-                {{ item.price | money_without_trailing_zeros }}
-              </span>
-            </div>
-
-            <div class="cart-product__quantity">
-              <div class="cart-quantity">
-                <a
-                  class="remove js-update-cart-qty"
-                  href="#"
-                  data-line="{{ forloop.index }}"
-                  data-qty="{{ item.quantity | minus:  1 }}"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    focusable="false"
-                    role="presentation"
-                    viewBox="0 0 10 2"
-                  >
-                    <path d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor"></path>
-                  </svg>
-                </a>
-                <span class="js-quantity-cart">
-                  {{ item.quantity }}
-                </span>
-                <a
-                  class="add js-update-cart-qty"
-                  href="#"
-                  data-line="{{ forloop.index }}"
-                  data-qty="{{ item.quantity | plus:  1 }}"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    focusable="false"
-                    role="presentation"
-                    viewBox="0 0 10 10"
-                  >
-                    <path d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="cart-product__delete">
-              <a
-                class="js-delete-cart-qty"
-                href="#"
-                rel="{{ item.id }}"
-                data-line="{{ forloop.index }}"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  aria-hidden="true"
-                  focusable="false"
-                  role="presentation"
-                >
-                  <path d="M14 3h-3.53a3.07 3.07 0 00-.6-1.65C9.44.82 8.8.5 8 .5s-1.44.32-1.87.85A3.06 3.06 0 005.53 3H2a.5.5 0 000 1h1.25v10c0 .28.22.5.5.5h8.5a.5.5 0 00.5-.5V4H14a.5.5 0 000-1zM6.91 1.98c.23-.29.58-.48 1.09-.48s.85.19 1.09.48c.2.24.3.6.36 1.02h-2.9c.05-.42.17-.78.36-1.02zm4.84 11.52h-7.5V4h7.5v9.5z"></path><path d="M6.55 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5zM9.45 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5z"></path>
-                </svg>
-              </a>
-            </div>
-
-            <div class="cart-product__price">
-              <span>
-                {{ item.price | money_without_trailing_zeros }}
-              </span>
-            </div>
-
-            <div class="cart-product__total">
-              <span>
-                {% if item.original_line_price != item.line_price -%}
-                  {{- item.original_line_price | money_without_trailing_zeros -}}
-                {%- endif %}
-                {{ item.line_price | money_without_trailing_zeros }}
-                {% for discount in item.discounts -%}
-                  {{- discount.title -}}
-                {%- endfor %}
-              </span>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-
-      <div class="cart__footer js-cart-footer">
-        <div class="cart-totals">
-          <span class="title title--small">
-            {{ 'sections.cart.subtotal' | t }}
+    <div class="wrap-cart-form">
+      <form
+        class="cart__form"
+        action="/cart"
+        method="post"
+        novalidate
+      >
+        <div class="cart-labels">
+          <span class="cart__label product">
+            {{ 'sections.cart.headings.product' | t }}
           </span>
-          <p class="totals__subtotal-value">
-            {{ cart.total_price | money }}
-          </p>
+          <span class="cart__label qty">
+            {{ 'sections.cart.headings.quantity' | t }}
+          </span>
+          <span class="cart__label total">
+            {{ 'sections.cart.headings.total' | t }}
+          </span>
         </div>
-        <div class="cart-actions">
-          <button class="cta cta--black" type="submit" name="checkout">
-            <span>
-              {{ 'sections.cart.checkout' | t }}
+
+        <div class="cart__products">
+          {% for item in cart.items %}
+            <div class="single-cart-product">
+              <div class="cart-product__img">
+                <img src="{{ item | image_url: width: 500 }}" alt="{{ item.title | escape }}">
+              </div>
+
+              <div class="cart-product__info">
+                <a href="{{ item.url }}" class="cart-product__name">
+                  {{ item.title }}
+                </a>
+                <div class="cart-product__desc">
+                  {{ item.description }}
+                </div>
+                <span class="cart-product__price cart-product__price--desktop">
+                  {{ item.price | money_without_trailing_zeros }}
+                </span>
+              </div>
+
+              <div class="cart-product__quantity">
+                <div class="cart-quantity">
+                  <a
+                    class="remove js-update-cart-qty"
+                    href="#"
+                    data-line="{{ forloop.index }}"
+                    data-qty="{{ item.quantity | minus:  1 }}"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 10 2"
+                    >
+                      <path d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor"></path>
+                    </svg>
+                  </a>
+                  <span class="js-quantity-cart">
+                    {{ item.quantity }}
+                  </span>
+                  <a
+                    class="add js-update-cart-qty"
+                    href="#"
+                    data-line="{{ forloop.index }}"
+                    data-qty="{{ item.quantity | plus:  1 }}"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 10 10"
+                    >
+                      <path d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="cart-product__delete">
+                <a
+                  class="js-delete-cart-qty"
+                  href="#"
+                  rel="{{ item.id }}"
+                  data-line="{{ forloop.index }}"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                    focusable="false"
+                    role="presentation"
+                  >
+                    <path d="M14 3h-3.53a3.07 3.07 0 00-.6-1.65C9.44.82 8.8.5 8 .5s-1.44.32-1.87.85A3.06 3.06 0 005.53 3H2a.5.5 0 000 1h1.25v10c0 .28.22.5.5.5h8.5a.5.5 0 00.5-.5V4H14a.5.5 0 000-1zM6.91 1.98c.23-.29.58-.48 1.09-.48s.85.19 1.09.48c.2.24.3.6.36 1.02h-2.9c.05-.42.17-.78.36-1.02zm4.84 11.52h-7.5V4h7.5v9.5z"></path><path d="M6.55 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5zM9.45 5.25a.5.5 0 00-.5.5v6a.5.5 0 001 0v-6a.5.5 0 00-.5-.5z"></path>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="cart-product__price">
+                <span>
+                  {{ item.price | money_without_trailing_zeros }}
+                </span>
+              </div>
+
+              <div class="cart-product__total">
+                <span>
+                  {% if item.original_line_price != item.line_price -%}
+                    {{- item.original_line_price | money_without_trailing_zeros -}}
+                  {%- endif %}
+                  {{ item.line_price | money_without_trailing_zeros }}
+                  {% for discount in item.discounts -%}
+                    {{- discount.title -}}
+                  {%- endfor %}
+                </span>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="cart__footer js-cart-footer">
+          <div class="cart-totals">
+            <span class="title title--small">
+              {{ 'sections.cart.subtotal' | t }}
             </span>
-          </button>
+            <p class="totals__subtotal-value">
+              {{ cart.total_price | money }}
+            </p>
+          </div>
+          <div class="cart-actions">
+            <button class="cta cta--black" type="submit" name="checkout">
+              <span>
+                {{ 'sections.cart.checkout' | t }}
+              </span>
+            </button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   {% endif %}
 </div>
