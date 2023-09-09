@@ -1,5 +1,5 @@
 <div
-  class="custom-block image-text{% if section.settings.img_style == 'space' %} image-text--space{% endif %}"
+  class="custom-block image-text{% if section.settings.img_style == 'space' %} image-text--space{% endif %} {% if section.settings.video != blank or section.settings.video_2 != blank %}js-scroll-video{% endif %}"
   style="background-color: {{ section.settings.color_scheme.settings.background }};"
 >
   <div class="container">
@@ -10,14 +10,15 @@
             {% if section.settings.video != blank %}
               <div class="wrap-video">
                 <iframe
-                  src="https://player.vimeo.com/video/{{ section.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
+                  src="https://player.vimeo.com/video/{{ section.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
                   muted
                   frameborder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowfullscreen
                 ></iframe>
               </div>
-            {% elsif section.settings.image != blank %}
+            {% endif %}
+            {% if section.settings.image != blank %}
               <picture>
                 <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
                 <source srcset="{{ section.settings.image | image_url: width: 450 }}">
@@ -34,14 +35,17 @@
           {% if section.settings.img_style == 'overlap' %}
             <div class="wrap-media wrap-media--small wrap-media--{{ section.settings.addon_media_ratio }} {% if section.settings.text_position == 'left' %} img--small--bottom{% endif %}">
               {% if section.settings.video_2 != blank %}
-                <iframe
-                  src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
-                  muted
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              {% elsif section.settings.image != blank %}
+                <div class="wrap-video">
+                  <iframe
+                    src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
+                    muted
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              {% endif %}
+              {% if section.settings.image != blank %}
                 <img
                   src="{{ section.settings.image_2 | image_url: width: 300 }}"
                   width="{{ section.settings.image_2.width }}"
@@ -58,14 +62,17 @@
           {% if section.settings.img_style == 'space' %}
             <div class="wrap-media wrap-media--small wrap-media--{{ section.settings.addon_media_ratio }}">
               {% if section.settings.video_2 != blank %}
-                <iframe
-                  src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
-                  muted
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              {% elsif section.settings.image != blank %}
+                <div class="wrap-video">
+                  <iframe
+                    src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
+                    muted
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              {% endif %}
+              {% if section.settings.image != blank %}
                 <img
                   src="{{ section.settings.image_2 | image_url: width: 300 }}"
                   width="{{ section.settings.image_2.width }}"
