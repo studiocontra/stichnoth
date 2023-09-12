@@ -73,9 +73,11 @@
             </div>
 
             <a
-              href=""
+              href="#"
+              data-link="https://calendar.app.google/JQbJJFjFgKitKaA19"
               class="link"
-              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/test-shopify/visit?hide_gdpr_banner=1&text_color=000000&primary_color=957153'});return false;"
+              data-toggle="modal"
+              data-target="#book-modal-{{ forloop.index0 }}"
             >
               {{ block.settings.button_label }}
 
@@ -83,6 +85,36 @@
                 <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
               </svg>
             </a>
+          </div>
+        </div>
+
+        <div
+          class="wrap-modal wrap-modal-book"
+          id="book-modal-{{ forloop.index0 }}"
+          role="dialog"
+          tabindex="-1"
+          aria-modal="true"
+        >
+          <div class="modal__content">
+            <a
+              class="modal__close"
+              href="javascript:void(0);"
+              role="button"
+              aria-label="Close Modal"
+              tabindex="-1"
+              onclick="closeModal()"
+            >
+              <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+              </svg>
+            </a>
+
+            <div class="modal__body">
+              <iframe
+                src="{{ block.settings.button_link }}"
+                frameborder="0"
+              ></iframe>
+            </div>
           </div>
         </div>
       {%- endif -%}

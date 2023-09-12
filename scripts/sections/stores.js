@@ -4,12 +4,12 @@ const storesApp = Vue.createApp({
       activeSection: null,
       targetSectionTop: null,
       allLinks: null,
-      storesNav: 88,
+      storesNavHeight: 88,
     };
   },
   mounted() {
     this.allLinks = document.querySelectorAll('.js-stores-nav-item');
-    this.storesNav = document.querySelector('.stores__nav').offsetHeight;
+    this.storesNavHeight = document.querySelector('.stores__nav').offsetHeight;
 
     window.addEventListener('scroll', () => this.activeOnScroll());
   },
@@ -19,7 +19,7 @@ const storesApp = Vue.createApp({
         const targetSection = document.querySelector(`.js-store-anchor[data-anchor="${item.dataset['section']}"]`);
         const targetTop = targetSection.getBoundingClientRect().top + window.scrollY;
 
-        if((window.scrollY + this.storesNav) > targetTop) {
+        if((window.scrollY + this.storesNavHeight) > targetTop) {
           this.allLinks.forEach(link => link.classList.remove('active'));
           item.classList.add('active');
         } else {
@@ -31,7 +31,7 @@ const storesApp = Vue.createApp({
       const targetSection = document.querySelector(`.js-store-anchor[data-anchor="${target}"]`).getBoundingClientRect().top + window.scrollY;
 
       this.activeSection = target;
-      this.targetSectionTop = targetSection - this.storesNav;
+      this.targetSectionTop = targetSection - (this.storesNavHeight - 20);
 
       window.scrollTo({
         top: this.targetSectionTop,
