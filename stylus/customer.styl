@@ -1,3 +1,5 @@
+@import 'base/mixins.styl'
+
 .customer
   padding-top 80px
   padding-left 0
@@ -8,9 +10,12 @@
 .customer.login
 .customer.register
   max-width 500px
+  margin 0 auto
+  padding 80px 20px 20px
 
-  .wrap-form
-    text-align left
+  .customer__headline
+    text-align center
+    margin-bottom 2em
 
     .cta
       margin-top 1em
@@ -39,6 +44,8 @@
 
   .account__details
     .cta
+      display inline-flex
+      min-width 290px
       margin-bottom 1.5em
 
   .account__orders
@@ -56,14 +63,79 @@
 
     .cta
       display inline-flex
+      min-width 290px
 
   .addresses__form
     +mq(600)
-      padding 0 5%
-    +mq(1200)
+      padding 0 15%
+    +mq(992)
       padding 0 10%
+    +mq(1400)
+      padding 0 20%
+
+    .title
+      margin-bottom 2em
 
     .link
       background none
       margin 0 auto
       border 0
+
+  .single-address
+    display flex
+    justify-content space-between
+    align-items flex-start
+    flex-wrap wrap
+    padding-bottom 24px
+
+    &:not(:last-child)
+      margin-bottom 24px
+      border-bottom 1px solid $black
+
+    .title
+      flex 1 1 100%
+
+    .single-address__content
+      flex 1 1
+      width calc(100% - 70px)
+
+      .text
+        margin-bottom 0
+
+    .single-address__actions
+      flex 0 0
+      width 50px
+
+      > div
+        margin-bottom 1em
+
+      button
+        border 0
+        background none
+
+      svg
+        width 30px
+        cursor pointer
+
+        &:hover
+          fill $gold
+
+
+  .wrap-modal-edit
+    .modal__body
+      position relative
+      max-width 500px
+      margin 0 auto
+      background-color $white
+      border-radius 8px
+      padding 32px 20px
+
+      .modal__close
+        text-align right
+        top 10px
+        right 10px
+
+      .link
+        background none
+        margin 0 auto
+        border 0
