@@ -6,16 +6,10 @@
     <div class="row justify-between {{ section.settings.v_align }}{% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
       <div class="{% if section.settings.img_style == 'space' %}col-md-7{% else %}col-md-6{% endif %}">
         <div class="image-text__media">
-          <div class="wrap-media wrap-media--{{ section.settings.main_media_ratio }}">
+          <div class="wrap-media wrap-media--{{ section.settings.main_media_ratio }} {% if section.settings.video != blank %}wrap-media--video{% endif %}">
             {% if section.settings.video != blank %}
               <div class="wrap-video">
-                <iframe
-                  src="https://player.vimeo.com/video/{{ section.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
-                  muted
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
               </div>
             {% endif %}
             {% if section.settings.image != blank %}
@@ -33,19 +27,13 @@
           </div>
 
           {% if section.settings.img_style == 'overlap' %}
-            <div class="wrap-media wrap-media--small wrap-media--{{ section.settings.addon_media_ratio }} {% if section.settings.text_position == 'left' %} img--small--bottom{% endif %}">
+            <div class="wrap-media wrap-media--small wrap-media--{{ section.settings.addon_media_ratio }} {% if section.settings.text_position == 'left' %} img--small--bottom{% endif %} {% if section.settings.video_2 != blank %}wrap-media--video{% endif %}">
               {% if section.settings.video_2 != blank %}
                 <div class="wrap-video">
-                  <iframe
-                    src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
-                    muted
-                    frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                  {{ section.settings.video_2 | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
                 </div>
               {% endif %}
-              {% if section.settings.image != blank %}
+              {% if section.settings.image_2 != blank %}
                 <img
                   src="{{ section.settings.image_2 | image_url: width: 300 }}"
                   width="{{ section.settings.image_2.width }}"
@@ -60,19 +48,13 @@
       <div class="col-md-5">
         <div class="image-text__content {{ section.settings.text_position }}">
           {% if section.settings.img_style == 'space' %}
-            <div class="wrap-media wrap-media--small wrap-media--{{ section.settings.addon_media_ratio }}">
+            <div class="wrap-media wrap-media--small wrap-media--{{ section.settings.addon_media_ratio }} {% if section.settings.video_2 != blank %}wrap-media--video{% endif %}">
               {% if section.settings.video_2 != blank %}
                 <div class="wrap-video">
-                  <iframe
-                    src="https://player.vimeo.com/video/{{ section.settings.video_2 }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
-                    muted
-                    frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                  {{ section.settings.video_2 | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
                 </div>
               {% endif %}
-              {% if section.settings.image != blank %}
+              {% if section.settings.image_2 != blank %}
                 <img
                   src="{{ section.settings.image_2 | image_url: width: 300 }}"
                   width="{{ section.settings.image_2.width }}"
@@ -160,7 +142,7 @@
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
-      "type": "text",
+      "type": "video",
       "id": "video",
       "label": "Main Video"
     },
@@ -190,7 +172,7 @@
       "label": "Additional Image"
     },
     {
-      "type": "text",
+      "type": "video",
       "id": "video_2",
       "label": "Additional Video"
     },

@@ -20,20 +20,19 @@
             {% for block in section.blocks %}
               <div class="swiper-slide">
                 <div class="cols-card">
-                  {% if block.settings.main_image != blank %}
+                  {% if block.settings.main_image != blank or block.settings.video != blank %}
                     <div class="cols-card__image">
-                      <div class="wrap-media wrap-media--{{block.settings.media_ratio}}">
+                      <div class="wrap-media wrap-media--{{block.settings.media_ratio}} {% if block.settings.video != blank %}wrap-media--video{% endif %}">
                         {% if block.settings.video != blank %}
+                          {% assign has_video = true %}
                           <div class="wrap-video">
-                            <iframe
-                              src="https://player.vimeo.com/video/{{ block.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
-                              muted
-                              frameborder="0"
-                              allow="autoplay; fullscreen; picture-in-picture"
-                              allowfullscreen
-                            ></iframe>
+                            {{
+                              block.settings.video
+                              | video_tag: autoplay: true, loop: true, muted: true, controls: false
+                            }}
                           </div>
-                        {% else %}
+                        {% endif %}
+                        {% if block.settings.main_image != blank %}
                           <picture>
                             <source
                               srcset="{{ block.settings.main_image | image_url: width: 650 }}"
@@ -84,21 +83,19 @@
         <div class="row">
           {% for block in section.blocks %}
             <div class="col-md-6">
-              <div class="cols-card">
-                {% if block.settings.main_image != blank %}
+              <div class="cols-card {% if block.settings.video != blank %}js-scroll-video{% endif %}">
+                {% if block.settings.main_image != blank or block.settings.video != blank %}
                   <div class="cols-card__image">
-                    <div class="wrap-media wrap-media--{{block.settings.media_ratio}}">
+                    <div class="wrap-media wrap-media--{{block.settings.media_ratio}} {% if block.settings.video != blank %}wrap-media--video{% endif %}">
                       {% if block.settings.video != blank %}
                         <div class="wrap-video">
-                          <iframe
-                            src="https://player.vimeo.com/video/{{ block.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
-                            muted
-                            frameborder="0"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            allowfullscreen
-                          ></iframe>
+                          {{
+                            block.settings.video
+                            | video_tag: autoplay: true, loop: true, muted: true, controls: false
+                          }}
                         </div>
-                      {% else %}
+                      {% endif %}
+                      {% if block.settings.main_image != blank %}
                         <picture>
                           <source
                             srcset="{{ block.settings.main_image | image_url: width: 650 }}"
@@ -167,7 +164,7 @@
           "label": "Main Image"
         },
         {
-          "type": "text",
+          "type": "video",
           "id": "video",
           "label": "Main Video"
         },

@@ -18,16 +18,22 @@
               </div>
 
               <div class="slide__content">
-                <picture>
-                  <source srcset="{{ block.settings.image | image_url: width: 2000 }}" media="(min-width: 1400px)">
-                  <source srcset="{{ block.settings.image | image_url: width: 1500 }}" media="(min-width: 768px)">
-                  <source srcset="{{ block.settings.image | image_url: width: 850 }}">
-                  <img
-                    src="{{ block.settings.image | image_url }}"
-                    width="{{ block.settings.image.width }}"
-                    height="{{ block.settings.image.height }}"
-                  >
-                </picture>
+                {% if block.settings.video != blank %}
+                  {{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
+                {% else %}
+                  {% if block.settings.image != blank %}
+                    <picture>
+                      <source srcset="{{ block.settings.image | image_url: width: 2000 }}" media="(min-width: 1400px)">
+                      <source srcset="{{ block.settings.image | image_url: width: 1500 }}" media="(min-width: 768px)">
+                      <source srcset="{{ block.settings.image | image_url: width: 850 }}">
+                      <img
+                        src="{{ block.settings.image | image_url }}"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                      >
+                    </picture>
+                  {% endif %}
+                {% endif %}
 
                 {% if block.settings.button_link %}
                   <a class="cta cta--white" href="{{ block.settings.button_link }}">
@@ -80,6 +86,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
         },
         {
           "type": "header",
