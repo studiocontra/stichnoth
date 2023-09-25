@@ -6,6 +6,7 @@ const mainHeaderApp = Vue.createApp({
       isMenuOpen: false,
       flagResize: false,
       isCartOpen: false,
+      menuPadding: 0,
 		}
 	},
   mounted() {
@@ -39,6 +40,11 @@ const mainHeaderApp = Vue.createApp({
         e.preventDefault();
         document.querySelector(`.submenu[data-id="${target}"]`).classList.toggle('active');
       }
+    },
+    setPadding(payload, {target}) {
+      console.log(target.offsetLeft);
+
+      this.menuPadding = target.offsetLeft;
     }
   }
 });

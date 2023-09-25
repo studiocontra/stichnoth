@@ -1,0 +1,26 @@
+.pagination-wrapper
+  margin-top 4rem
+
+  .pagination__list
+    display flex
+    flex-wrap wrap
+    justify-content center
+
+    li
+      list-style none
+      padding 0 1em
+
+  .pagination__item
+    @extend .link
+
+  .pagination__item--current
+    color $black
+    cursor initial
+
+  .pagination__item-arrow
+    svg
+      rotate -90deg
+
+    &.pagination__item--next
+      svg
+        rotate 90deg

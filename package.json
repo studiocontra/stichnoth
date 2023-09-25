@@ -18,6 +18,7 @@
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
+    "babel-preset-minify": "^0.5.2",
     "concurrently": "^8.0.1",
     "stylus": "^0.59.0"
   }

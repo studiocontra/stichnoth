@@ -37,20 +37,14 @@
           </picture>
 
           {%- if card_product.available == false -%}
-            <div class="card__badge">
-              <span
-                id="Badge-{{ section_id }}-{{ card_product.id }}"
-                class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
-              >
+            <div class="card__badge card__badge--black">
+              <span>
                 {{- 'products.product.sold_out' | t -}}
               </span>
             </div>
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-            <div class="card__badge">
-              <span
-                id="Badge-{{ section_id }}-{{ card_product.id }}"
-                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-              >
+            <div class="card__badge card__badge--gold">
+              <span>
                 {{- 'products.product.on_sale' | t -}}
               </span>
             </div>

@@ -219,7 +219,7 @@ header
 
   li
     display inline-block
-    padding 0 12px
+    padding 0
     margin 0 12px
 
     &:hover
@@ -235,6 +235,7 @@ header
     position relative
     width 100%
     padding 0
+    background-color $white
 
     +mq(992)
       position absolute
@@ -246,29 +247,34 @@ header
     &.active
       display block
 
+    li
+      display table
+      width auto
+
 
   .menu__link
     display flex
     color $black2
     text-decoration none
+    padding 10px 12px
+    border-radius 8px
     font('headline')
 
     &:hover
-      font-weight 500
+      background-color $white2
 
     svg
       display inline-block
-      width 12px
+      width 28px
       height @width
-      margin-left 5px
       fill $black2
-      translate 0 -3px
+      translate 0 3px
 
       +mq(992)
-        width 10px
+        width 18px
         height @width
         margin-left 10px
-        translate 0 6px
+        translate 0 1px
 
 
   .menu__link--active

@@ -8,6 +8,7 @@
           "settings": {
             "headline": "AN INVESTMENT IN LIFE",
             "image": "shopify:\/\/shop_images\/Hero_1.jpg",
+            "video": "shopify:\/\/files\/videos\/Stichnoth video 21 .webm",
             "button_label": "Learn More",
             "button_link": ""
           }
@@ -38,10 +39,10 @@
             "collection": "bracelets"
           }
         },
-        "template--19944138113322__d1c17097-f371-4509-9bc5-26a489ed6c50-featured_collection-2": {
+        "8d01519f-4694-4dba-96d1-0f236c8a3a28": {
           "type": "featured_collection",
           "settings": {
-            "collection": "earrings"
+            "collection": "rings"
           }
         },
         "template--19944138113322__d1c17097-f371-4509-9bc5-26a489ed6c50-featured_collection-3": {
@@ -53,7 +54,7 @@
       },
       "block_order": [
         "template--19944138113322__d1c17097-f371-4509-9bc5-26a489ed6c50-featured_collection-1",
-        "template--19944138113322__d1c17097-f371-4509-9bc5-26a489ed6c50-featured_collection-2",
+        "8d01519f-4694-4dba-96d1-0f236c8a3a28",
         "template--19944138113322__d1c17097-f371-4509-9bc5-26a489ed6c50-featured_collection-3"
       ],
       "settings": {
@@ -97,8 +98,6 @@
         "image": "shopify:\/\/shop_images\/crafting_excelence_img1_044ff7cf-f86d-4178-be1d-c5cb8c5fbdf6.jpg",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/crafting_excelence_img2.jpg",
-        "video": "",
-        "video_2": "",
         "img_style": "overlap",
         "text_position": "right",
         "v_align": "align-bottom"
@@ -152,8 +151,6 @@
         "image": "shopify:\/\/shop_images\/timeless-craftsmanship-img1.jpg",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/timeless-craftsmanship-img2.jpg",
-        "video": "",
-        "video_2": "",
         "img_style": "space",
         "text_position": "right",
         "v_align": "align-bottom"
