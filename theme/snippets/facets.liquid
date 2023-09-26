@@ -104,30 +104,6 @@
                                 {% endif %}
                               >
 
-                              <div class="input">
-                                <svg
-                                  width="1.6rem"
-                                  height="1.6rem"
-                                  viewBox="0 0 16 16"
-                                  aria-hidden="true"
-                                  focusable="false"
-                                >
-                                  <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                </svg>
-
-                                <svg
-                                  aria-hidden="true"
-                                  class="icon icon-checkmark"
-                                  width="1.1rem"
-                                  height="0.7rem"
-                                  viewBox="0 0 11 7"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                              </div>
-
                               <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
                               <span class="sr-only">
                                 {{- value.label | escape }} (
@@ -157,8 +133,8 @@
                       </div>
 
                       <price-range class="facets__price">
-                        <span class="field__currency">{{ cart.currency.symbol }}</span>
                         <div class="field">
+                          <span class="field__currency">{{ cart.currency.symbol }}</span>
                           <input
                             class="field__input"
                             name="{{ filter.min_value.param_name }}"
@@ -184,8 +160,8 @@
                           </label>
                         </div>
 
-                        <span class="field__currency">{{ cart.currency.symbol }}</span>
                         <div class="field">
+                          <span class="field__currency">{{ cart.currency.symbol }}</span>
                           <input
                             class="field__input"
                             name="{{ filter.max_value.param_name }}"
@@ -261,11 +237,6 @@
           </div>
 
           <div class="facets__footer">
-            <facet-remove class="facets__clear-wrapper">
-              <a href="{{ results_url }}" class="link">
-                {{- 'products.facets.clear_all' | t -}}
-              </a>
-            </facet-remove>
             <button
               type="button"
               class="cta cta--black"
@@ -275,6 +246,11 @@
                 {{ 'products.facets.apply' | t }}
               </span>
             </button>
+            <facet-remove class="facets__clear-wrapper">
+              <a href="{{ results_url }}" class="link">
+                {{- 'products.facets.clear_all' | t -}}
+              </a>
+            </facet-remove>
           </div>
 
           {% if results.current_vendor or results.current_type %}
