@@ -105,11 +105,10 @@ const productFormApp = Vue.createApp({
           res.json();
           this.isAdding = false;
 
-          updateCart();
-
-          mainHeaderApp.$data.isCartOpen = true;
-
-          // window.location.href = `${window.Shopify.routes.root}cart`;
+          updateCartDrawer();
+        })
+        .then(res => {
+          mountedHeaderApp.$data.isCartOpen = true;
         })
         .catch((error) => {
           console.error('Error:', error);

@@ -20,7 +20,7 @@
                   src="{{ section.settings.image | image_url }}"
                   width="{{ section.settings.image.width }}"
                   height="{{ section.settings.image.height }}"
-                  lazy="true"
+                  loading="lazy"
                 >
               </picture>
             {% endif %}
@@ -38,7 +38,7 @@
                   src="{{ section.settings.image_2 | image_url: width: 300 }}"
                   width="{{ section.settings.image_2.width }}"
                   height="{{ section.settings.image_2.height }}"
-                  lazy="true"
+                  loading="lazy"
                 >
               {% endif %}
             </div>
@@ -59,7 +59,7 @@
                   src="{{ section.settings.image_2 | image_url: width: 300 }}"
                   width="{{ section.settings.image_2.width }}"
                   height="{{ section.settings.image_2.height }}"
-                  lazy="true"
+                  loading="lazy"
                 >
               {% endif %}
             </div>

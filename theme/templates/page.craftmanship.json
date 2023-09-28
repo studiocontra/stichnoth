@@ -45,8 +45,6 @@
         "main_media_ratio": "square",
         "image": "shopify:\/\/shop_images\/making-jewelry.jpg",
         "addon_media_ratio": "square",
-        "video": "",
-        "video_2": "",
         "img_style": "overlap",
         "text_position": "left",
         "v_align": "align-center"
@@ -130,6 +128,7 @@
       ],
       "settings": {
         "color_scheme": "",
+        "media_ratio": "vertical",
         "text_position": "right"
       }
     },
@@ -140,6 +139,7 @@
           "type": "Column",
           "settings": {
             "main_image": "shopify:\/\/shop_images\/Rectangle_2-1_ee8a024c-1769-4913-89b2-979ce17b1cd0.png",
+            "media_ratio": "vertical",
             "text": "<p>The importance of preserving traditional techniques and skills cannot be overstated, as they form the foundation of the industry.<\/p>"
           }
         },
@@ -147,6 +147,7 @@
           "type": "Column",
           "settings": {
             "main_image": "shopify:\/\/shop_images\/Screenshot_2023-07-05_at_7.37.png",
+            "media_ratio": "vertical",
             "text": "<p>The use of new tools and techniques helps to speed up production without sacrificing quality or artistry. <\/p>"
           }
         }

@@ -141,7 +141,7 @@
                           src="{{ item.image | image_url }}"
                           width="{{ item.image.width }}"
                           height="{{ item.image.height }}"
-                          lazy="true"
+                          loading="lazy"
                         >
                       </picture>
                     {%- endif -%}
@@ -162,10 +162,10 @@
                 <div class="single-benefit">
                   <div class="icon">
                     <img
-                      src="{{ img_link | img_url: width: 50 }}"
+                      src="{{ img_link | image_url: width: 50 }}"
                       width="{{ img_link.width }}"
                       height="{{ img_link.height }}"
-                      lazy="true"
+                      loading="lazy"
                     >
                   </div>
                   <p>{{ benefits.content.value[forloop.index0] }}</p>
@@ -190,7 +190,7 @@
                   src="{{ addon_content.main_image | image_url }}"
                   width="{{ addon_content.main_image.width }}"
                   height="{{ addon_content.main_image.height }}"
-                  lazy="true"
+                  loading="lazy"
                 >
               </picture>
 
@@ -199,7 +199,7 @@
                 src="{{ addon_content.additional_image | image_url: width: 300 }}"
                 width="{{ addon_content.additional_image.width }}"
                 height="{{ addon_content.additional_image.height }}"
-                lazy="true"
+                loading="lazy"
               >
             </div>
           </div>
@@ -224,7 +224,9 @@
 
     <div class="custom-block product__faqs">
       <div class="container">
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          {{}}
+        </div>
         <div class="col-md-8">
           <div class="product__accordion--faqs" data-ref="faqsAccordion">
             {% for faq in product.metafields.custom.faqs.value %}

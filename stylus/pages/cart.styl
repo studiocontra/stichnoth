@@ -138,6 +138,7 @@
   grid-column 2 / 3
   grid-row 1 / 2
   margin-bottom 16px
+  max-width 550px
 
 
 .cart-product__name
@@ -163,8 +164,7 @@
 
 
 .cart-product__quantity
-  display flex
-  flex-direction column
+  width 100px
   align-self start
   align-items flex-start
   grid-column 2 / 3
@@ -192,6 +192,7 @@
 
     svg
       width 16px
+      pointer-events none
 
 
 .cart-product__delete
@@ -203,6 +204,7 @@
   svg
     fill $gray2
     width 22px
+    pointer-events none
 
 
 .cart-product__total
@@ -265,7 +267,6 @@
 
   .cart-product__quantity
     align-items center
-    flex-direction row
 
     .cart-quantity
       width auto
@@ -303,7 +304,7 @@
       grid-column 5 / 6
 
   .single-cart-product
-    grid-template-columns 150px auto 150px 50px 100px
+    grid-template-columns 150px auto 100px 20px 150px
     grid-template-rows 1fr 1fr
 
   .cart-product__img
@@ -323,7 +324,6 @@
   .cart-product__quantity
     grid-column 3 / 4
     grid-row span 2
-    margin-right 32px
     align-self center
     justify-self end
 

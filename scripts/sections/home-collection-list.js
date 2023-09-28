@@ -4,9 +4,6 @@ const homeCollectionListApp = Vue.createApp({
       slidesPerView: 'auto',
       spaceBetween: 0,
       watchOverflow: true,
-      centerInsufficientSlides: true,
-      centeredSlides: true,
-      centeredSlidesBounds: true,
       navigation: {
         nextEl: '.js-list-next',
         prevEl: '.js-list-prev',

@@ -1,4 +1,17 @@
+const cartPageApp = Vue.createApp({
+  data() {
+    return {
+      errorMsg: null,
+    }
+  }
+});
+
+cartPageApp.config.compilerOptions.delimiters = ['[[', ']]'];
+const mountedCartPageApp = cartPageApp.mount('.wrap-page--cart');
+
+
 function addCartListeners() {
+  console.log('listeners');
   document
     .querySelectorAll('.js-update-cart-qty')
     .forEach(btn => {
@@ -10,7 +23,12 @@ function addCartListeners() {
           method: 'POST'
         });
 
-        updateCart();
+        if(res.status === 422) {
+          mountedCartPageApp.$data.errorMsg = true;
+          return
+        }
+
+        updateCartPage();
       })
 
     });
@@ -20,13 +38,13 @@ function addCartListeners() {
     .forEach(btn => {
       btn.addEventListener('click', async (e) => {
         e.preventDefault();
-        const {line} = btn.dataset;
+        const {line, qty} = btn.dataset;
 
-        const res = await fetch(`${window.Shopify.routes.root}cart/change.js?line=${line}&quantity=0`, {
+        await fetch(`${window.Shopify.routes.root}cart/change.js?line=${line}&quantity=${qty}`, {
           method: 'POST'
         });
 
-        updateCart();
+        updateCartPage();
       })
 
     });
@@ -34,22 +52,16 @@ function addCartListeners() {
 
 addCartListeners();
 
-async function updateCart() {
-  const res = await fetch('/?section_id=header');
+async function updateCartPage() {
+  const res = await fetch('/?section_id=main-cart-items');
   const text = await res.text();
 
   const resHtml = document.createElement('div');
   resHtml.innerHTML = text;
 
-  // Update drawer
+  // Update Items
   const newDrawer = resHtml.querySelector('.wrap-cart-form').innerHTML;
-  document.querySelectorAll('.wrap-cart-form').forEach(form => {
-    form.innerHTML = newDrawer;
-  })
-
-  // Update Cart count
-  const newCounter = resHtml.querySelector('.header__icon--cart').innerHTML;
-  document.querySelector('.header__icon--cart').innerHTML = newCounter;
+  document.querySelector('.wrap-cart-form').innerHTML = newDrawer;
 
   addCartListeners();
 }

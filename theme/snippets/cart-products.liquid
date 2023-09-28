@@ -11,32 +11,32 @@
     </div>
   </div>
 
-  {% if cart == empty %}
-    <div class="cart__empty">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M10 3h4v11h-4V3m0 18v-4h4v4h-4Z"/>
-      </svg>
+  <div class="wrap-cart-form">
+    {% if cart == empty %}
+      <div class="cart__empty">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M10 3h4v11h-4V3m0 18v-4h4v4h-4Z"/>
+        </svg>
 
-      <h2 class="title title--small">
-        {{ 'sections.cart.empty' | t }}
-      </h2>
+        <h2 class="title title--small">
+          {{ 'sections.cart.empty' | t }}
+        </h2>
 
-      <div class="text">
-        <p>
-          {{ 'sections.cart.empty_description' | t }}
-        </p>
+        <div class="text">
+          <p>
+            {{ 'sections.cart.empty_description' | t }}
+          </p>
+        </div>
+
+        <div class="cart__footer">
+          <a href="{{ routes.all_products_collection_url }}" class="cta cta--black">
+            <span>
+              {{ 'general.continue_shopping' | t }}
+            </span>
+          </a>
+        </div>
       </div>
-
-      <div class="cart__footer">
-        <a href="{{ routes.all_products_collection_url }}" class="cta cta--black">
-          <span>
-            {{ 'general.continue_shopping' | t }}
-          </span>
-        </a>
-      </div>
-    </div>
-  {% else %}
-    <div class="wrap-cart-form">
+    {% else %}
       <form
         class="cart__form"
         action="/cart"
@@ -59,7 +59,7 @@
           {% for item in cart.items %}
             <div class="single-cart-product">
               <div class="cart-product__img">
-                <img src="{{ item | image_url: width: 500 }}" alt="{{ item.title | escape }}">
+                <img src="{{ item | image_url: width: 500 }}" alt="{{ item.title | escape }}" loading="lazy">
               </div>
 
               <div class="cart-product__info">
@@ -80,7 +80,7 @@
                     class="remove js-update-cart-qty"
                     href="#"
                     data-line="{{ forloop.index }}"
-                    data-qty="{{ item.quantity | minus:  1 }}"
+                    data-qty="{{ item.quantity | minus: 1 }}"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@
                     class="add js-update-cart-qty"
                     href="#"
                     data-line="{{ forloop.index }}"
-                    data-qty="{{ item.quantity | plus:  1 }}"
+                    data-qty="{{ item.quantity | plus: 1 }}"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -120,6 +120,7 @@
                   href="#"
                   rel="{{ item.id }}"
                   data-line="{{ forloop.index }}"
+                  data-qty="0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -172,6 +173,6 @@
           </div>
         </div>
       </form>
-    </div>
-  {% endif %}
+    {% endif %}
+  </div>
 </div>

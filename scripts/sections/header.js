@@ -1,3 +1,19 @@
+async function updateCartDrawer() {
+  const res = await fetch('/?section_id=header');
+  const text = await res.text();
+
+  const resHtml = document.createElement('div');
+  resHtml.innerHTML = text;
+
+  // Update drawer
+  const newDrawer = resHtml.querySelector('.wrap-cart-form').innerHTML;
+  document.querySelector('.wrap-cart-form').innerHTML = newDrawer;
+
+  // Update Cart count
+  const newCounter = resHtml.querySelector('.js-cart-count').innerHTML;
+  document.querySelector('.js-cart-count').innerHTML = newCounter;
+}
+
 const mainHeaderApp = Vue.createApp({
 	data() {
 		return {
@@ -6,6 +22,7 @@ const mainHeaderApp = Vue.createApp({
       isMenuOpen: false,
       flagResize: false,
       isCartOpen: false,
+      isLoading: false,
       menuPadding: 0,
 		}
 	},
@@ -42,12 +59,32 @@ const mainHeaderApp = Vue.createApp({
       }
     },
     setPadding(payload, {target}) {
-      console.log(target.offsetLeft);
-
       this.menuPadding = target.offsetLeft;
+    },
+    async updateCartItem({target}) {
+      const { line, qty } = target.dataset;
+
+      const editButtons = target.matches('.js-delete-cart-qty') ||
+      target.matches('.js-update-cart-qty');
+      this.isLoading = true;
+
+      if(editButtons) {
+        const {status} = await fetch(`${window.Shopify.routes.root}cart/change.js?line=${line}&quantity=${qty}`, {
+          method: 'POST'
+        });
+
+        if(status === 422) {
+          this.errorMsg = true;
+          return
+        }
+
+        await updateCartDrawer();
+        this.isLoading = false;
+      }
     }
   }
 });
 
 mainHeaderApp.config.compilerOptions.delimiters = ['[[', ']]'];
-mainHeaderApp.mount('.wrap-header');
+
+const mountedHeaderApp = mainHeaderApp.mount('.wrap-header');

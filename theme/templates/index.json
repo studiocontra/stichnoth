@@ -9,8 +9,8 @@
             "headline": "AN INVESTMENT IN LIFE",
             "image": "shopify:\/\/shop_images\/Hero_1.jpg",
             "video": "shopify:\/\/files\/videos\/Stichnoth video 21 .webm",
-            "button_label": "Learn More",
-            "button_link": ""
+            "button_label": "Shop Our Products",
+            "button_link": "shopify:\/\/collections"
           }
         },
         "5a1e862b-7ff7-4b8e-8ca2-bc79bf5c948d": {
@@ -18,8 +18,8 @@
           "settings": {
             "headline": "We celebrate artisans",
             "image": "shopify:\/\/shop_images\/hero-2.jpg",
-            "button_label": "Learn More",
-            "button_link": ""
+            "button_label": "Know About Us",
+            "button_link": "shopify:\/\/pages\/our-story"
           }
         }
       },
@@ -147,13 +147,13 @@
       ],
       "settings": {
         "color_scheme": "",
-        "main_media_ratio": "square",
+        "main_media_ratio": "vertical",
         "image": "shopify:\/\/shop_images\/timeless-craftsmanship-img1.jpg",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/timeless-craftsmanship-img2.jpg",
         "img_style": "space",
         "text_position": "right",
-        "v_align": "align-bottom"
+        "v_align": "align-center"
       }
     },
     "a04c9bc8-533b-40e3-8445-512917a12c33": {

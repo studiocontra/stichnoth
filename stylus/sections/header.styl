@@ -360,6 +360,17 @@ header
     opacity 1
     transform translateX(0)
 
+  .loader
+    background-color rgba($white, 0.85)
+    z-index 2
+    fullAbs()
+
+    .spinner
+      width 120px
+      height @width
+      stroke $black
+      centerAbs()
+
 .cart-drawer__close
   position absolute
   right 16px

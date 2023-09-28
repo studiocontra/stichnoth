@@ -29,16 +29,22 @@
 
       <div class="wrap-product-grid" id="ProductGridContainer">
         {%- if collection.products.size == 0 -%}
-          <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+          <div class="collection collection--empty" id="product-grid" data-id="{{ section.id }}">
             <div class="title-wrapper center">
-              <h2 class="title title--primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M10 3h4v11h-4V3m0 18v-4h4v4h-4Z"/>
+              </svg>
+              <h2 class="title title--medium">
                 {{ 'sections.collection_template.empty' | t -}}
-                <br>
-                {{
-                  'sections.collection_template.use_fewer_filters_html'
-                  | t: link: collection.url, class: 'underlined-link link'
-                }}
               </h2>
+              <div class="text">
+                <p>
+                  {{
+                    'sections.collection_template.use_fewer_filters_html'
+                    | t: link: collection.url, class: 'underlined-link link'
+                  }}
+                </p>
+              </div>
             </div>
           </div>
         {%- else -%}

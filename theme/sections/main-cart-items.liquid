@@ -1,4 +1,10 @@
+<script src="{{ 'custom-cart.min.js' | asset_url }}" defer></script>
+
 <div class="wrap-page wrap-page--cart">
+  <div v-if="errorMsg" class="cart__error">
+    Error
+  </div>
+
   <div class="container">
     {% render 'cart-products' %}
   </div>
