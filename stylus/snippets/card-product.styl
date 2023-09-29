@@ -1,4 +1,9 @@
 .card-product
+  &:hover
+    .card-product__media
+      .hover-img
+        opacity 1
+
   a
     color $black
 
@@ -13,6 +18,10 @@
     border-radius 8px
     fullAbs()
     fit()
+
+  .hover-img
+    opacity 0
+    transition opacity 0.15s ease-out
 
   .card__badge
     position absolute
