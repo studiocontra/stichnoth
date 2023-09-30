@@ -46,8 +46,6 @@
         "image": "shopify:\/\/shop_images\/Rectangle_3_f800adfa-f60d-4768-86b1-79434c002406.png",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/Rectangle_2_c872cdbb-cd2a-498b-b4d9-cb869a69a942.png",
-        "video": "",
-        "video_2": "",
         "img_style": "space",
         "text_position": "right",
         "v_align": "align-center"
@@ -88,8 +86,6 @@
         "image": "shopify:\/\/shop_images\/Rectangle_1-1_622f2638-f8c8-4cc2-8f6e-9b6e59a47c75.png",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/Rectangle_2-1_9b6120eb-6b99-4637-97fd-aa17f6550c41.png",
-        "video": "",
-        "video_2": "",
         "img_style": "overlap",
         "text_position": "left",
         "v_align": "align-center"
@@ -130,8 +126,6 @@
         "image": "shopify:\/\/shop_images\/Rectangle_12_007ba470-9ba7-4f09-b7cb-589fe0c839ae.png",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/Rectangle_13_3571043f-86fe-494e-b48c-bfaec772f8a8.png",
-        "video": "",
-        "video_2": "",
         "img_style": "overlap",
         "text_position": "right",
         "v_align": "align-center"

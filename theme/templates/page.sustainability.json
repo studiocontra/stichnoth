@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "headline": "Sustainability",
-            "image": "shopify:\/\/shop_images\/sustainability-hero.jpg",
+            "video": "shopify:\/\/files\/videos\/Stichnoth video 2.webm",
             "button_label": "Learn More",
             "button_link": ""
           }
@@ -118,8 +118,6 @@
         "image": "shopify:\/\/shop_images\/responsibility-1.jpg",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/responsibility-2.jpg",
-        "video": "",
-        "video_2": "",
         "img_style": "space",
         "text_position": "right",
         "v_align": "align-center"

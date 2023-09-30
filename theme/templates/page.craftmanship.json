@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "headline": "Craftmanship",
-            "image": "shopify:\/\/shop_images\/carftmanship-hero_8abf4d5a-f9a5-4c39-bf6c-8a0cb7d215f8.jpg",
+            "video": "shopify:\/\/files\/videos\/Stichnoth video 24 .webm",
             "button_label": "Learn More",
             "button_link": ""
           }
@@ -138,7 +138,7 @@
         "b1d94a3a-644a-41b8-aefa-04a9e74fe4cf": {
           "type": "Column",
           "settings": {
-            "main_image": "shopify:\/\/shop_images\/Rectangle_2-1_ee8a024c-1769-4913-89b2-979ce17b1cd0.png",
+            "video": "shopify:\/\/files\/videos\/Stichnoth video 6 .webm",
             "media_ratio": "vertical",
             "text": "<p>The importance of preserving traditional techniques and skills cannot be overstated, as they form the foundation of the industry.<\/p>"
           }
@@ -146,7 +146,7 @@
         "5a44de06-c4b5-405a-bc02-d3b871a28ab2": {
           "type": "Column",
           "settings": {
-            "main_image": "shopify:\/\/shop_images\/Screenshot_2023-07-05_at_7.37.png",
+            "video": "shopify:\/\/files\/videos\/Stichnoth video 23.webm",
             "media_ratio": "vertical",
             "text": "<p>The use of new tools and techniques helps to speed up production without sacrificing quality or artistry. <\/p>"
           }
