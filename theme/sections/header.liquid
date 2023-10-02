@@ -1,3 +1,12 @@
+<style>
+  .predictive-search {
+    position: relative;
+    width: 500px;
+  }
+</style>
+
+<script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+
 <div class="wrap-header">
   <div v-if="isMenuOpen" class="header__space"></div>
   <header :class="{'header--fixed': isMenuOpen}">
