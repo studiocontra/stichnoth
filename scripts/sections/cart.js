@@ -1,17 +1,16 @@
-const cartPageApp = Vue.createApp({
-  data() {
-    return {
-      errorMsg: null,
-    }
-  }
-});
+// const cartPageApp = Vue.createApp({
+//   data() {
+//     return {
+//       errorMsg: null,
+//     }
+//   }
+// });
 
-cartPageApp.config.compilerOptions.delimiters = ['[[', ']]'];
-const mountedCartPageApp = cartPageApp.mount('.wrap-page--cart');
+// cartPageApp.config.compilerOptions.delimiters = ['[[', ']]'];
+// const mountedCartPageApp = cartPageApp.mount('.wrap-page--cart');
 
 
 function addCartListeners() {
-  console.log('listeners');
   document
     .querySelectorAll('.js-update-cart-qty')
     .forEach(btn => {
@@ -63,5 +62,5 @@ async function updateCartPage() {
   const newDrawer = resHtml.querySelector('.wrap-cart-form').innerHTML;
   document.querySelector('.wrap-cart-form').innerHTML = newDrawer;
 
-  addCartListeners();
+  // addCartListeners();
 }

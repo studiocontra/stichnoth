@@ -43,9 +43,6 @@
 
         {% assign full_url = shop.url | append: routes.cart_url %}
 
-        {% comment %} {{full_url}}<br>
-        {{canonical_url}}<br> {% endcomment %}
-
         {% if canonical_url != full_url %}
           <a
             href="#"
@@ -64,7 +61,7 @@
               <span class="sr-only">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
             </div>
           </a>
-      {% endif %}
+        {% endif %}
 
         {%- if shop.customer_accounts_enabled -%}
           <a

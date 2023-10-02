@@ -20,10 +20,10 @@
             <div class="product-form">
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
-              <div class="product__price">
+              <div class="product__price" id="price-{{ section.id }}" role="status">
                 <span class="price__label">{{ 'sections.cart.headings.price' | t }}</span>
 
-                {% render 'price', product: product %}
+                {% render 'price', product: product, use_variant: true %}
               </div>
 
               <div class="product-form__add">

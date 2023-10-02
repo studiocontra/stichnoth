@@ -37,18 +37,18 @@
           </picture>
 
           {% if card_product.media[1] %}
-          <picture>
-            <source srcset="{{ card_product.media[1] | image_url: width: 650 }}" media="(min-width: 450px)">
-            <source srcset="{{ card_product.media[1] | image_url: width: 450 }}">
-            <img
-              src="{{ card_product.media[1] | image_url }}"
-              width="{{ card_product.media[1].width }}"
-              height="{{ card_product.media[1].height }}"
-              class="hover-img"
-              loading="lazy"
-            >
-          </picture>
-          {% endif %}
+            <picture>
+              <source srcset="{{ card_product.media[1] | image_url: width: 650 }}" media="(min-width: 450px)">
+              <source srcset="{{ card_product.media[1] | image_url: width: 450 }}">
+              <img
+                src="{{ card_product.media[1] | image_url }}"
+                width="{{ card_product.media[1].width }}"
+                height="{{ card_product.media[1].height }}"
+                class="hover-img"
+                loading="lazy"
+              >
+            </picture>
+          {%- endif -%}
 
           {%- if card_product.available == false -%}
             <div class="card__badge card__badge--black">
@@ -63,6 +63,8 @@
               </span>
             </div>
           {%- endif -%}
+        {%- else -%}
+          {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
       </div>
 

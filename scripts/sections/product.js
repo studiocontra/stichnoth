@@ -85,11 +85,14 @@ const productFormApp = Vue.createApp({
   methods: {
     addToCart({target}) {
       const {product, qty} = target.dataset;
+      const urlParams = new URLSearchParams(window.location.search);
+      const variant = urlParams.get('variant');
       this.isAdding = true;
 
       let formData = {
         'items': [{
-          'id': product,
+          'product-id': product,
+          'id': variant || product,
           'quantity': qty
         }]
       };

@@ -1,9 +1,9 @@
 <script src="{{ 'custom-cart.min.js' | asset_url }}" defer></script>
 
 <div class="wrap-page wrap-page--cart">
-  <div v-if="errorMsg" class="cart__error">
+  {% comment %} <div v-if="errorMsg" class="cart__error">
     Error
-  </div>
+  </div> {% endcomment %}
 
   <div class="container">
     {% render 'cart-products' %}
