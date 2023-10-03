@@ -9,6 +9,11 @@
 
 <div class="wrap-header">
   <div v-if="isMenuOpen" class="header__space"></div>
+
+  <transition name="fade">
+    <div v-if="isSearchOpen" class="header__backdrop"></div>
+  </transition>
+
   <header :class="{'header--fixed': isMenuOpen}">
     <div v-if="isCartOpen" class="backdrop" @click="isCartOpen = false"></div>
     <div class="container">

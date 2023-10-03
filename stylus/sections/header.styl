@@ -4,13 +4,15 @@ header
   top 0
   left 0
   width 100%
-  z-index 2
+  z-index 5
+  background-color $white
 
   >.container
     display flex
     justify-content space-between
     align-items center
     flex-wrap wrap
+    position static
 
 
 .header__space
@@ -18,6 +20,14 @@ header
   display block
   height var(--header-height)
   content ''
+
+
+.header__backdrop
+    display block
+    background-color rgba($black, 0.5)
+    z-index 4
+    backdrop-filter blur(5px)
+    fullAbs()
 
 
 .header--fixed

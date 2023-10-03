@@ -23,7 +23,10 @@ const mainHeaderApp = Vue.createApp({
       flagResize: false,
       isCartOpen: false,
       isLoading: false,
+      // isSearchOpen: false,
+      isSearchOpen: true,
       menuPadding: 0,
+      activeClass: 'hola-class-8'
 		}
 	},
   mounted() {
@@ -57,6 +60,11 @@ const mainHeaderApp = Vue.createApp({
         e.preventDefault();
         document.querySelector(`.submenu[data-id="${target}"]`).classList.toggle('active');
       }
+    },
+    toggleSearch() {
+      this.isSearchOpen = !this.isSearchOpen;
+      window.scrollTo(0, 0);
+      document.body.classList.toggle('overflow-hidden');
     },
     setPadding(payload, {target}) {
       this.menuPadding = target.offsetLeft;
