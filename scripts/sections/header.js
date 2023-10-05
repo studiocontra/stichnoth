@@ -23,8 +23,7 @@ const mainHeaderApp = Vue.createApp({
       flagResize: false,
       isCartOpen: false,
       isLoading: false,
-      // isSearchOpen: false,
-      isSearchOpen: true,
+      isSearchOpen: false,
       menuPadding: 0,
       activeClass: 'hola-class-8'
 		}

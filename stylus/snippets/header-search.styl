@@ -6,12 +6,19 @@
   background-color $white
   padding-bottom 16px
 
+
 .search-modal__form
   display block
+  position relative
   width 100%
 
   .search
     position relative
+
+    .form__input
+      display flex
+      align-items center
+      flex 0 1 auto
 
   input
     width 100%
@@ -35,14 +42,38 @@
       border-color $black
 
   .reset__button
-    position absolute
-    top 15px
-    right 0
     width auto
     appearance none
     background none
     border 0
+    flex 0 0 30px
 
     svg
       width 30px
       height @width
+
+
+  .predictive-search
+    height 0
+    overflow hidden
+
+
+.predictive-search__loading-state
+  width 30px
+  display none
+
+  svg
+    stroke $black
+
+
+.search-modal__form[loading]
+  .predictive-search__loading-state
+    display block
+
+
+.search-modal__form[results]
+  input
+    border-color $black
+
+  .predictive-search
+    height auto

@@ -213,6 +213,17 @@ header
       content ''
 
 
+body:not(.overflow-hidden)
+  .header__nav
+    li:hover
+      +mq(992)
+        svg
+          rotate 180deg
+
+        .submenu
+          display block
+
+
 .header__nav
   display none
   margin-top 36px
@@ -232,14 +243,6 @@ header
     padding 0
     margin 0 12px
 
-    &:hover
-      +mq(992)
-        svg
-          rotate 180deg
-
-        .submenu
-          display block
-
   .submenu
     display none
     position relative
@@ -249,7 +252,7 @@ header
 
     +mq(992)
       position absolute
-      top 100%
+      top calc(100% - 32px)
       left 0
       text-align center
       padding 16px 0

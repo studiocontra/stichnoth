@@ -33,6 +33,7 @@ class SearchForm extends HTMLElement {
   }
 
   onFormReset(event) {
+    console.log('reset form');
     // Prevent default so the form reset doesn't set the value gotten from the url on page load
     event.preventDefault();
     // Don't reset if the user has selected an element on the predictive search dropdown

@@ -44,53 +44,53 @@
       class="search-modal__form"
       data-loading-text="{{ 'accessibility.loading' | t }}">
       <form action="{{ routes.search_url }}" method="get" role="search" class="search">
-        <input
-          class="search__input field__input"
-          id="{{ input_id }}"
-          type="search"
-          name="q"
-          value="{{ search.terms | escape }}"
-          placeholder="{{ 'general.search.search' | t }}"
-          {%- if settings.predictive_search_enabled -%}
-            role="combobox"
-            aria-expanded="false"
-            aria-owns="predictive-search-results"
-            aria-controls="predictive-search-results"
-            aria-haspopup="listbox"
-            aria-autocomplete="list"
-            autocorrect="off"
-            autocomplete="off"
-            autocapitalize="off"
-            spellcheck="false"
-          {%- endif -%}
-        >
-        <input type="hidden" name="options[prefix]" value="last">
+        <div class="form__input">
+          <div class="predictive-search__loading-state">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              class="spinner"
+            >
+              <path fill="none" stroke-dasharray="15" stroke-dashoffset="15" stroke-linecap="round" stroke-width="2" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path>
+            </svg>
+          </div>
 
-        <button
-          type="reset"
-          class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
-          aria-label="{{ 'general.search.reset' | t }}"
-          @click="toggleSearch"
-        >
-          <svg class="icon icon-close" aria-hidden="true" focusable="false">
-            <use xlink:href="#icon-close">
-          </svg>
-        </button>
+          <input
+            class="search__input field__input"
+            id="{{ input_id }}"
+            type="search"
+            name="q"
+            value="{{ search.terms | escape }}"
+            placeholder="{{ 'general.search.search' | t }}"
+            autofocus
+            {%- if settings.predictive_search_enabled -%}
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results"
+              aria-controls="predictive-search-results"
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+            {%- endif -%}
+          >
+          <input type="hidden" name="options[prefix]" value="last">
+
+          <button
+            type="reset"
+            class="reset__button field__button"
+            aria-label="Clear search term">
+            <svg class="icon icon-close" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-close">
+            </use></svg>
+          </button>
+        </div>
 
         {%- if settings.predictive_search_enabled -%}
-          <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-            <div class="predictive-search__loading-state">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                class="spinner"
-                viewBox="0 0 66 66"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-              </svg>
-            </div>
-          </div>
+          <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search></div>
 
           <span class="predictive-search-status sr-only" role="status" aria-hidden="true"></span>
         {%- endif -%}
