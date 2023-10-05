@@ -1,4 +1,6 @@
 .card-product
+  container card-product / inline-size
+
   &:hover
     .card-product__media
       .hover-img
@@ -40,25 +42,27 @@
   .card__badge--gold
     background-color $gold
 
+  &.no-image
+    background-color $white2
+
 
 
 .card-product__content
   display flex
-  flex-wrap nowrap
-  justify-content space-between
+  flex-direction column
 
   .title
-    flex 1 1 auto
+  .wrap-price
+    flex 1 1 100%
 
   .wrap-price
-    flex 0 0 135px
     font-size 18px
     letter-spacing 0.1rem
     line-height 1.2
     color $gray
 
     .price
-      text-align right
+      text-align left
 
     .price-item
       display inline-block
@@ -88,3 +92,22 @@
       color $gray
       font-size 0.85em
       text-decoration line-through
+
+
+/**
+* Container Queries
+*/
+// 576px viweport
+@container card-product (min-width: 300px)
+  .card-product__content
+    flex-wrap nowrap
+    flex-direction row
+
+    .title
+      flex 1 1 auto
+
+    .wrap-price
+      flex 0 0 135px
+
+      .price
+        text-align right

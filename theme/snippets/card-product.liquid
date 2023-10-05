@@ -23,7 +23,7 @@
 {%- if card_product and card_product != empty -%}
   <div class="card-product">
     <a href="{{ card_product.url }}">
-      <div class="card-product__media">
+      <div class="card-product__media {% unless card_product.featured_media %}no-image{% endunless %}">
         {%- if card_product.featured_media -%}
           <picture>
             <source srcset="{{ card_product.featured_media | image_url: width: 650 }}" media="(min-width: 450px)">

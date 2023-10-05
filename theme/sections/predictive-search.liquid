@@ -3,55 +3,40 @@
   <div id="predictive-search-results" role="listbox">
     {%- if predictive_search.resources.products.size > 0 -%}
       <div class="search-results__header">
-        <span data-predictive-search-live-region-count-value>
-          {% liquid
-            assign total_results = predictive_search.resources.products.size
-            if total_results == 0
-              echo 'templates.search.no_results' | t: terms: predictive_search.terms
-            else
-              echo 'templates.search.results_with_count_and_term' | t: count: total_results, terms: predictive_search.terms
-            endif
-          %}
-        </span>
-
-        <div id="predictive-search-option-search-keywords" class="predictive-search__search-for-button">
-          <a
-            href="#"
-            class="link"
-            tabindex="-1"
-            role="option"
-            aria-selected="false"
-          >
-            <span data-predictive-search-search-for-text>
-              {{- 'templates.search.search_for' | t: terms: predictive_search.terms -}}
-              {% render 'icon-arrow' %}
-            </span>
-          </a>
+        <div class="text" data-predictive-search-live-region-count-value>
+          <p>
+            {% liquid
+              assign total_results = predictive_search.resources.products.size
+              if total_results == 0
+                echo 'templates.search.no_results' | t: terms: predictive_search.terms
+              else
+                echo 'templates.search.results_with_count_and_term' | t: count: total_results, terms: predictive_search.terms
+              endif
+            %}
+          </p>
         </div>
       </div>
 
       <div id="predictive-search-results-groups-wrapper" class="predictive-search__results-groups-wrapper">
-        <div class="predictive-search__result-group">
-          <div
-            id="predictive-search-results-products-list"
-            class="search-results__items"
-            role="group"
-            aria-labelledby="predictive-search-products"
-          >
-            {%- for product in predictive_search.resources.products -%}
-              {% render 'card-product',
-                card_product: product,
-                media_aspect_ratio: section.settings.image_ratio,
-                image_shape: section.settings.image_shape,
-                show_secondary_image: section.settings.show_secondary_image,
-                show_vendor: section.settings.show_vendor,
-                show_rating: section.settings.show_rating,
-                lazy_load: lazy_load,
-                show_quick_add: section.settings.enable_quick_add,
-                section_id: section.id
-              %}
-            {%- endfor -%}
-          </div>
+        <div
+          id="predictive-search-results-products-list"
+          class="search-results__items"
+          role="group"
+          aria-labelledby="predictive-search-products"
+        >
+          {%- for product in predictive_search.resources.products -%}
+            {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: section.settings.image_ratio,
+              image_shape: section.settings.image_shape,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              lazy_load: lazy_load,
+              show_quick_add: section.settings.enable_quick_add,
+              section_id: section.id
+            %}
+          {%- endfor -%}
         </div>
       </div>
     {%- endif -%}
