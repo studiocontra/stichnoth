@@ -34,7 +34,7 @@
       {%- endif -%}
 
       {%- if block.type == 'store' -%}
-        <div class="single-store single-store--{{ block.settings.style }}">
+        <div class="single-store single-store--{{ block.settings.style }} {% if block.settings.coming_soon %} single-store--disabled{% endif %}">
           {% if block.settings.image %}
             <div class="store__images">
               <div class="main-img">
@@ -49,8 +49,16 @@
                     height="{{ block.settings.image.height }}"
                   >
                 </picture>
+
+                {% if block.settings.coming_soon %}
+                  <span class="title title--hero title--hero--light {% if block.settings.style != 'full' %} title--hero--small{% endif %}">
+                    <strong>New</strong>&nbsp;
+                    Store
+                  </span>
+
+                {% endif %}
               </div>
-              {% if block.settings.style != 'full' and block.settings.image_2 %}
+              {% if block.settings.style != 'full' and block.settings.image_2 and block.settings.coming_soon != true %}
                 <div class="addon-img">
                   <picture>
                     <img
@@ -184,7 +192,7 @@
         },
         {
           "type": "checkbox",
-          "id": "comming_soon",
+          "id": "coming_soon",
           "label": "Coming Soon",
           "default": false
         },

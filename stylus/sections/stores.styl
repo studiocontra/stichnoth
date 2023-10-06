@@ -76,12 +76,16 @@
     .main-img
       position relative
       width 86.666%
+      border-radius 5px
+      overflow hidden
       aspect-ratio 1.2 / 1
 
     .addon-img
       position absolute
       right 0
       width 130px
+      border-radius 3px
+      overflow hidden
       aspect-ratio 1 / 1.5
 
 
@@ -156,6 +160,40 @@
 
   .store__text
     padding 0
+
+
+.single-store--disabled
+  position relative
+
+  .store__images
+    z-index 1
+
+    .main-img
+      &:after
+        display block
+        background-color rgba($black, 0.2)
+        content ''
+        z-index 1
+        backdrop-filter blur(5px)
+        fullAbs()
+
+
+    .title
+      width 100%
+      text-align center
+      font-weight 400
+      color $white
+      centerAbs()
+      z-index 2
+
+
+  .store__text
+    &:after
+      display block
+      background-color rgba($white, 0.6)
+      content ''
+      backdrop-filter blur(7.5px)
+      fullAbs()
 
 
 .wrap-modal-book
