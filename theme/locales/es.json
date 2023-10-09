@@ -109,6 +109,7 @@
     "product": {
       "add_to_cart": "Agregar al carrito",
       "description": "Descripción",
+      "faq": "Preguntas frecuentes",
       "on_sale": "Oferta",
       "product_variants": "Variantes de producto",
       "quantity": {

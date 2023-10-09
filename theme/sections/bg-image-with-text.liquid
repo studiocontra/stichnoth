@@ -50,14 +50,8 @@
         <div class="col-md-6 col-lg-8">
           {% if section.settings.video != blank %}
             <div class="bg-image-text__video">
-              <div class="video">
-                <iframe
-                  src="https://player.vimeo.com/video/{{ section.settings.video }}?loop=1&autoplay=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=1"
-                  muted
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+              <div class="wrap-video">
+                {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
               </div>
             </div>
           {% else %}
@@ -143,7 +137,7 @@
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
-      "type": "text",
+      "type": "video",
       "id": "video",
       "label": "Main Video"
     },
