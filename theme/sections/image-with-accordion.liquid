@@ -57,9 +57,25 @@
                 <div class="accordion-item__loader">
                   <div class="progress-bar" :style="styleObject"></div>
                 </div>
+
                 {%- if block.settings.text != blank -%}
                   <div class="text">
                     {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+
+                {%- if block.settings.image -%}
+                  <div class="wrap-media wrap-media--square">
+                    <picture>
+                      <source srcset="{{ block.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+                      <source srcset="{{ block.settings.image | image_url: width: 450 }}">
+                      <img
+                        src="{{ block.settings.image | image_url }}"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                        loading="lazy"
+                      >
+                    </picture>
                   </div>
                 {%- endif -%}
               </div>

@@ -41,7 +41,7 @@
         "type": "pre-footer",
         "settings": {
           "color_scheme": "gold",
-          "image": "shopify:\/\/shop_images\/Work-with-us.jpg",
+          "image": "shopify:\/\/shop_images\/Stichnoth_work_with_us.png",
           "headline": "Work with us",
           "content": "<p>If you would like to become part of an innovative company that has been shaped by decades of tradition, apply now!<\/p>",
           "button_label": "Go to Careers",
@@ -54,7 +54,8 @@
           "footer_logo": "shopify:\/\/shop_images\/logo-footer.png",
           "footer_top_text": "<p>Honoring heritage with timeless traditions, seamlessly woven into the brilliance of modern innovation.<\/p>",
           "show_social": true,
-          "enable_language_selector": true
+          "enable_language_selector": true,
+          "menu_footer": "footer"
         }
       }
     },
