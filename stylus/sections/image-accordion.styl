@@ -51,6 +51,8 @@
   .accordion-item.closed
     .accordion-item__content
       max-height 0 !important
+      +mq(768)
+        margin-bottom 0 !important
       .accordion-item__loader
         .progress-bar
           width 0 !important
@@ -94,6 +96,8 @@
     max-height 0
     overflow hidden
     transition max-height 0.3s ease-out
+    +mq(768)
+      margin-bottom 2em
 
     .text
       color #6f6f6f
@@ -103,7 +107,7 @@
         margin-bottom 0
 
     .wrap-media
-      display block
+      display block1
       margin-bottom 3em
       +mq(768)
         display none

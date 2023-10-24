@@ -140,7 +140,6 @@
                           src="{{ item.image | image_url }}"
                           width="{{ item.image.width }}"
                           height="{{ item.image.height }}"
-                          loading="lazy"
                         >
                       </picture>
                     {%- endif -%}
@@ -346,45 +345,56 @@
     {% if faqs_content %}
     <div class="custom-block product__faqs">
       <div class="container">
-        <div class="col-md-4">
-          <h3 class="title title--small">
-            {{ 'products.product.faq' | t }}
-          </h3>
-        </div>
-        <div class="col-md-8">
-          <div class="product__accordion--faqs" data-ref="faqsAccordion">
-            {% for faq in faqs_content.value %}
-              <div
-                class="accordion-item"
-                :class="{'closed': activeFaqsAccordion !== {{ forloop.index0 }}}"
-                data-idx="{{ forloop.index0 }}"
-              >
-                <div
-                  class="accordion-item__headline"
-                  @click="toggleAccordionItem('faqsAccordion', {{ forloop.index0 }})"
-                >
-                  <h3 class="text">
-                    {{ faq.headline }}
-                  </h3>
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="title title--small">
+              {{ 'products.product.faq' | t }}
+            </h3>
+          </div>
+          <div class="col-md-8">
+            {% for faq_group in faqs_content.value %}
+              {% assign forParent = forloop %}
 
-                  <div class="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
+              <div class="product__accordion--faqs" data-ref="faqsAccordion-{{ forParent.index0 }}">
+                <h4 class="product__accordion__headline">
+                  {{ faq_group.name }}
+                </h4>
+
+                {% for faq in faq_group.items.value %}
+                  <div
+                    class="accordion-item"
+                    :class="{'closed': activeFaqsAccordion[{{ forParent.index0 }}] !== {{ forloop.index0 }}}"
+                    data-idx="{{ forloop.index0 }}"
+                  >
+                    <div
+                      class="accordion-item__headline"
+                      @click="toggleAccordionItem({{ forParent.index0 }}, {{ forloop.index0 }})"
                     >
-                      <path v-if="activeFaqsAccordion !== {{ forloop.index0 }}" fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z"/>
-                      <path v-else fill="currentColor" d="M19 13H5v-2h14v2Z"/>
-                    </svg>
-                  </div>
-                </div>
+                      <h3 class="text">
+                        {{ faq.headline }}
+                      </h3>
 
-                <div class="accordion-item__content">
-                  <div class="text">
-                    {{ faq.content | metafield_tag }}
+                      <div class="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 24 24"
+                        >
+                          <path v-if="activeFaqsAccordion[{{ forParent.index0 }}] !== {{ forloop.index0 }}" fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z"/>
+                          <path v-else fill="currentColor" d="M19 13H5v-2h14v2Z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item__content">
+                      <div class="text">
+                        {{ faq.content | metafield_tag }}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                {% endfor %}
+
               </div>
             {% endfor %}
           </div>
