@@ -55,7 +55,7 @@
 
 
 .title--hero
-  font-size clamp(120px, 15vw, 260px)
+  font-size clamp(100px, 15vw, 260px)
   line-height 0.85
   margin-bottom 0
   letter-spacing 0.015em
@@ -65,7 +65,7 @@
     font-size clamp(100px, 20vw, 320px)
 
 .title--hero--small
-  font-size clamp(112px, 10vw, 175px)
+  font-size clamp(90px, 10vw, 175px)
   line-height 0.85
   margin-bottom 0
   letter-spacing 0.015em
@@ -74,3 +74,35 @@
 
 .title--hero-light
   font-weight 400
+
+
+// German lang overrwites
+[lang="de"]
+  // Headlines
+  .title
+    font-size clamp(18px, 4vw, 32px)
+
+  .title--big
+    font-size clamp(28px, 5vw, 52px)
+
+
+  .title--medium
+    font-size clamp(16px, 2.5vw, 28px)
+
+
+  .title--small
+    font-size clamp(14px, 1.5vw, 20px)
+
+
+  .title--xsmall
+    font-size clamp(12px, 1vw, 14px)
+
+
+  .title--hero
+    font-size clamp(95px, 12vw, 220px)
+
+    +mq(1600)
+      font-size clamp(95px, 17vw, 280px)
+
+  .title--hero--small
+    font-size clamp(80px, 8.5vw, 150px)

@@ -1,4 +1,9 @@
 const productCarouselApp = Vue.createApp({
+  data() {
+    return {
+      isZooming: false
+    }
+  },
   mounted() {
     new Swiper(".js-carousel-products-swiper", {
       slidesPerView: 'auto',
@@ -12,6 +17,24 @@ const productCarouselApp = Vue.createApp({
         prevEl: ".js-swiper-carousel-products-button-prev",
       }
     });
+  },
+  methods: {
+    zoom(itemId, e) {
+      this.isZooming = itemId;
+
+      const zoomer = e.currentTarget.querySelector('.zoom');
+      let offsetX, offsetY;
+      let x, y;
+
+      offsetX = e.offsetX;
+      offsetY = e.offsetY;
+
+      x = offsetX / e.currentTarget.offsetWidth * 100;
+      y = offsetY / e.currentTarget.offsetHeight * 100;
+
+      zoomer.style.backgroundPosition = x + '% ' + y + '%';
+
+    },
   }
 });
 

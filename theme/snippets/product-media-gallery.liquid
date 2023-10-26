@@ -30,7 +30,11 @@
     <div class="swiper js-carousel-products-swiper">
       <div class="swiper-wrapper">
         {%- for media in product.media -%}
-          <div class="swiper-slide">
+          <div
+            class="swiper-slide"
+            @mousemove="zoom({{forloop.index}}, $event)"
+            @mouseleave="isZooming = false"
+          >
             {{
               media.preview_image
               | image_url: width: 1946
@@ -39,6 +43,13 @@
                 sizes: sizes,
                 widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
             }}
+            <transition name="fade">
+              <div
+                v-show="isZooming === {{forloop.index}}"
+                class="zoom"
+                style="background-image: url('{{media.preview_image | image_url: width: 1946}}')"
+              ></div>
+            </transition>
           </div>
         {%- endfor -%}
       </div>

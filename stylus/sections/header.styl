@@ -135,6 +135,13 @@ header
 
 
 .header__locale--mobile
+  margin-top 0
+  margin-bottom 2em
+  padding-bottom 2em
+  padding-left 26px
+  border-bottom 1px solid #f4f4f4
+  width 100%
+
   +mq(992)
     display none
 
@@ -283,6 +290,7 @@ body:not(.overflow-hidden)
       width 28px
       height @width
       fill $black2
+      pointer-events none
       translate 0 3px
 
       +mq(992)
@@ -315,6 +323,7 @@ body:not(.overflow-hidden)
   background-color white
   margin-top 0
   border-top 1px solid $gray3
+  overflow auto
 
   li
     display block
@@ -329,10 +338,6 @@ body:not(.overflow-hidden)
   .submenu
     .menu__link
       font-size clamp(14px, 5vw, 20px)
-
-  .header__locale
-    margin-top auto
-    padding-left 16px
 
 
 // Cart Drawer

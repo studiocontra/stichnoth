@@ -68,10 +68,12 @@
 
                 <ul>
                   <li>
-                    <a href=""> Cart </a>
+                    <a href="{{ routes.cart_url }}"> Cart </a>
                   </li>
                   <li>
-                    <a href=""> My Account </a>
+                    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                      My Account
+                    </a>
                   </li>
                   <li>
                     {%- form 'localization', id: 'FooterLanguageForm', class: 'footer__locale' -%}

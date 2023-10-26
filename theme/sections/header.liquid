@@ -90,28 +90,37 @@
       </div>
 
       <div class="header__nav" :class="{'header__nav--active': isMenuOpen}">
+        {%- form 'localization', id: 'LanguageMobileForm', class: 'header__locale header__locale--mobile' -%}
+          {% render 'language-localization', formId: 'LanguageMobileForm' %}
+        {%- endform -%}
+
         <nav>
           <ul>
             {%- for link in section.settings.menu.links -%}
               <li
-                @mouseenter.prevent="setPadding(null, $event)">
+                @mouseenter.prevent="setPadding(null, $event)"
+              >
                 <a
                   href="{{ link.url }}"
                   class="menu__link{% if link.current %} menu__link--active{% endif %}"
+                  data-child="{{ link.links.size }}"
                   @click="openDropdown('menu-{{forloop.index0}}', $event)"
                 >
                   {{ link.title }}
 
-                {% if link.links.size > 0 %}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m24 12l-8 10l-8-10z"/></svg>
-                {% endif %}
+                  {% if link.links.size > 0 %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                      <path fill="currentColor" d="m24 12l-8 10l-8-10z"/>
+                    </svg>
+                  {% endif %}
                 </a>
 
                 {% if link.links.size > 0 %}
                   <ul
                     class="submenu"
                     data-id="menu-{{forloop.index0}}"
-                    :style="{ paddingLeft: menuPadding + 'px' }">
+                    :style="{ paddingLeft: menuPadding + 'px' }"
+                  >
                     {%- for childlink in link.links -%}
                       <li>
                         <a
@@ -128,10 +137,6 @@
             {%- endfor -%}
           </ul>
         </nav>
-
-        {%- form 'localization', id: 'LanguageMobileForm', class: 'header__locale header__locale--mobile' -%}
-          {% render 'language-localization', formId: 'LanguageMobileForm' %}
-        {%- endform -%}
       </div>
     </div>
 
@@ -139,7 +144,8 @@
       <div class="cart-drawer" :class="{'active': isCartOpen}" @click="updateCartItem">
         <div
           v-if="isLoading"
-          class="loader">
+          class="loader"
+        >
           <svg
             width="32"
             height="32"
