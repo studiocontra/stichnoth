@@ -107,6 +107,7 @@
   "products": {
     "product": {
       "add_to_cart": "In den Warenkorb legen",
+      "by_request": "Preis auf Anfrage",
       "description": "Beschreibung",
       "faq": "Häufig gestellte Fragen",
       "on_sale": "Sale",

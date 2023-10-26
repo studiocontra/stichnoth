@@ -38,7 +38,7 @@
           </div>
         {% endfor %}
 
-        {%- if total_images > 3 and total_images < 6 -%}
+        {%- if total_images >= 3 and total_images < 6 -%}
           {%- for block in section.blocks -%}
             <div class="swiper-slide">
               <div class="carousel-images-text__images">

@@ -37,14 +37,12 @@ const productCarouselApp = Vue.createApp({
     },
   }
 });
-
 productCarouselApp.mount('.product__media-wrapper');
 
 
 const productAccordionApp = Vue.createApp({
   data() {
     return {
-      isAdding: false,
       activeDetailsAccordion: null
     };
   },
@@ -65,7 +63,6 @@ const productAccordionApp = Vue.createApp({
     }
   }
 });
-
 productAccordionApp.config.compilerOptions.delimiters = ['[[', ']]'];
 productAccordionApp.mount('.product__accordion');
 
@@ -73,29 +70,41 @@ productAccordionApp.mount('.product__accordion');
 const productFaqsApp = Vue.createApp({
   data() {
     return {
+      activeFaqsGroup: null,
       activeFaqsAccordion: null
     };
   },
   mounted() {
-    this.toggleAccordionItem('faqsAccordion', 0);
+    this.toggleFaqItem(0, 0);
   },
   methods: {
-    toggleAccordionItem(accordion, idx) {
-      if(this.activeFaqsAccordion === idx) return this.activeFaqsAccordion = null;
+    toggleFaqItem(accordion, idx) {
+      console.log(accordion, idx);
+      if (this.activeFaqsGroup === accordion && this.activeFaqsAccordion === idx) {
+        this.activeFaqsGroup = null;
+        this.activeFaqsAccordion = null;
+        return true;
+      }
 
+      this.activeFaqsGroup = accordion;
       this.activeFaqsAccordion = idx;
 
-      const contentWrapper = document.querySelector(`[data-ref="${accordion}"] .accordion-item[data-idx="${idx}"] .accordion-item__content`);
-
+      const contentWrapper = document.querySelector(`[data-ref="faqsAccordion-${accordion}"] .accordion-item[data-idx="${idx}"] .accordion-item__content`);
       const contentHeight = contentWrapper.scrollHeight;
 
       contentWrapper.style.maxHeight = `${contentHeight}px`;
+    },
+    checkActive(accordion, idx) {
+      return this.activeFaqsGroup === accordion && this.activeFaqsAccordion === idx;
     }
-  }
+  },
 });
-
 productFaqsApp.config.compilerOptions.delimiters = ['[[', ']]'];
-productFaqsApp.mount('.product__accordion--faqs');
+productFaqsApp.mount('.product__faqs');
+
+// if(document.querySelector('.product__faqs').length > 0) {
+//   productFaqsApp.mount('.product__faqs');
+// }
 
 
 
@@ -142,6 +151,5 @@ const productFormApp = Vue.createApp({
     }
   }
 });
-
 productFormApp.config.compilerOptions.delimiters = ['[[', ']]'];
 productFormApp.mount('.product-form__add');

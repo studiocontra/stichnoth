@@ -33,22 +33,20 @@
 
   .swiper-slide
     position relative
-    width 190px
-    margin 0 5vw
+    padding 0 5vw
     border-radius 8px
     transform translateY(90px) !important
     transition all .3s ease-in-out
     transition-delay 0.1s
-    aspect-ratio 94/163
 
-    +mq(600)
-      width 390px
-      aspect-ratio 13/16
+    +mq(992)
+      padding 0 50px
 
     .carousel-images-text__images
       position relative
       width 100%
       height 100%
+      aspect-ratio 1/1.25
 
       img
         border-radius 8px

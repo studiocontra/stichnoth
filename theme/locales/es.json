@@ -108,6 +108,7 @@
   "products": {
     "product": {
       "add_to_cart": "Agregar al carrito",
+      "by_request": "Precio por encargo",
       "description": "Descripción",
       "faq": "Preguntas frecuentes",
       "on_sale": "Oferta",
