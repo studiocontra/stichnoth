@@ -17,7 +17,6 @@ async function updateCartDrawer() {
 const mainHeaderApp = Vue.createApp({
 	data() {
 		return {
-      currentLocale: '',
 		  isSearchOpen: false,
       isMenuOpen: false,
       flagResize: false,
@@ -40,8 +39,6 @@ const mainHeaderApp = Vue.createApp({
   },
   methods: {
     changeLocale(target, formId) {
-      this.currentLocale = target;
-
       setTimeout(() => {
         document.getElementById(formId).submit();
       }, 200);

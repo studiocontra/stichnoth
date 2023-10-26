@@ -5,23 +5,26 @@
     - formId: pass in the position in which the form is coming up to create specific IDs
 {%- endcomment -%}
 
-<input type="hidden" name="locale_code" v-model="currentLocale">
-<input type="hidden" name="country_code" v-model="currentLocale">
-
 {%- if localization.available_languages.size > 1 -%}
   {%- for language in localization.available_languages -%}
-    <a
+    {% if language.iso_code != localization.language.iso_code %}
+      <input type="hidden" name="locale_code" value="{{ language.iso_code }}">
+      <input type="hidden" name="country_code" value="{{ language.iso_code }}">
+    {% endif %}
+
+    <button
       class="locale__link{% if language.iso_code == localization.language.iso_code %} locale__link--active{% endif %}"
       href="#"
       hreflang="{{ language.iso_code }}"
       lang="{{ language.iso_code }}"
       {% if language.iso_code == localization.language.iso_code %}
         aria-current="true"
+      {% else %}
+        type="submit"
       {% endif %}
-      @click.prevent="changeLocale('{{ language.iso_code }}', '{{ formId }}')"
     >
       {{ language.iso_code }}
-    </a>
+    </button>
     {% unless forloop.last %}
       {% if inFooter %}
         <div class="bull">/</div>
