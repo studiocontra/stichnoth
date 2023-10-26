@@ -1,0 +1,63 @@
+.wrap-modal-popup
+  &::before
+    background-color: rgba(0,0,0,0.7);
+
+  .modal__close
+    top 5px
+    right 5px
+
+  .modal__body
+    padding 2em
+    border-radius 4px
+
+    .wrap-media
+      position relative
+      border-radius 8px
+      overflow hidden
+      aspect-ratio 1.35 / 1
+
+      +mq(576)
+        aspect-ratio 1 / 1.25
+
+    img
+      width 100%
+      transition opacity 0.2s ease-out
+      fullAbs()
+      fit()
+
+
+    .popup__media
+      position relative
+      width 80%
+      margin-bottom 3em
+      padding-bottom 20%
+
+      +mq(768)
+        width 76%
+        margin-bottom 0
+
+      .wrap-media--small
+        position absolute
+        top auto
+        bottom 0
+        right 0
+        width 60%
+        max-width 240px
+        aspect-ratio 1.4 / 1
+        transform translateX(25%)
+
+
+
+    .popup__content
+      text-align left
+
+      &.left
+        +mq(992)
+          padding-left 15%
+
+      &.right
+        +mq(992)
+          padding-right 15%
+
+      .text
+        color #6f6f6f

@@ -1,0 +1,175 @@
+<div
+  class="wrap-modal wrap-modal-popup"
+  id="modal-popup"
+  role="dialog"
+  tabindex="-1"
+  aria-modal="true"
+>
+  <div class="modal__content">
+    <div
+      class="modal__body"
+      style="background-color: {{ section.settings.color_scheme.settings.background }};"
+    >
+      <a
+        class="modal__close"
+        href="javascript:void(0);"
+        role="button"
+        aria-label="Close Modal"
+        tabindex="-1"
+        data-modal="popup"
+        onclick="closeModal(true)"
+      >
+        <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+        </svg>
+      </a>
+
+      <div class="row justify-between align-center {% if section.settings.text_position == 'left' %} direction-md-reverse{% endif %}">
+        <div class="col-sm-4 col-md-6">
+          <div class="popup__media">
+            <div class="wrap-media">
+              {% if section.settings.image != blank %}
+                <picture>
+                  <source srcset="{{ section.settings.image | image_url: width: 650 }}" media="(min-width: 450px)">
+                  <source srcset="{{ section.settings.image | image_url: width: 450 }}">
+                  <img
+                    src="{{ section.settings.image | image_url }}"
+                    width="{{ section.settings.image.width }}"
+                    height="{{ section.settings.image.height }}"
+                    loading="lazy"
+                  >
+                </picture>
+              {% endif %}
+            </div>
+
+            <div class="wrap-media wrap-media--small">
+              {% if section.settings.image_2 != blank %}
+                <img
+                  src="{{ section.settings.image_2 | image_url: width: 300 }}"
+                  width="{{ section.settings.image_2.width }}"
+                  height="{{ section.settings.image_2.height }}"
+                  loading="lazy"
+                >
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-6">
+          <div class="popup__content {{ section.settings.text_position }}">
+            {% if section.settings.heading != blank %}
+              <h3
+                class="title title--hero--small title--hero-light"
+                style="color: {{ section.settings.color_scheme.settings.headline }};"
+              >
+                {{ section.settings.heading }}
+              </h3>
+            {% endif %}
+
+            {% if section.settings.text != blank %}
+              <div class="text" style="color: {{ section.settings.color_scheme.settings.text }};">
+                {{ section.settings.text }}
+              </div>
+            {% endif %}
+
+            {% if section.settings.button_link != blank %}
+              <a
+                href="{{ section.settings.button_link }}"
+                class="link"
+                style="color: {{ section.settings.color_scheme.settings.button }}"
+              >
+                {{ section.settings.button_label }}
+
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path style="color: {{ section.settings.color_scheme.settings.button }}" d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+                </svg>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Pop up",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_popup",
+      "default": false,
+      "label": "Show"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Additional Image"
+    },
+    {
+      "type": "header",
+      "content": "Section Properties"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Image with text",
+      "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+      "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Button label",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+      "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+    }
+  ]
+}
+{% endschema %}

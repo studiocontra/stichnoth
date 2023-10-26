@@ -1,6 +1,9 @@
 const closeModalEvent = new Event('close-modal');
 
-function closeModal() {
+function closeModal(popup = false) {
+  if(popup) {
+    sessionStorage.setItem("popup", true);
+  }
   document.querySelectorAll('.wrap-modal').forEach(
     (modal) => {
       modal.classList.remove('active');
@@ -18,19 +21,17 @@ function openModal(e) {
   document.getElementById(target).focus();
 }
 
-function moveModalToEnd(el) {
-  const target = el.dataset.target.substring(1);
-
-  document.body.appendChild(document.getElementById(target));
-}
-
 document.querySelectorAll('[data-toggle="modal"]').forEach(
   (item) => {
-    // moveModalToEnd(item);
     item.addEventListener('click', openModal);
   }
 );
 
 document.addEventListener('keyup', function (e) {
-  if (e.keyCode === 27) closeModal();
+  if (e.keyCode === 27) {
+    if(document.getElementById('modal-popup').classList.contains('active')) {
+      sessionStorage.setItem("popup", true);
+    }
+    closeModal();
+  }
 });
