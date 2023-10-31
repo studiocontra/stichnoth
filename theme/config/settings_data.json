@@ -45,7 +45,7 @@
           "headline": "Work with us",
           "content": "<p>If you would like to become part of an innovative company that has been shaped by decades of tradition, apply now!<\/p>",
           "button_label": "Go to Careers",
-          "button_link": "https:\/\/gooms.com.co\/"
+          "button_link": "https:\/\/www.linkedin.com\/company\/stichnoth\/"
         }
       },
       "footer": {
@@ -56,6 +56,20 @@
           "show_social": true,
           "enable_language_selector": true,
           "menu_footer": "footer"
+        }
+      },
+      "pop-up": {
+        "type": "pop-up",
+        "settings": {
+          "show_popup": false,
+          "color_scheme": "",
+          "image": "shopify:\/\/shop_images\/2010-2.jpg",
+          "image_2": "shopify:\/\/shop_images\/default.jpg",
+          "text_position": "right",
+          "heading": "<strong>Visit<\/strong> us",
+          "text": "<p>Go to Stores, select your favorite one and schedule a visit.<\/p>",
+          "button_label": "Find a Store",
+          "button_link": "shopify:\/\/pages\/stores"
         }
       }
     },

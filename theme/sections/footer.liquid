@@ -48,7 +48,11 @@
           <div class="row">
             <div class="col-6 col-sm-4">
               <div class="footer__col">
-                <h3 class="title title--footer">Our world</h3>
+                {% if section.settings.heading_1 != blank %}
+                  <h3 class="title title--footer">
+                    {{ section.settings.heading_1 }}
+                  </h3>
+                {% endif %}
 
                 <ul>
                   {%- for link in section.settings.menu_footer.links -%}
@@ -64,17 +68,27 @@
 
             <div class="col-6 col-sm-4">
               <div class="footer__col">
-                <h3 class="title title--footer">Your Experience</h3>
+                {% if section.settings.heading_2 != blank %}
+                  <h3 class="title title--footer">
+                    {{ section.settings.heading_2 }}
+                  </h3>
+                {% endif %}
 
                 <ul>
-                  <li>
-                    <a href="{{ routes.cart_url }}"> Cart </a>
-                  </li>
-                  <li>
-                    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-                      My Account
-                    </a>
-                  </li>
+                  {% if section.settings.my_cart != blank %}
+                    <li>
+                      <a href="{{ routes.cart_url }}">
+                        {{ section.settings.my_cart }}
+                      </a>
+                    </li>
+                  {% endif %}
+                  {% if section.settings.my_account != blank %}
+                    <li>
+                      <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                        {{ section.settings.my_account }}
+                      </a>
+                    </li>
+                  {% endif %}
                   <li>
                     {%- form 'localization', id: 'FooterLanguageForm', class: 'footer__locale' -%}
                       {% render 'language-localization', formId: 'FooterLanguageForm', inFooter: true %}
@@ -86,13 +100,14 @@
 
             <div class="col-6 col-sm-4">
               <div class="footer__col">
-                <h3 class="title title--footer">Reach Out</h3>
+                {% if section.settings.heading_3 != blank %}
+                  <h3 class="title title--footer">
+                    {{ section.settings.heading_3 }}
+                  </h3>
+                {% endif %}
 
                 <div class="text">
-                  <p>Contact Us</p>
-                  <p>Georgstraße 35, 30159</p>
-                  <p>Hannover</p>
-                  <p>+49 511 360840</p>
+                  {{ section.settings.contact_menu }}
                 </div>
               </div>
             </div>
@@ -263,16 +278,46 @@
       "info": "t:sections.footer.settings.header__6.info"
     },
     {
-      "type": "checkbox",
-      "id": "enable_language_selector",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_language_selector.label"
+      "type": "text",
+      "id": "heading_1",
+      "default": "Our World",
+      "label": "Menu Headline"
     },
     {
       "type": "link_list",
       "id": "menu_footer",
       "default": "footer",
       "label": "Menu"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "default": "Your Experience",
+      "label": "User Menu Headline"
+    },
+    {
+      "type": "text",
+      "id": "my_cart",
+      "default": "Cart",
+      "label": "Cart headline"
+    },
+    {
+      "type": "text",
+      "id": "my_account",
+      "default": "My Account",
+      "label": "My Account Headline"
+    },
+    {
+      "type": "text",
+      "id": "heading_3",
+      "default": "Reach out",
+      "label": "Contact Menu Headline"
+    },
+    {
+      "type": "richtext",
+      "id": "contact_menu",
+      "default": "<p>Contact Us</p>",
+      "label": "Contact Menu Content"
     }
   ]
 }
