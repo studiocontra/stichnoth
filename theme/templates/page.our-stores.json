@@ -45,10 +45,11 @@
         "c507a402-8429-423d-95f1-1b6385776019": {
           "type": "store",
           "settings": {
+            "coming_soon": false,
             "style": "full",
-            "image": "shopify:\/\/shop_images\/hannover.jpg",
-            "name": "Stichnoth Store",
-            "description": "<p>Georgstraße 35, 30159 Hannover<\/p><p>Monday - Saturday<\/p><p>11 AM to 7 PM<\/p>",
+            "image": "shopify:\/\/shop_images\/Screenshot_showroom_2.png",
+            "name": "Stichnoth Showroom in our Manufactory",
+            "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
             "button_label": "Book an Appointment",
             "button_link": "https:\/\/calendar.google.com\/calendar\/u\/0\/appointments\/schedules\/AcZssZ0gYAwjKYVJc3ITj-NuH5mfSmVRLbQ7NpKSyI2QOV7XiBmxoPNwZI17or9P4qoy80IFZxfRGf_4"
           }
@@ -56,11 +57,12 @@
         "567b18c2-ac8a-48cb-b581-4ee143d318bc": {
           "type": "store",
           "settings": {
+            "coming_soon": false,
             "style": "img-left",
-            "image": "shopify:\/\/shop_images\/default.jpg",
-            "image_2": "shopify:\/\/shop_images\/hannover-2-2.jpg",
+            "image": "shopify:\/\/shop_images\/Screenshot_hannover_1.png",
+            "image_2": "shopify:\/\/shop_images\/Screenshot_hannover_2.png",
             "name": "Stichnoth Store",
-            "description": "<p>Weidendamm 12-14, 30167 Hannover<\/p><p>By appointment<\/p>",
+            "description": "<p>Georgstraße 35, 30159 Hannover<\/p><p>Monday - Saturday<\/p><p>11 AM to 7 PM<\/p>",
             "button_label": "Book an Appointment",
             "button_link": "https:\/\/calendar.google.com\/calendar\/u\/0\/appointments\/schedules\/AcZssZ0gYAwjKYVJc3ITj-NuH5mfSmVRLbQ7NpKSyI2QOV7XiBmxoPNwZI17or9P4qoy80IFZxfRGf_4"
           }
@@ -75,8 +77,9 @@
         "9913dab7-ff26-4c7e-b903-1e80ac5a08b6": {
           "type": "store",
           "settings": {
+            "coming_soon": false,
             "style": "img-right",
-            "image": "shopify:\/\/shop_images\/hamburg-1.jpg",
+            "image": "shopify:\/\/shop_images\/Screenshot_hamburg_1.png",
             "image_2": "shopify:\/\/shop_images\/hamburg-2.jpg",
             "name": "Stichnoth Store",
             "description": "<p>Große Bleichen 8, 20354 Hamburg<\/p><p>Tuesday - Saturday<\/p><p>11AM to 7PM<\/p>",
@@ -94,6 +97,7 @@
         "a6316373-e578-40c4-bf57-3e497b5c35c1": {
           "type": "store",
           "settings": {
+            "coming_soon": false,
             "style": "full",
             "image": "shopify:\/\/shop_images\/bremen.jpg",
             "name": "Stichnoth Store",
@@ -112,8 +116,9 @@
         "7c954495-f6e2-468e-906e-66d6f0ce9648": {
           "type": "store",
           "settings": {
+            "coming_soon": false,
             "style": "img-left",
-            "image": "shopify:\/\/shop_images\/default.jpg",
+            "image": "shopify:\/\/shop_images\/Screenshot_Frankfurt.png",
             "name": "Stichnoth Store",
             "description": "<p>Katharinenpforte 6, 60313 Frankfurt am Main<\/p><p>Tuesday - Saturday<\/p><p>11 AM to 7 PM<\/p>",
             "button_label": "Book an Appointment",

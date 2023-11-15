@@ -54,7 +54,6 @@
           "footer_logo": "shopify:\/\/shop_images\/logo-footer.png",
           "footer_top_text": "<p>Honoring heritage with timeless traditions, seamlessly woven into the brilliance of modern innovation.<\/p>",
           "show_social": true,
-          "enable_language_selector": true,
           "menu_footer": "footer"
         }
       },

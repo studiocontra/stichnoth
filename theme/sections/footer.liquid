@@ -132,6 +132,16 @@
             </li>
           {%- endif -%}
         {%- endfor -%}
+
+        {%- if section.settings.impressum_link != blank -%}
+          <li>
+            <small class="copyright__content"
+              ><a href="{{ section.settings.impressum_link }}" target="_blank">
+                {{- section.settings.impressum_label -}}
+              </a></small
+            >
+          </li>
+        {%- endif -%}
       </ul>
 
       <a href="https://studiocontra.co" target="_blank"> Made by Contra </a>
@@ -318,6 +328,21 @@
       "id": "contact_menu",
       "default": "<p>Contact Us</p>",
       "label": "Contact Menu Content"
+    },
+    {
+      "type": "header",
+      "content": "Impressum"
+    },
+    {
+      "type": "url",
+      "id": "impressum_link",
+      "label": "Impressum Link"
+    },
+    {
+      "type": "text",
+      "id": "impressum_label",
+      "label": "Impressum Label",
+      "default": "Impressum"
     }
   ]
 }

@@ -44,17 +44,17 @@
             "collection": "rings"
           }
         },
-        "template--19944138113322__d1c17097-f371-4509-9bc5-26a489ed6c50-featured_collection-3": {
+        "f2d33ec2-c2a7-45e9-b1a4-fa4bc25fc911": {
           "type": "featured_collection",
           "settings": {
-            "collection": "necklaces"
+            "collection": "necklace"
           }
         }
       },
       "block_order": [
         "template--19944138113322__d1c17097-f371-4509-9bc5-26a489ed6c50-featured_collection-1",
         "8d01519f-4694-4dba-96d1-0f236c8a3a28",
-        "template--19944138113322__d1c17097-f371-4509-9bc5-26a489ed6c50-featured_collection-3"
+        "f2d33ec2-c2a7-45e9-b1a4-fa4bc25fc911"
       ],
       "settings": {
         "title": "Our Products",
@@ -107,7 +107,6 @@
       "settings": {
         "color_scheme": "gold",
         "image": "shopify:\/\/shop_images\/Bespoke-brilliance_2f065b3c-4bd5-4465-a802-da87e9608c97.jpg",
-        "video": "",
         "heading": "Bespoke <strong>Brilliance<\/strong>",
         "text": "<p>An essential part of our offer consists of products manufactured individually according to your wishes. Together we will design a piece of jewelry that matches your ideas, which is characterized by durability and uniqueness. Immerse yourself with us in the unique world of unlimited creative possibilities!<\/p>",
         "button_label": "BOOK AN APPOINTMENT",
@@ -161,13 +160,13 @@
         "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-2": {
           "type": "related_product",
           "settings": {
-            "product": "guardian-angel-earrings"
+            "product": "armspange"
           }
         },
         "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-1": {
           "type": "related_product",
           "settings": {
-            "product": "gold-bird-necklace"
+            "product": "anhanger-cabochon"
           }
         },
         "59cad453-eb57-4030-9062-f2faba4ca0af": {
@@ -179,7 +178,7 @@
         "3137369b-2234-4dce-9357-32b351678431": {
           "type": "related_product",
           "settings": {
-            "product": "silver-threader-necklace"
+            "product": "ring-lavender"
           }
         }
       },
