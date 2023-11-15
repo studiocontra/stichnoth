@@ -54,7 +54,15 @@
           "footer_logo": "shopify:\/\/shop_images\/logo-footer.png",
           "footer_top_text": "<p>Honoring heritage with timeless traditions, seamlessly woven into the brilliance of modern innovation.<\/p>",
           "show_social": true,
-          "menu_footer": "footer"
+          "heading_1": "Our World",
+          "menu_footer": "footer",
+          "heading_2": "Your Experience",
+          "my_cart": "Cart",
+          "my_account": "My Account",
+          "heading_3": "Reach out",
+          "contact_menu": "<p>Contact Us<\/p>",
+          "impressum_link": "https:\/\/s2.q4cdn.com\/175719177\/files\/doc_presentations\/Placeholder-PDF.pdf",
+          "impressum_label": "Imprint"
         }
       },
       "pop-up": {
