@@ -46,8 +46,6 @@
         "image": "shopify:\/\/shop_images\/story-1-1.jpg",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/story-1-2.png",
-        "video": "",
-        "video_2": "",
         "img_style": "overlap",
         "text_position": "left",
         "v_align": "align-center"
@@ -80,8 +78,6 @@
         "image": "shopify:\/\/shop_images\/Rectangle_12.png",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/Rectangle_13.png",
-        "video": "",
-        "video_2": "",
         "img_style": "overlap",
         "text_position": "right",
         "v_align": "align-center"
@@ -92,7 +88,6 @@
       "disabled": true,
       "settings": {
         "color_scheme": "dark",
-        "video": "",
         "heading": "1979 & <strong>1980<\/strong>",
         "text": "<p>Horst Stichnoth passed on his craftsmanship and love for jewelry to his sons Jörg and Dirk Stichnoth, both of whom started their apprenticeship as goldsmiths in 1979 and 1980. The foundation for the continuation of the business in the second generation was laid.<\/p>",
         "button_label": "",
@@ -105,7 +100,6 @@
       "settings": {
         "color_scheme": "dark",
         "image": "shopify:\/\/shop_images\/Out_story_stichnoth_1980_1983.png",
-        "video": "",
         "heading": "1980 & <strong>1983<\/strong>",
         "text": "<p>Horst Stichnoth passed on his craftsmanship and love for jewelry to his sons Jörg and Dirk Stichnoth, both of whom started their apprenticeship as goldsmiths in 1980 and 1983. The foundation for the continuation of the business in the second generation was laid.<\/p>",
         "button_label": "Button label",
@@ -140,8 +134,6 @@
         "image": "shopify:\/\/shop_images\/Rectangle_3.png",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/Rectangle_2-1.png",
-        "video": "",
-        "video_2": "",
         "img_style": "space",
         "text_position": "right",
         "v_align": "align-center"
@@ -174,8 +166,6 @@
         "image": "shopify:\/\/shop_images\/Rectangle_3-1.png",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/2010-2.jpg",
-        "video": "",
-        "video_2": "",
         "img_style": "overlap",
         "text_position": "left",
         "v_align": "align-center"
@@ -208,8 +198,6 @@
         "image": "shopify:\/\/shop_images\/Rectangle_12-1.png",
         "addon_media_ratio": "square",
         "image_2": "shopify:\/\/shop_images\/Rectangle_13-1.png",
-        "video": "",
-        "video_2": "",
         "img_style": "overlap",
         "text_position": "right",
         "v_align": "align-bottom"
@@ -234,33 +222,33 @@
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1": {
           "type": "related_product",
           "settings": {
-            "product": "gold-bird-necklace"
+            "product": "anhanger-kreis-pavee"
           }
         },
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2": {
           "type": "related_product",
           "settings": {
-            "product": "gemstone"
-          }
-        },
-        "51dc98dc-4dfe-4f9f-a5c6-0129e0a913e0": {
-          "type": "text",
-          "settings": {
-            "text": "Artisanal Masterpieces"
+            "product": "ring-cabochon"
           }
         },
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3": {
           "type": "related_product",
           "settings": {
-            "product": "choker-with-triangle"
+            "product": "solitar-ring-happy-4"
+          }
+        },
+        "53ddcc17-1f8a-4d75-b098-e437ae661fa5": {
+          "type": "related_product",
+          "settings": {
+            "product": "the-single-diamond-earring"
           }
         }
       },
       "block_order": [
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1",
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2",
-        "51dc98dc-4dfe-4f9f-a5c6-0129e0a913e0",
-        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3"
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3",
+        "53ddcc17-1f8a-4d75-b098-e437ae661fa5"
       ],
       "settings": {
         "title": "Our Recommendations",

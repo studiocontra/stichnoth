@@ -200,33 +200,33 @@
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1": {
           "type": "related_product",
           "settings": {
-            "product": "gold-bird-necklace"
+            "product": "ring-double"
           }
         },
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2": {
           "type": "related_product",
           "settings": {
-            "product": "gemstone"
-          }
-        },
-        "df8e5271-ecc5-417d-8fb1-49572092c248": {
-          "type": "text",
-          "settings": {
-            "text": "Artisanal Masterpieces"
+            "product": "ohrhanger-kreis-pavee"
           }
         },
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3": {
           "type": "related_product",
           "settings": {
-            "product": "choker-with-triangle"
+            "product": "memoire-ring-rose"
+          }
+        },
+        "572209fc-5874-4c7c-be83-6a026b533574": {
+          "type": "related_product",
+          "settings": {
+            "product": "kopie-von-tutti-frutti"
           }
         }
       },
       "block_order": [
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1",
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2",
-        "df8e5271-ecc5-417d-8fb1-49572092c248",
-        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3"
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3",
+        "572209fc-5874-4c7c-be83-6a026b533574"
       ],
       "settings": {
         "title": "Our Recommendations",

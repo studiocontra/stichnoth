@@ -157,36 +157,43 @@
     "a04c9bc8-533b-40e3-8445-512917a12c33": {
       "type": "product-list",
       "blocks": {
+        "3137369b-2234-4dce-9357-32b351678431": {
+          "type": "related_product",
+          "settings": {
+            "product": "kopie-von-the-colourfull-ring"
+          }
+        },
         "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-2": {
           "type": "related_product",
           "settings": {
-            "product": "armspange"
+            "product": "memoire-ring-magnolia"
           }
         },
         "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-1": {
           "type": "related_product",
           "settings": {
-            "product": "anhanger-cabochon"
+            "product": "collier-solitar-4-krappen"
           }
         },
-        "59cad453-eb57-4030-9062-f2faba4ca0af": {
-          "type": "text",
-          "settings": {
-            "text": "Artesanal Masterpieces"
-          }
-        },
-        "3137369b-2234-4dce-9357-32b351678431": {
+        "1703398b-3dd3-443e-a276-3e54b6ccfd7c": {
           "type": "related_product",
           "settings": {
-            "product": "ring-lavender"
+            "product": "solitar-ring-sunflower-2"
+          }
+        },
+        "a433c3d7-0ceb-493f-8f53-e1df32989d19": {
+          "type": "related_product",
+          "settings": {
+            "product": "memoire-ring-tulip"
           }
         }
       },
       "block_order": [
+        "3137369b-2234-4dce-9357-32b351678431",
         "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-2",
         "template--19944138113322__a04c9bc8-533b-40e3-8445-512917a12c33-related_product-1",
-        "59cad453-eb57-4030-9062-f2faba4ca0af",
-        "3137369b-2234-4dce-9357-32b351678431"
+        "1703398b-3dd3-443e-a276-3e54b6ccfd7c",
+        "a433c3d7-0ceb-493f-8f53-e1df32989d19"
       ],
       "settings": {
         "title": "Our Recommendations",

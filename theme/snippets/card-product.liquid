@@ -21,6 +21,8 @@
 {% endcomment %}
 
 {%- if card_product and card_product != empty -%}
+  {% assign by_request = card_product.metafields.custom.product_by_request.value %}
+
   <div class="card-product">
     <a href="{{ card_product.url }}">
       <div class="card-product__media {% unless card_product.featured_media %}no-image{% endunless %}">
@@ -73,7 +75,9 @@
           {{ card_product.title | escape }}
         </h3>
 
-        {% render 'price', product: card_product %}
+        {% unless by_request %}
+          {% render 'price', product: card_product %}
+        {% endunless %}
       </div>
     </a>
 

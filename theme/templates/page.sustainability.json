@@ -83,7 +83,6 @@
       "settings": {
         "color_scheme": "gold",
         "image": "shopify:\/\/shop_images\/green-energy.jpg",
-        "video": "",
         "heading": "Green <strong>Energy<\/strong>",
         "text": "<p>In addition to buying and processing scrap gold, which makes a significant contribution to recycling, we run part of our production with green energy, which is generated with the help of our photovoltaic system. In addition, when choosing our means of transport, we pay attention to the constant expansion of our electric fleet.<\/p>",
         "button_label": "",
@@ -129,33 +128,33 @@
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1": {
           "type": "related_product",
           "settings": {
-            "product": "gold-bird-necklace"
+            "product": "collier-perlenzauber-1"
           }
         },
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2": {
           "type": "related_product",
           "settings": {
-            "product": "gemstone"
-          }
-        },
-        "839cfdd3-20b2-4abf-ac5e-6de769916b60": {
-          "type": "text",
-          "settings": {
-            "text": "Artisanal Masterpieces"
+            "product": "ohrhanger-lavender"
           }
         },
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3": {
           "type": "related_product",
           "settings": {
-            "product": "choker-with-triangle"
+            "product": "the-knot"
+          }
+        },
+        "2faadf24-56e8-4070-b2bf-8a05ee79f730": {
+          "type": "related_product",
+          "settings": {
+            "product": "solitar-ring-wildflower"
           }
         }
       },
       "block_order": [
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-1",
         "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-2",
-        "839cfdd3-20b2-4abf-ac5e-6de769916b60",
-        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3"
+        "template--20153828344106__a99e782a-18c9-448a-9cab-c4064f0a4c6d-related_product-3",
+        "2faadf24-56e8-4070-b2bf-8a05ee79f730"
       ],
       "settings": {
         "title": "Our Recommendations",
