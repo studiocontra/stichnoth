@@ -52,10 +52,8 @@
 
                 {% if block.settings.coming_soon %}
                   <span class="title title--hero title--hero--light {% if block.settings.style != 'full' %} title--hero--small{% endif %}">
-                    <strong>New</strong>&nbsp;
-                    Store
+                    <strong>New</strong>&nbsp; Store
                   </span>
-
                 {% endif %}
               </div>
               {% if block.settings.style != 'full' and block.settings.image_2 and block.settings.coming_soon != true %}
@@ -80,19 +78,20 @@
               {{ block.settings.description }}
             </div>
 
-            <a
-              href="#"
-              data-link="https://calendar.app.google/JQbJJFjFgKitKaA19"
-              class="link"
-              data-toggle="modal"
-              data-target="#book-modal-{{ forloop.index0 }}"
-            >
-              {{ block.settings.button_label }}
+            {% if block.settings.button_link != blank %}
+              <a
+                href="#"
+                class="link"
+                data-toggle="modal"
+                data-target="#book-modal-{{ forloop.index0 }}"
+              >
+                {{ block.settings.button_label }}
 
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
-              </svg>
-            </a>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.182 7.99996L14.8184 7.99996M14.8184 7.99996L8.2729 14.5454M14.8184 7.99996L8.2729 1.4545" stroke="black" stroke-width="1.6" stroke-linecap="square"/>
+                </svg>
+              </a>
+            {% endif %}
           </div>
         </div>
 

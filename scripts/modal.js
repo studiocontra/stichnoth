@@ -23,6 +23,7 @@ function openModal(e) {
 
 document.querySelectorAll('[data-toggle="modal"]').forEach(
   (item) => {
+    console.log(item);
     item.addEventListener('click', openModal);
   }
 );
