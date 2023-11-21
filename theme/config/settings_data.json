@@ -70,10 +70,10 @@
         "settings": {
           "show_popup": false,
           "color_scheme": "",
-          "image": "shopify:\/\/shop_images\/2010-2.jpg",
-          "image_2": "shopify:\/\/shop_images\/default.jpg",
+          "image": "shopify:\/\/shop_images\/20008850-b332-4012-b4c4-5fcbb3e17af8.jpg",
+          "image_2": "shopify:\/\/shop_images\/sitting-santa.jpg",
           "text_position": "right",
-          "heading": "<strong>Visit<\/strong> us",
+          "heading": "<strong>Merry Christmas<\/strong>",
           "text": "<p>Go to Stores, select your favorite one and schedule a visit.<\/p>",
           "button_label": "Find a Store",
           "button_link": "shopify:\/\/pages\/stores"
