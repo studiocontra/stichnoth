@@ -288,7 +288,9 @@
       "login": {
         "title": "Hast du ein Konto?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Logge dich ein<\/a>, damit es beim Checkout schneller geht."
-      }
+      },
+      "description": "Erleben Sie die zeitlose Eleganz unserer exquisiten Schmuckkollektion",
+      "empty_description": "Sie haben noch nichts bestellt! Schauen Sie im Shop vorbei"
     },
     "footer": {
       "payment": "Zahlungsmethoden"

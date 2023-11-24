@@ -20,8 +20,18 @@
             <div class="product-form">
               {% if by_request %}
                 <div class="product-form__add">
+                  {% comment %}
+                    <a
+                      href="{{ shop.url }}/pages/contact"
+                      class="cta cta--black"
+                    >
+                      <span>
+                        {{ 'products.product.by_request' | t }}
+                      </span>
+                    </a>
+                  {% endcomment %}
                   <a
-                    href="{{shop.url}}/pages/contact"
+                    href="{{ pages['contact'].url }}"
                     class="cta cta--black"
                   >
                     <span>
