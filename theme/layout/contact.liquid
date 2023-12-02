@@ -35,6 +35,12 @@
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 
+    <!--  Cookie consent -->
+    <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
+    <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script">
+    <script id="usercentrics-cmp" data-settings-id="kZHEDfIdACpNGV" data-language="de" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" async></script>
+    <script src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" async></script>
+
     {{ content_for_header }}
   </head>
 

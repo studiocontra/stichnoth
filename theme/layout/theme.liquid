@@ -38,7 +38,12 @@
 
     <!-- Calendly link widget begin -->
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+    <!--  Cookie consent -->
+    <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
+    <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script">
+    <script id="usercentrics-cmp" data-settings-id="kZHEDfIdACpNGV" data-language="de" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" async></script>
+    <script src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" async></script>
 
     {{ 'fonts.css' | asset_url | stylesheet_tag }}
     {{ 'custom.min.css' | asset_url | stylesheet_tag }}
