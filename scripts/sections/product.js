@@ -111,7 +111,9 @@ productFaqsApp.mount('.product__faqs');
 const productFormApp = Vue.createApp({
   data() {
     return {
-      isAdding: false
+      isAdding: false,
+      engraveStyle: '',
+      engraveText: ''
     };
   },
   methods: {
@@ -119,13 +121,20 @@ const productFormApp = Vue.createApp({
       const {product, qty} = target.dataset;
       const urlParams = new URLSearchParams(window.location.search);
       const variant = urlParams.get('variant');
+      const engraveStyle = document.getElementById('engrave_style').value;
+      const engraveText = document.getElementById('engrave_text').value;
+
       this.isAdding = true;
 
       let formData = {
         'items': [{
           'product-id': product,
           'id': variant || product,
-          'quantity': qty
+          'quantity': qty,
+          'properties': {
+            'Engrave style': engraveStyle,
+            'Engrave text': engraveText,
+          }
         }]
       };
 

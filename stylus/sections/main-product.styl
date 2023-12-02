@@ -31,6 +31,56 @@
     .price--sale
       display block
 
+  .product__custom-fields
+    padding-top 1em
+    margin-bottom 2em
+    width 100%
+
+    .custom
+      position relative
+      width 100%
+      margin-bottom 1em
+
+      label
+        display block
+        text-transform uppercase
+        color $gray
+        letter-spacing 0.1em
+        margin-bottom 10px
+
+      input,
+      select
+        width 100%
+        border 0
+        border-bottom 1px solid $gray
+        padding 6px 0 4px
+        font-size 16px
+
+        &:focus
+          outline 0
+          border-color $gold
+
+
+    .select
+      position relative
+      cursor pointer
+
+      select
+        padding-right 30px
+        cursor inherit
+        -moz-appearance none
+        -webkit-appearance none
+        appearance none
+
+      svg
+        position absolute
+        width 20px
+        height @width
+        top 14px
+        right 0
+        translate 0 -50%
+        pointer-events none
+
 
   .product-form__add
     flex 1 1 100%

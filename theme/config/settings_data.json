@@ -60,8 +60,8 @@
           "my_cart": "Cart",
           "my_account": "My Account",
           "heading_3": "Reach out",
-          "contact_menu": "<p>Contact Us<\/p>",
-          "impressum_link": "https:\/\/s2.q4cdn.com\/175719177\/files\/doc_presentations\/Placeholder-PDF.pdf",
+          "contact_menu": "<p><a href=\"\/pages\/contact\" title=\"Contact\">Contact Us<\/a><\/p>",
+          "impressum_link": "",
           "impressum_label": "Imprint"
         }
       },

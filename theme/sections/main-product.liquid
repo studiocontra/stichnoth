@@ -20,16 +20,6 @@
             <div class="product-form">
               {% if by_request %}
                 <div class="product-form__add">
-                  {% comment %}
-                    <a
-                      href="{{ shop.url }}/pages/contact"
-                      class="cta cta--black"
-                    >
-                      <span>
-                        {{ 'products.product.by_request' | t }}
-                      </span>
-                    </a>
-                  {% endcomment %}
                   <a
                     href="{{ pages['contact'].url }}"
                     class="cta cta--black"
@@ -47,6 +37,53 @@
 
                   {% render 'price', product: product, use_variant: true %}
                 </div>
+
+                <div class="product__custom-fields">
+                    <div class="custom">
+                      <label for="engrave_style">
+                        {{ section.settings.select_label }}
+                      </label>
+
+                      <div class="select">
+                        <select name="properties[Engrave style]" id="engrave_style">
+                          <option selected disabled>
+                            {{ section.settings.select_placeholder }}
+                          </option>
+                          <option value="3900">Nr. 3900</option>
+                          <option value="3901">Nr. 3901</option>
+                          <option value="3902">Nr. 3902</option>
+                          <option value="3903">Nr. 3903</option>
+                          <option value="3904">Nr. 3904</option>
+                          <option value="3905">Nr. 3905</option>
+                          <option value="3906">Nr. 3906</option>
+                          <option value="3907">Nr. 3907</option>
+                          <option value="3908">Nr. 3908</option>
+                          <option value="3909">Nr. 3909</option>
+                          <option value="3910">Nr. 3910</option>
+                          <option value="3911">Nr. 3911</option>
+                          <option value="3912">Nr. 3912</option>
+                          <option value="3913">Nr. 3913</option>
+                          <option value="3914">Nr. 3914</option>
+                          <option value="3915">Nr. 3915</option>
+                          <option value="3916">Nr. 3916</option>
+                        </select>
+                        {% comment %} <input id="engrave_style" type="text" placeholder="{{ section.settings.select_placeholder }}" name="properties[Engrave style]"> {% endcomment %}
+
+                        <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                          </path>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="custom">
+                      <label for="engrave_text">
+                        {{ section.settings.text_label }}
+                      </label>
+                      <input id="engrave_text" type="text"
+                      placeholder="{{ section.settings.text_placeholder }}" name="properties[Engrave text]">
+                    </div>
+                  </div>
 
                 <div class="product-form__add">
                   <button
@@ -523,19 +560,31 @@
   "settings": [
     {
       "type": "header",
-      "content": "Product Recommendations"
+      "content": "Product Engraving"
     },
     {
-      "type": "inline_richtext",
-      "id": "headline",
-      "default": "Lorem ipsum",
-      "label": "Headline"
+      "type": "text",
+      "id": "select_label",
+      "default": "Select a Engrave Style",
+      "label": "Engrave Style Label"
     },
     {
-      "type": "checkbox",
-      "id": "show_view_all",
-      "default": false,
-      "label": "Enable \"View all\" button "
+      "type": "text",
+      "id": "select_placeholder",
+      "default": "Choose your style",
+      "label": "Engrave Style Placeholder"
+    },
+    {
+      "type": "text",
+      "id": "text_label",
+      "default": "Engrave Text",
+      "label": "Engrave Text Label"
+    },
+    {
+      "type": "text",
+      "id": "text_placeholder",
+      "default": "Add a maximum of 28 characters",
+      "label": "Engrave Text Placeholder"
     }
   ]
 }

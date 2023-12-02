@@ -60,7 +60,6 @@
             "coming_soon": false,
             "style": "img-left",
             "image": "shopify:\/\/shop_images\/Screenshot_hannover_1.png",
-            "image_2": "shopify:\/\/shop_images\/Screenshot_hannover_2.png",
             "name": "Stichnoth Store",
             "description": "<p>Georgstraße 35, 30159 Hannover<\/p><p>Monday - Saturday<\/p><p>11 AM to 7 PM<\/p>",
             "button_label": "Book an Appointment",
@@ -79,8 +78,7 @@
           "settings": {
             "coming_soon": false,
             "style": "img-right",
-            "image": "shopify:\/\/shop_images\/Screenshot_hamburg_1.png",
-            "image_2": "shopify:\/\/shop_images\/hamburg-2.jpg",
+            "image": "shopify:\/\/shop_images\/IMG_2761.jpg",
             "name": "Stichnoth Store",
             "description": "<p>Große Bleichen 8, 20354 Hamburg<\/p><p>Tuesday - Saturday<\/p><p>11AM to 7PM<\/p>",
             "button_label": "Book an Appointment",
