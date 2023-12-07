@@ -39,7 +39,7 @@
     .custom
       position relative
       width 100%
-      margin-bottom 1em
+      margin-bottom 2em
 
       label
         display block
@@ -80,6 +80,10 @@
         right 0
         translate 0 -50%
         pointer-events none
+
+    .help
+      color $gray
+      margin-top 1em
 
 
   .product-form__add
@@ -204,3 +208,47 @@
       img
         width 70%
         centerAbs()
+
+// Modal for engravinig styles
+.wrap-modal-styles
+  .modal__close
+    top 16px
+    right 16px
+
+  .modal__content
+    max-width 1000px
+    background-color $white
+    padding-top 40px
+
+  .modal__body
+    padding 0 48px 48px
+
+  .modal__headline
+    text-align left
+    padding-right 20px
+
+    .text
+      color $gray
+
+  .wrap-styles-grid
+    column-width 270px
+
+  .single-style
+    position relative
+    display flex
+    align-items center
+    justify-content space-between
+    padding 20px 15px
+    border-bottom 1px solid $gray2
+
+    span
+      display block
+      flex 0 0 80px
+      margin-right 16px
+      text-align left
+
+    img
+      flex 0 1 auto
+      max-height 17px
+      width auto
+      max-width calc(100% - 100px)

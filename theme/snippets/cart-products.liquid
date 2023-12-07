@@ -68,6 +68,17 @@
                 </a>
                 <div class="cart-product__desc">
                   {{ item.description }}
+
+                  <div class="cart-product__properties">
+                    {% for property in item.properties %}
+                      <p class="text">
+                        <span class="text--500">
+                          {{ property.first }}:
+                        </span>
+                        {{ property.last }}
+                      </p>
+                    {% endfor %}
+                  </div>
                 </div>
                 <span class="cart-product__price cart-product__price--desktop">
                   {{ item.price | money_without_trailing_zeros }}
