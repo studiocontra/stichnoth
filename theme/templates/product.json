@@ -1,7 +1,156 @@
 {
   "sections": {
     "main": {
-      "type": "main-product"
+      "type": "main-product",
+      "blocks": {
+        "35742344-2a48-4efb-b299-709afb8de81b": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3900.png",
+            "code": "Nr3900"
+          }
+        },
+        "7ecaee96-c598-4bf9-9f0b-3062ab9d5943": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3901.png",
+            "code": "Nr3901"
+          }
+        },
+        "11454e4c-47c4-4af9-bbed-4c4c156f1841": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3902.png",
+            "code": "Nr3902"
+          }
+        },
+        "9ba2c754-abc0-42bd-9af6-7965907d447a": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3903.png",
+            "code": "Nr3903"
+          }
+        },
+        "b3489778-336e-44fd-975e-b43f38228156": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3904.png",
+            "code": "Nr3904"
+          }
+        },
+        "228c2ee4-5ead-4cfd-a799-82d6fb51cd0b": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3905.png",
+            "code": "Nr3905"
+          }
+        },
+        "f86359d3-a39b-4a82-829b-a8a3f6f9e1e7": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3906.png",
+            "code": "Nr3906"
+          }
+        },
+        "023aeca5-d47d-4e3c-85f2-f97771c44002": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3907.png",
+            "code": "Nr3907"
+          }
+        },
+        "7601827c-aacc-477a-95a6-515da4b63908": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3908.png",
+            "code": "Nr3908"
+          }
+        },
+        "922516d7-2d1d-4593-8afc-9a6114fd5eff": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3909.png",
+            "code": "Nr3909"
+          }
+        },
+        "73b351c8-624b-4a48-9e4a-2bdd8e4a21f9": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3910.png",
+            "code": "Nr3910"
+          }
+        },
+        "42f94be9-4767-43fb-b916-2c94293b8f70": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3911.png",
+            "code": "Nr3911"
+          }
+        },
+        "e39b752e-8c43-49fe-9b0f-b5750844e352": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3912.png",
+            "code": "Nr3912"
+          }
+        },
+        "d8ff1ced-717f-4d49-9f36-d5d5596480b4": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3913.png",
+            "code": "Nr3913"
+          }
+        },
+        "cd34035a-df3a-4041-a4a0-7694fd6fb080": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3914.png",
+            "code": "Nr3914"
+          }
+        },
+        "f45b29ac-bb24-48d9-a254-ddf50426d7a2": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3915.png",
+            "code": "Nr3915"
+          }
+        },
+        "d5be371b-83a9-44c1-9796-105a68df2046": {
+          "type": "style",
+          "settings": {
+            "preview": "shopify:\/\/shop_images\/3916.png",
+            "code": "Nr3916"
+          }
+        }
+      },
+      "block_order": [
+        "35742344-2a48-4efb-b299-709afb8de81b",
+        "7ecaee96-c598-4bf9-9f0b-3062ab9d5943",
+        "11454e4c-47c4-4af9-bbed-4c4c156f1841",
+        "9ba2c754-abc0-42bd-9af6-7965907d447a",
+        "b3489778-336e-44fd-975e-b43f38228156",
+        "228c2ee4-5ead-4cfd-a799-82d6fb51cd0b",
+        "f86359d3-a39b-4a82-829b-a8a3f6f9e1e7",
+        "023aeca5-d47d-4e3c-85f2-f97771c44002",
+        "7601827c-aacc-477a-95a6-515da4b63908",
+        "922516d7-2d1d-4593-8afc-9a6114fd5eff",
+        "73b351c8-624b-4a48-9e4a-2bdd8e4a21f9",
+        "42f94be9-4767-43fb-b916-2c94293b8f70",
+        "e39b752e-8c43-49fe-9b0f-b5750844e352",
+        "d8ff1ced-717f-4d49-9f36-d5d5596480b4",
+        "cd34035a-df3a-4041-a4a0-7694fd6fb080",
+        "f45b29ac-bb24-48d9-a254-ddf50426d7a2",
+        "d5be371b-83a9-44c1-9796-105a68df2046"
+      ],
+      "settings": {
+        "select_label": "Select a Engrave Style",
+        "select_placeholder": "Choose your style",
+        "select_help": "See all the engrave styles here",
+        "text_label": "Engrave Text",
+        "text_placeholder": "Add a maximum of 28 characters",
+        "modal_headline": "Engravement Styles",
+        "modal_content": "<p>lorem ipsum dolor<\/p>"
+      }
     }
   },
   "order": [
