@@ -143,13 +143,13 @@
         "d5be371b-83a9-44c1-9796-105a68df2046"
       ],
       "settings": {
-        "select_label": "Select a Engrave Style",
+        "select_label": "Engrave Style",
         "select_placeholder": "Choose your style",
         "select_help": "See all the engrave styles here",
         "text_label": "Engrave Text",
         "text_placeholder": "Add a maximum of 28 characters",
         "modal_headline": "Engravement Styles",
-        "modal_content": "<p>lorem ipsum dolor<\/p>"
+        "modal_content": "<p>Please enter the number in the engraving text for the desired symbols (Nr3909-3916) as placeholders. <\/p><p>Example: \"Julia & Romeo 14.07.2015 <strong>3911\" <\/strong>or \"Julia & Romeo <strong>3910<\/strong> 14.07.2015<strong>\"<\/strong><\/p>"
       }
     }
   },

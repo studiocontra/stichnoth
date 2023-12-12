@@ -1,5 +1,5 @@
 async function updateCartDrawer() {
-  const res = await fetch('/?section_id=header');
+  const res = await fetch(`${window.Shopify.routes.root}/?section_id=header`);
   const text = await res.text();
 
   const resHtml = document.createElement('div');

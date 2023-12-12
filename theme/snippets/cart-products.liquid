@@ -71,12 +71,12 @@
 
                   <div class="cart-product__properties">
                     {% for property in item.properties %}
-                      <p class="text">
-                        <span class="text--500">
-                          {{ property.first }}:
-                        </span>
-                        {{ property.last }}
-                      </p>
+                      {% if property.last != blank %}
+                        <p class="text">
+                          <span class="text--500"> {{ property.first }}: </span>
+                          {{ property.last }}
+                        </p>
+                      {% endif %}
                     {% endfor %}
                   </div>
                 </div>

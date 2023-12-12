@@ -59,7 +59,7 @@
                         </label>
 
                         <div class="select">
-                          <select name="properties[Engrave style]" id="engrave_style">
+                          <select name="properties[{{ section.settings.select_label }}]" id="engrave_style">
                             <option selected disabled>
                               {{ section.settings.select_placeholder }}
                             </option>
@@ -104,7 +104,7 @@
                           id="engrave_text"
                           type="text"
                           placeholder="{{ section.settings.text_placeholder }}"
-                          name="properties[Engrave text]"
+                          name="properties[{{ section.settings.text_label }}]"
                         >
                       </div>
                     </div>

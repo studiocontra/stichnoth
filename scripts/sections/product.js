@@ -121,8 +121,8 @@ const productFormApp = Vue.createApp({
       const {product, qty} = target.dataset;
       const urlParams = new URLSearchParams(window.location.search);
       const variant = urlParams.get('variant');
-      const engraveStyle = document.getElementById('engrave_style').value;
-      const engraveText = document.getElementById('engrave_text').value;
+      const engraveStyle = (document.getElementById('engrave_style')) ? document.getElementById('engrave_style').value : '';
+      const engraveText = (document.getElementById('engrave_text')) ? document.getElementById('engrave_text').value : '';
 
       this.isAdding = true;
 
