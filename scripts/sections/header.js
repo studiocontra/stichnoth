@@ -1,5 +1,5 @@
 async function updateCartDrawer() {
-  const res = await fetch(`${window.Shopify.routes.root}/?section_id=header`);
+  const res = await fetch(`${window.Shopify.routes.root}?section_id=header`);
   const text = await res.text();
 
   const resHtml = document.createElement('div');
@@ -68,11 +68,10 @@ const mainHeaderApp = Vue.createApp({
     async updateCartItem({target}) {
       const { line, qty } = target.dataset;
 
-      const editButtons = target.matches('.js-delete-cart-qty') ||
-      target.matches('.js-update-cart-qty');
-      this.isLoading = true;
+      const editButtons = target.matches('.js-delete-cart-qty') || target.matches('.js-update-cart-qty');
 
       if(editButtons) {
+        this.isLoading = true;
         const {status} = await fetch(`${window.Shopify.routes.root}cart/change.js?line=${line}&quantity=${qty}`, {
           method: 'POST'
         });

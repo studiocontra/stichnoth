@@ -1,15 +1,3 @@
-// const cartPageApp = Vue.createApp({
-//   data() {
-//     return {
-//       errorMsg: null,
-//     }
-//   }
-// });
-
-// cartPageApp.config.compilerOptions.delimiters = ['[[', ']]'];
-// const mountedCartPageApp = cartPageApp.mount('.wrap-page--cart');
-
-
 function addCartListeners() {
   document
     .querySelectorAll('.js-update-cart-qty')
@@ -61,6 +49,4 @@ async function updateCartPage() {
   // Update Items
   const newDrawer = resHtml.querySelector('.wrap-cart-form').innerHTML;
   document.querySelector('.wrap-cart-form').innerHTML = newDrawer;
-
-  // addCartListeners();
 }
