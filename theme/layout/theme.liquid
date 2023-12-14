@@ -53,6 +53,18 @@
 
     {{ content_for_header }}
 
+    <!-- Cookies -->
+    <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
+    <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script">
+    <script
+      id="usercentrics-cmp"
+      data-settings-id="kZHEDfIdACpNGV"
+      data-language="de"
+      src="https://app.usercentrics.eu/browser-ui/latest/loader.js"
+      async
+    ></script>
+    <script src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" async></script>
+
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {
@@ -75,6 +87,10 @@
 
     {% section 'pre-footer' %}
     {% section 'footer' %}
+
+    <a href="https://wa.me/4915126858330" target="_blank" class="whatsapp-button" aria-label="WhatsApp">
+      <img src="{{ 'WhatsApp.webp' | asset_url  }}" alt="Whatsapp">
+    </a>
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>

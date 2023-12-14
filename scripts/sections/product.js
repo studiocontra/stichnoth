@@ -121,7 +121,9 @@ const productFormApp = Vue.createApp({
       const {product, qty} = target.dataset;
       const urlParams = new URLSearchParams(window.location.search);
       const variant = urlParams.get('variant');
+      const engraveStyleProp = (document.getElementById('engrave_style')) ? document.getElementById('engrave_style').dataset['prop'] : '';
       const engraveStyle = (document.getElementById('engrave_style')) ? document.getElementById('engrave_style').value : '';
+      const engraveTextProp = (document.getElementById('engrave_text')) ? document.getElementById('engrave_text').dataset['prop'] : '';
       const engraveText = (document.getElementById('engrave_text')) ? document.getElementById('engrave_text').value : '';
 
       this.isAdding = true;
@@ -132,8 +134,8 @@ const productFormApp = Vue.createApp({
           'id': variant || product,
           'quantity': qty,
           'properties': {
-            'Engrave style': engraveStyle,
-            'Engrave text': engraveText,
+            [engraveStyleProp]: engraveStyle,
+            [engraveTextProp]: engraveText,
           }
         }]
       };
