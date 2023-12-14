@@ -102,11 +102,6 @@ const productFaqsApp = Vue.createApp({
 productFaqsApp.config.compilerOptions.delimiters = ['[[', ']]'];
 productFaqsApp.mount('.product__faqs');
 
-// if(document.querySelector('.product__faqs').length > 0) {
-//   productFaqsApp.mount('.product__faqs');
-// }
-
-
 
 const productFormApp = Vue.createApp({
   data() {
