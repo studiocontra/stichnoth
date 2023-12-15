@@ -8,12 +8,14 @@
 
 .home-collection-list__slider
   .swiper-wrapper
-    padding-bottom 15%
+    padding-bottom 120px
+    align-items stretch
     +mq(1400)
       padding-bottom 10%
 
   .swiper-slide
     margin 0 4%
+    height auto
 
     +mq(768)
       margin 0 2.5%
@@ -28,13 +30,15 @@
 
       +mq(768)
         width 60vw !important
+      +mq(992)
+        width 50vw !important
       +mq(1200)
         width 40vw !important
 
     &:nth-child(3n + 1)
-      transform translateY(20%)
-
       .collection-list__card
+        transform translateY(20%)
+
         .card__img
           aspect-ratio 1 / 1.5
 
@@ -46,9 +50,9 @@
 
 
     &:nth-child(3n + 3)
-      transform translateY(50%)
-
       .collection-list__card
+        transform translateY(50%)
+
         .card__img
           aspect-ratio 1 / 1
 
