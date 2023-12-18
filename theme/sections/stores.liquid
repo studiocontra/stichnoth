@@ -14,7 +14,7 @@
           <a
             href="javascript:void(0);"
             class="js-stores-nav-item"
-            :class="{'active': activeSection === {{ block.settings.heading | downcase }}}"
+            :class="{'active': activeSection === {{ block.settings.heading | downcase | strip }}}"
             data-section="{{ block.settings.heading | downcase }}"
             @click="goToSection('{{ block.settings.heading | downcase }}')"
           >
@@ -26,7 +26,7 @@
 
     {%- for block in section.blocks -%}
       {%- if block.type == 'anchor' -%}
-        <div class="stores__region js-store-anchor" data-anchor="{{ block.settings.anchor | downcase }}">
+        <div class="stores__region js-store-anchor" data-anchor="{{ block.settings.anchor | downcase | strip }}">
           <h2 class="title title--big" style="color: {{ section.settings.color_scheme.settings.headline }};">
             {{ block.settings.headline }}
           </h2>
