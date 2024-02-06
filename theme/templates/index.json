@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "headline": "We celebrate artisans",
-            "video": "shopify:\/\/files\/videos\/Stichnoth video 11 .webm",
+            "video": "shopify:\/\/files\/videos\/Stichnoth video 13 .webm",
             "button_label": "Know About Us",
             "button_link": "shopify:\/\/pages\/our-story"
           }
@@ -49,12 +49,19 @@
           "settings": {
             "collection": "necklace"
           }
+        },
+        "55dcdb95-f9fd-4cdd-b38f-b64a3402e1c9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wedding-rings"
+          }
         }
       },
       "block_order": [
         "template--19944138113322__d1c17097-f371-4509-9bc5-26a489ed6c50-featured_collection-1",
         "8d01519f-4694-4dba-96d1-0f236c8a3a28",
-        "f2d33ec2-c2a7-45e9-b1a4-fa4bc25fc911"
+        "f2d33ec2-c2a7-45e9-b1a4-fa4bc25fc911",
+        "55dcdb95-f9fd-4cdd-b38f-b64a3402e1c9"
       ],
       "settings": {
         "title": "Our Products",

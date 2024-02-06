@@ -73,11 +73,11 @@
         "settings": {
           "show_popup": false,
           "color_scheme": "",
-          "image": "shopify:\/\/shop_images\/20008850-b332-4012-b4c4-5fcbb3e17af8.jpg",
-          "image_2": "shopify:\/\/shop_images\/sitting-santa.jpg",
+          "image": "shopify:\/\/shop_images\/altgoldankauf_komprimiert.jpg",
+          "image_2": "shopify:\/\/shop_images\/Logo-OFG.png",
           "text_position": "right",
-          "heading": "<strong>Merry Christmas<\/strong>",
-          "text": "<p>Go to Stores, select your favorite one and schedule a visit.<\/p>",
+          "heading": "<strong>Old gold purchase<\/strong>",
+          "text": "<p>Sustainability is important to us.<br\/><br\/>We recycle the precious metal we buy.<\/p><p>Go to Stores, select your favorite one and schedule online a visit.<\/p>",
           "button_label": "Find a Store",
           "button_link": "shopify:\/\/pages\/stores"
         }
